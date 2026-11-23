@@ -13,6 +13,24 @@
 
 <div dir="rtl">
 
+## الطرفية
+
+نافذة حية رسمتُها يدويًا بـ SVG — والحركة فيها حقيقية لا صورة ثابتة:
+الأسطر تُكتب واحدًا تلو الآخر عند فتح الصفحة، والمؤشر لا يتوقف عن الوميض،
+ومؤشر `live` في شريط الحالة ينبض فعليًا طوال الوقت:
+
+</div>
+
+<div align="center">
+
+<img src="assets/terminal.svg" width="96%" alt="طرفية حية: أمر whoami يعيد ahmed-radwan باني منتجات رقمية من ليبيا، ثم قائمة المنتجات الثمانية، ثم مؤشر وامض لا يتوقف" />
+
+</div>
+
+<img src="assets/divider.svg" width="100%" alt="فاصل بصري" />
+
+<div dir="rtl">
+
 ## من أنا
 
 أنا **أحمد رضوان** — باني منتجات رقمية من ليبيا، أصمّم وأبرمج المنظومة كاملة:
@@ -60,7 +78,8 @@
 ## المشاريع المميزة
 
 ثمانية منتجات مكتملة الجوانب — لكل منها هويته البصرية المستقلة الموثقة في
-مستودعه. **انقر أي بطاقة لزيارة المستودع الكامل:**
+مستودعه. **انقر أي بطاقة لزيارة المستودع الكامل** — وتحت كل بطاقة ثلاث شارات
+حية تُسحب من واجهة GitHub لحظة زيارتك: النجوم، والتفريعات، وآخر دفع:
 
 </div>
 
@@ -68,20 +87,60 @@
 
 <table>
   <tr>
-    <td width="50%" valign="top"><a href="https://github.com/ahmadmedo1012/ulara"><img src="assets/projects/ulara.svg" width="100%" alt="أُلارا — نظام تشغيل الجامعة: منظومة أكاديمية متكاملة عربية-أولًا"></a></td>
-    <td width="50%" valign="top"><a href="https://github.com/ahmadmedo1012/madarek"><img src="assets/projects/madarek.svg" width="100%" alt="مدارك — منصة تعليم ذكي مستقلة عربية-أولًا"></a></td>
+    <td dir="ltr" width="50%" valign="top">
+      <a href="https://github.com/ahmadmedo1012/ulara"><img src="assets/projects/ulara.svg" width="100%" alt="أُلارا — نظام تشغيل الجامعة: منظومة أكاديمية متكاملة عربية-أولًا"></a>
+      <a href="https://github.com/ahmadmedo1012/ulara/stargazers"><img height="20" src="https://img.shields.io/github/stars/ahmadmedo1012/ulara?style=flat-square&label=%E2%98%85&labelColor=161D29&color=E2A93B" alt="النجوم — حي"></a>
+      <img height="20" src="https://img.shields.io/github/forks/ahmadmedo1012/ulara?style=flat-square&labelColor=161D29&color=232A38" alt="التفريعات — حي">
+      <img height="20" src="https://img.shields.io/github/last-commit/ahmadmedo1012/ulara?style=flat-square&labelColor=161D29&color=232A38" alt="آخر دفع — حي">
+    </td>
+    <td dir="ltr" width="50%" valign="top">
+      <a href="https://github.com/ahmadmedo1012/madarek"><img src="assets/projects/madarek.svg" width="100%" alt="مدارك — منصة تعليم ذكي مستقلة عربية-أولًا"></a>
+      <a href="https://github.com/ahmadmedo1012/madarek/stargazers"><img height="20" src="https://img.shields.io/github/stars/ahmadmedo1012/madarek?style=flat-square&label=%E2%98%85&labelColor=161D29&color=E2A93B" alt="النجوم — حي"></a>
+      <img height="20" src="https://img.shields.io/github/forks/ahmadmedo1012/madarek?style=flat-square&labelColor=161D29&color=232A38" alt="التفريعات — حي">
+      <img height="20" src="https://img.shields.io/github/last-commit/ahmadmedo1012/madarek?style=flat-square&labelColor=161D29&color=232A38" alt="آخر دفع — حي">
+    </td>
   </tr>
   <tr>
-    <td width="50%" valign="top"><a href="https://github.com/ahmadmedo1012/SubNation2"><img src="assets/projects/subnation.svg" width="100%" alt="سب نيشن — سوق الاشتراكات الرقمية عربية-أولًا"></a></td>
-    <td width="50%" valign="top"><a href="https://github.com/ahmadmedo1012/SmartBot"><img src="assets/projects/smartbot.svg" width="100%" alt="سمارت بوت — بوت ماسنجر وأتمتة لصفحات فيسبوك"></a></td>
+    <td dir="ltr" width="50%" valign="top">
+      <a href="https://github.com/ahmadmedo1012/SubNation2"><img src="assets/projects/subnation.svg" width="100%" alt="سب نيشن — سوق الاشتراكات الرقمية عربية-أولًا"></a>
+      <a href="https://github.com/ahmadmedo1012/SubNation2/stargazers"><img height="20" src="https://img.shields.io/github/stars/ahmadmedo1012/SubNation2?style=flat-square&label=%E2%98%85&labelColor=161D29&color=E2A93B" alt="النجوم — حي"></a>
+      <img height="20" src="https://img.shields.io/github/forks/ahmadmedo1012/SubNation2?style=flat-square&labelColor=161D29&color=232A38" alt="التفريعات — حي">
+      <img height="20" src="https://img.shields.io/github/last-commit/ahmadmedo1012/SubNation2?style=flat-square&labelColor=161D29&color=232A38" alt="آخر دفع — حي">
+    </td>
+    <td dir="ltr" width="50%" valign="top">
+      <a href="https://github.com/ahmadmedo1012/SmartBot"><img src="assets/projects/smartbot.svg" width="100%" alt="سمارت بوت — بوت ماسنجر وأتمتة لصفحات فيسبوك"></a>
+      <a href="https://github.com/ahmadmedo1012/SmartBot/stargazers"><img height="20" src="https://img.shields.io/github/stars/ahmadmedo1012/SmartBot?style=flat-square&label=%E2%98%85&labelColor=161D29&color=E2A93B" alt="النجوم — حي"></a>
+      <img height="20" src="https://img.shields.io/github/forks/ahmadmedo1012/SmartBot?style=flat-square&labelColor=161D29&color=232A38" alt="التفريعات — حي">
+      <img height="20" src="https://img.shields.io/github/last-commit/ahmadmedo1012/SmartBot?style=flat-square&labelColor=161D29&color=232A38" alt="آخر دفع — حي">
+    </td>
   </tr>
   <tr>
-    <td width="50%" valign="top"><a href="https://github.com/ahmadmedo1012/Smart-Menu"><img src="assets/projects/smart-menu.svg" width="100%" alt="سمارت منيو — منيو رقمي وطلبات واتساب للمطاعم"></a></td>
-    <td width="50%" valign="top"><a href="https://github.com/ahmadmedo1012/Smart-Order"><img src="assets/projects/smart-order.svg" width="100%" alt="سمارت أوردر — متجر رقمي وطلبات وتوصيل للأعمال"></a></td>
+    <td dir="ltr" width="50%" valign="top">
+      <a href="https://github.com/ahmadmedo1012/Smart-Menu"><img src="assets/projects/smart-menu.svg" width="100%" alt="سمارت منيو — منيو رقمي وطلبات واتساب للمطاعم"></a>
+      <a href="https://github.com/ahmadmedo1012/Smart-Menu/stargazers"><img height="20" src="https://img.shields.io/github/stars/ahmadmedo1012/Smart-Menu?style=flat-square&label=%E2%98%85&labelColor=161D29&color=E2A93B" alt="النجوم — حي"></a>
+      <img height="20" src="https://img.shields.io/github/forks/ahmadmedo1012/Smart-Menu?style=flat-square&labelColor=161D29&color=232A38" alt="التفريعات — حي">
+      <img height="20" src="https://img.shields.io/github/last-commit/ahmadmedo1012/Smart-Menu?style=flat-square&labelColor=161D29&color=232A38" alt="آخر دفع — حي">
+    </td>
+    <td dir="ltr" width="50%" valign="top">
+      <a href="https://github.com/ahmadmedo1012/Smart-Order"><img src="assets/projects/smart-order.svg" width="100%" alt="سمارت أوردر — متجر رقمي وطلبات وتوصيل للأعمال"></a>
+      <a href="https://github.com/ahmadmedo1012/Smart-Order/stargazers"><img height="20" src="https://img.shields.io/github/stars/ahmadmedo1012/Smart-Order?style=flat-square&label=%E2%98%85&labelColor=161D29&color=E2A93B" alt="النجوم — حي"></a>
+      <img height="20" src="https://img.shields.io/github/forks/ahmadmedo1012/Smart-Order?style=flat-square&labelColor=161D29&color=232A38" alt="التفريعات — حي">
+      <img height="20" src="https://img.shields.io/github/last-commit/ahmadmedo1012/Smart-Order?style=flat-square&labelColor=161D29&color=232A38" alt="آخر دفع — حي">
+    </td>
   </tr>
   <tr>
-    <td width="50%" valign="top"><a href="https://github.com/ahmadmedo1012/Smart-Link"><img src="assets/projects/smart-link.svg" width="100%" alt="سمارت لينك — المظلة الرقمية للأعمال في ليبيا"></a></td>
-    <td width="50%" valign="top"><a href="https://github.com/ahmadmedo1012/lyosint"><img src="assets/projects/lyosint.svg" width="100%" alt="ليوسينت — منصة استخبارات المصدر المفتوح"></a></td>
+    <td dir="ltr" width="50%" valign="top">
+      <a href="https://github.com/ahmadmedo1012/Smart-Link"><img src="assets/projects/smart-link.svg" width="100%" alt="سمارت لينك — المظلة الرقمية للأعمال في ليبيا"></a>
+      <a href="https://github.com/ahmadmedo1012/Smart-Link/stargazers"><img height="20" src="https://img.shields.io/github/stars/ahmadmedo1012/Smart-Link?style=flat-square&label=%E2%98%85&labelColor=161D29&color=E2A93B" alt="النجوم — حي"></a>
+      <img height="20" src="https://img.shields.io/github/forks/ahmadmedo1012/Smart-Link?style=flat-square&labelColor=161D29&color=232A38" alt="التفريعات — حي">
+      <img height="20" src="https://img.shields.io/github/last-commit/ahmadmedo1012/Smart-Link?style=flat-square&labelColor=161D29&color=232A38" alt="آخر دفع — حي">
+    </td>
+    <td dir="ltr" width="50%" valign="top">
+      <a href="https://github.com/ahmadmedo1012/lyosint"><img src="assets/projects/lyosint.svg" width="100%" alt="ليوسينت — منصة استخبارات المصدر المفتوح"></a>
+      <a href="https://github.com/ahmadmedo1012/lyosint/stargazers"><img height="20" src="https://img.shields.io/github/stars/ahmadmedo1012/lyosint?style=flat-square&label=%E2%98%85&labelColor=161D29&color=E2A93B" alt="النجوم — حي"></a>
+      <img height="20" src="https://img.shields.io/github/forks/ahmadmedo1012/lyosint?style=flat-square&labelColor=161D29&color=232A38" alt="التفريعات — حي">
+      <img height="20" src="https://img.shields.io/github/last-commit/ahmadmedo1012/lyosint?style=flat-square&labelColor=161D29&color=232A38" alt="آخر دفع — حي">
+    </td>
   </tr>
 </table>
 
@@ -91,9 +150,12 @@
 
 <div dir="rtl">
 
-## الإحصائيات والنشاط
+## الإحصائيات والنشاط — بيانات حية
 
-أرقام حية تُسحب لحظة زيارتك — من GitHub مباشرة، بلا أي رقم مكتوب يدويًا:
+لا رقم في هذه الصفحة مكتوب يدويًا — كل ما يلي يُسحب من واجهة GitHub لحظة
+زيارتك: نجوم، مساهمات، لغات، نشاط، كؤوس، وعدد الزوار. وحتى أفعى المساهمات
+في الأسفل تُعاد بناء تلقائيًا كل ست ساعات عبر سير عمل آلي داخل هذا المستودع —
+فبمجرد ظهور بيانات جديدة تظهر من نفسها، بلا تدخل يدوي:
 
 </div>
 
@@ -108,11 +170,35 @@
 
 <br/>
 
+<a href="https://github-profile-trophy.vercel.app/?username=ahmadmedo1012&row=2&column=4&margin-w=6&margin-h=6&no-frame=true&title_color=E2A93B&text_color=C7CEDB&icon_color=E2A93B&bg_color=0D1017&stroke_color=232A38">
+  <img width="95%" src="https://github-profile-trophy.vercel.app/?username=ahmadmedo1012&row=2&column=4&margin-w=6&margin-h=6&no-frame=true&title_color=E2A93B&text_color=C7CEDB&icon_color=E2A93B&bg_color=0D1017&stroke_color=232A38" alt="كؤوس الإنجاز — تُسحب حية من GitHub" />
+</a>
+
+<br/>
+
 <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=ahmadmedo1012&layout=compact&hide_border=true&bg_color=0D1017&title_color=E2A93B&text_color=C7CEDB" alt="أكثر لغات البرمجة استخدامًا في المستودعات العامة" />
 
 <br/>
 
 <img width="95%" src="https://github-readme-activity-graph.vercel.app/graph?username=ahmadmedo1012&bg_color=0D1017&color=C7CEDB&line=E2A93B&point=E2A93B&area=true&area_color=161D29&hide_border=true" alt="مخطط نشاط المساهمات عبر الزمن" />
+
+<br/>
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/ahmadmedo1012/ahmadmedo1012/main/assets/snake-dark.svg">
+  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/ahmadmedo1012/ahmadmedo1012/main/assets/snake-light.svg">
+  <img width="95%" src="https://raw.githubusercontent.com/ahmadmedo1012/ahmadmedo1012/main/assets/snake-dark.svg" alt="أفعى المساهمات تزحف على شبكة المساهمات — كهرمانية على الحبر، متحركة، وتتجدد تلقائيًا" />
+</picture>
+
+<br/>
+
+<img src="https://komarev.com/ghpvc/?username=ahmadmedo1012&style=flat-square&color=E2A93B&label=profile+views" alt="عدد زوار الملف الشخصي — حي" />
+
+</div>
+
+<div dir="rtl" align="center">
+
+<sub>كل ما في الأعلى حي: الإحصائيات والسلاسل والكؤوس واللغات والنشاط والزوار تُسحب لحظة فتحك الصفحة — والأفعى يعيد بناءها سير عمل آلي كل ٦ ساعات.</sub>
 
 </div>
 
@@ -122,21 +208,48 @@
 
 ## تواصل
 
-أسرع ثلاث طرق للوصول إليّ — والبريد هو القناة المفضلة للأمور الجدية:
+**واتساب هو القناة الأساسية** — أسرع طريق للرد مهما كان الموضوع، ويبقى البريد للمراسلات الرسمية:
 
 </div>
 
-<div align="center">
+<table>
+  <tr>
+    <td dir="rtl" width="28%" align="center">
+      <a href="https://wa.me/218910089975"><img src="assets/icons/whatsapp.svg" width="56" alt="واتساب — القناة الأساسية"></a>
+      <br/>
+      <a href="https://wa.me/218910089975"><b>واتساب</b></a>
+      <br/>
+      <sub dir="ltr"><b>+218 91 008 9975</b></sub>
+      <br/>
+      <sub>القناة الأساسية — الأسرع ردًا</sub>
+    </td>
+    <td dir="rtl" width="24%" align="center">
+      <a href="https://t.me/rhAhmed2011"><img src="assets/icons/telegram.svg" width="48" alt="تليجرام"></a>
+      <br/>
+      <a href="https://t.me/rhAhmed2011"><b>تليجرام</b></a>
+      <br/>
+      <sub dir="ltr">@rhAhmed2011</sub>
+    </td>
+    <td dir="rtl" width="24%" align="center">
+      <a href="mailto:ahmadmedo1012@gmail.com"><img src="assets/icons/mail.svg" width="48" alt="البريد الإلكتروني"></a>
+      <br/>
+      <a href="mailto:ahmadmedo1012@gmail.com"><b>البريد</b></a>
+      <br/>
+      <sub dir="ltr">ahmadmedo1012@gmail.com</sub>
+    </td>
+    <td dir="rtl" width="24%" align="center">
+      <a href="https://github.com/ahmadmedo1012"><img src="assets/icons/github.svg" width="48" alt="GitHub"></a>
+      <br/>
+      <a href="https://github.com/ahmadmedo1012"><b>GitHub</b></a>
+      <br/>
+      <sub dir="ltr">@ahmadmedo1012</sub>
+    </td>
+  </tr>
+</table>
 
-<a href="mailto:ahmadmedo1012@gmail.com"><img src="assets/icons/mail.svg" width="24" alt="البريد الإلكتروني: ahmadmedo1012@gmail.com"></a>
-&nbsp;&nbsp;&nbsp;
-<a href="https://github.com/ahmadmedo1012"><img src="assets/icons/github.svg" width="24" alt="حساب GitHub: ahmadmedo1012"></a>
-&nbsp;&nbsp;&nbsp;
-<a href="https://ulara.vercel.app"><img src="assets/icons/globe.svg" width="24" alt="الموقع المباشر لمشروع أُلارا: ulara.vercel.app"></a>
+<div dir="rtl" align="center">
 
-<br/>
-
-<a href="mailto:ahmadmedo1012@gmail.com"><b>ahmadmedo1012@gmail.com</b></a>
+<sub>ونماذج حية تعمل الآن: <a href="https://ulara.vercel.app"><b dir="ltr">ulara.vercel.app</b></a> · <a href="https://subnation.ly"><b dir="ltr">subnation.ly</b></a></sub>
 
 </div>
 
@@ -146,6 +259,6 @@
 
 <div dir="rtl" align="center">
 
-<sub>الواجهة والأصول البصرية في هذه الصفحة رسمت خصيصًا لهذا الحساب — SVG يدوي بلا تدرجات ولا شارات جاهزة · دليل الهوية: <a href="IDENTITY.md">IDENTITY.md</a></sub>
+<sub>الواجهة والأصول البصرية في هذه الصفحة رسمت خصيصًا لهذا الحساب — SVG يدوي بلا تدرجات، وكل رقم فيها يُسحب حيًا من واجهة GitHub · دليل الهوية: <a href="IDENTITY.md">IDENTITY.md</a></sub>
 
 </div>
