@@ -1,0 +1,116 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="620" viewBox="0 0 1200 620" role="img">
+  <title>المكدّس التقني — ما تشغّله المنظومة فعليًا</title>
+  <defs>
+    <pattern id="sgrid" width="60" height="60" patternUnits="userSpaceOnUse">
+      <path d="M60 0H0V60" fill="none" stroke="#141926" stroke-width="1"/>
+    </pattern>
+  </defs>
+
+  <rect width="1200" height="620" rx="16" fill="#0D1017"/>
+  <rect width="1200" height="620" rx="16" fill="url(#sgrid)"/>
+  <rect x="0.5" y="0.5" width="1199" height="619" rx="15.5" fill="none" stroke="#232A38" stroke-width="1"/>
+
+  <!-- الترويسة -->
+  <text x="1140" y="62" text-anchor="end" font-family="Segoe UI, Tahoma, Noto Sans Arabic, Geeza Pro, sans-serif" font-size="28" font-weight="700" fill="#F2EFE6">المكدّس التقني</text>
+  <text x="1140" y="88" text-anchor="end" font-family="Cascadia Code, SF Mono, Menlo, Consolas, DejaVu Sans Mono, monospace" font-size="12" letter-spacing="3" fill="#8A93A3">THE STACK — WHAT THE SYSTEM ACTUALLY RUNS ON</text>
+  <rect x="54" y="50" width="9" height="9" rx="2" transform="rotate(45 58.5 54.5)" fill="#E2A93B"/>
+  <line x1="80" y1="54" x2="260" y2="54" stroke="#232A38" stroke-width="1.5"/>
+
+  <!-- الصف 1: الواجهة -->
+  <text x="1140" y="146" text-anchor="end" font-family="Segoe UI, Tahoma, Noto Sans Arabic, Geeza Pro, sans-serif" font-size="20" font-weight="700" fill="#E2A93B">الواجهة</text>
+  <text x="1140" y="166" text-anchor="end" font-family="Cascadia Code, SF Mono, Menlo, Consolas, DejaVu Sans Mono, monospace" font-size="11" letter-spacing="2" fill="#7E8798">FRONTEND</text>
+  <g>
+    <rect x="884" y="132" width="96" height="36" rx="10" fill="#12161F" stroke="#232A38" stroke-width="1"/>
+    <text x="932" y="155" text-anchor="middle" font-family="Cascadia Code, SF Mono, Menlo, Consolas, DejaVu Sans Mono, monospace" font-size="15" fill="#C7CEDB">React 19</text>
+    <rect x="762" y="132" width="114" height="36" rx="10" fill="#12161F" stroke="#232A38" stroke-width="1"/>
+    <text x="819" y="155" text-anchor="middle" font-family="Cascadia Code, SF Mono, Menlo, Consolas, DejaVu Sans Mono, monospace" font-size="15" fill="#C7CEDB">Next.js 16</text>
+    <rect x="694" y="132" width="60" height="36" rx="10" fill="#12161F" stroke="#232A38" stroke-width="1"/>
+    <text x="724" y="155" text-anchor="middle" font-family="Cascadia Code, SF Mono, Menlo, Consolas, DejaVu Sans Mono, monospace" font-size="15" fill="#C7CEDB">Vite</text>
+    <rect x="545" y="132" width="141" height="36" rx="10" fill="#12161F" stroke="#232A38" stroke-width="1"/>
+    <text x="615" y="155" text-anchor="middle" font-family="Cascadia Code, SF Mono, Menlo, Consolas, DejaVu Sans Mono, monospace" font-size="15" fill="#C7CEDB">Tailwind CSS 4</text>
+    <rect x="432" y="132" width="105" height="36" rx="10" fill="#12161F" stroke="#232A38" stroke-width="1"/>
+    <text x="484" y="155" text-anchor="middle" font-family="Cascadia Code, SF Mono, Menlo, Consolas, DejaVu Sans Mono, monospace" font-size="15" fill="#C7CEDB">shadcn/ui</text>
+    <rect x="337" y="132" width="87" height="36" rx="10" fill="#12161F" stroke="#232A38" stroke-width="1"/>
+    <text x="380" y="155" text-anchor="middle" font-family="Cascadia Code, SF Mono, Menlo, Consolas, DejaVu Sans Mono, monospace" font-size="15" fill="#C7CEDB">Zustand</text>
+    <rect x="188" y="132" width="141" height="36" rx="10" fill="#12161F" stroke="#232A38" stroke-width="1"/>
+    <text x="258" y="155" text-anchor="middle" font-family="Cascadia Code, SF Mono, Menlo, Consolas, DejaVu Sans Mono, monospace" font-size="15" fill="#C7CEDB">TanStack Query</text>
+  </g>
+
+  <!-- الصف 2: الخلفية -->
+  <text x="1140" y="238" text-anchor="end" font-family="Segoe UI, Tahoma, Noto Sans Arabic, Geeza Pro, sans-serif" font-size="20" font-weight="700" fill="#E2A93B">الخلفية</text>
+  <text x="1140" y="258" text-anchor="end" font-family="Cascadia Code, SF Mono, Menlo, Consolas, DejaVu Sans Mono, monospace" font-size="11" letter-spacing="2" fill="#7E8798">BACKEND</text>
+  <g>
+    <rect x="866" y="224" width="114" height="36" rx="10" fill="#12161F" stroke="#B98426" stroke-width="1.5"/>
+    <text x="923" y="247" text-anchor="middle" font-family="Cascadia Code, SF Mono, Menlo, Consolas, DejaVu Sans Mono, monospace" font-size="15" fill="#E2A93B">TypeScript</text>
+    <rect x="771" y="224" width="87" height="36" rx="10" fill="#12161F" stroke="#232A38" stroke-width="1"/>
+    <text x="814" y="247" text-anchor="middle" font-family="Cascadia Code, SF Mono, Menlo, Consolas, DejaVu Sans Mono, monospace" font-size="15" fill="#C7CEDB">Node.js</text>
+    <rect x="658" y="224" width="105" height="36" rx="10" fill="#12161F" stroke="#232A38" stroke-width="1"/>
+    <text x="710" y="247" text-anchor="middle" font-family="Cascadia Code, SF Mono, Menlo, Consolas, DejaVu Sans Mono, monospace" font-size="15" fill="#C7CEDB">Express 5</text>
+    <rect x="563" y="224" width="87" height="36" rx="10" fill="#12161F" stroke="#232A38" stroke-width="1"/>
+    <text x="606" y="247" text-anchor="middle" font-family="Cascadia Code, SF Mono, Menlo, Consolas, DejaVu Sans Mono, monospace" font-size="15" fill="#C7CEDB">FastAPI</text>
+    <rect x="477" y="224" width="78" height="36" rx="10" fill="#12161F" stroke="#232A38" stroke-width="1"/>
+    <text x="516" y="247" text-anchor="middle" font-family="Cascadia Code, SF Mono, Menlo, Consolas, DejaVu Sans Mono, monospace" font-size="15" fill="#C7CEDB">Python</text>
+    <rect x="364" y="224" width="105" height="36" rx="10" fill="#12161F" stroke="#232A38" stroke-width="1"/>
+    <text x="416" y="247" text-anchor="middle" font-family="Cascadia Code, SF Mono, Menlo, Consolas, DejaVu Sans Mono, monospace" font-size="15" fill="#C7CEDB">Socket.IO</text>
+    <rect x="305" y="224" width="51" height="36" rx="10" fill="#12161F" stroke="#232A38" stroke-width="1"/>
+    <text x="330" y="247" text-anchor="middle" font-family="Cascadia Code, SF Mono, Menlo, Consolas, DejaVu Sans Mono, monospace" font-size="15" fill="#C7CEDB">Zod</text>
+  </g>
+
+  <!-- الصف 3: البيانات -->
+  <text x="1140" y="330" text-anchor="end" font-family="Segoe UI, Tahoma, Noto Sans Arabic, Geeza Pro, sans-serif" font-size="20" font-weight="700" fill="#E2A93B">البيانات</text>
+  <text x="1140" y="350" text-anchor="end" font-family="Cascadia Code, SF Mono, Menlo, Consolas, DejaVu Sans Mono, monospace" font-size="11" letter-spacing="2" fill="#7E8798">DATA</text>
+  <g>
+    <rect x="866" y="316" width="114" height="36" rx="10" fill="#12161F" stroke="#232A38" stroke-width="1"/>
+    <text x="923" y="339" text-anchor="middle" font-family="Cascadia Code, SF Mono, Menlo, Consolas, DejaVu Sans Mono, monospace" font-size="15" fill="#C7CEDB">PostgreSQL</text>
+    <rect x="780" y="316" width="78" height="36" rx="10" fill="#12161F" stroke="#232A38" stroke-width="1"/>
+    <text x="819" y="339" text-anchor="middle" font-family="Cascadia Code, SF Mono, Menlo, Consolas, DejaVu Sans Mono, monospace" font-size="15" fill="#C7CEDB">Prisma</text>
+    <rect x="694" y="316" width="78" height="36" rx="10" fill="#12161F" stroke="#232A38" stroke-width="1"/>
+    <text x="733" y="339" text-anchor="middle" font-family="Cascadia Code, SF Mono, Menlo, Consolas, DejaVu Sans Mono, monospace" font-size="15" fill="#C7CEDB">Drizzle</text>
+    <rect x="608" y="316" width="78" height="36" rx="10" fill="#12161F" stroke="#232A38" stroke-width="1"/>
+    <text x="647" y="339" text-anchor="middle" font-family="Cascadia Code, SF Mono, Menlo, Consolas, DejaVu Sans Mono, monospace" font-size="15" fill="#C7CEDB">SQLite</text>
+    <rect x="531" y="316" width="69" height="36" rx="10" fill="#12161F" stroke="#232A38" stroke-width="1"/>
+    <text x="565" y="339" text-anchor="middle" font-family="Cascadia Code, SF Mono, Menlo, Consolas, DejaVu Sans Mono, monospace" font-size="15" fill="#C7CEDB">Redis</text>
+    <rect x="427" y="316" width="96" height="36" rx="10" fill="#12161F" stroke="#232A38" stroke-width="1"/>
+    <text x="475" y="339" text-anchor="middle" font-family="Cascadia Code, SF Mono, Menlo, Consolas, DejaVu Sans Mono, monospace" font-size="15" fill="#C7CEDB">pgvector</text>
+  </g>
+
+  <!-- الصف 4: الجوال -->
+  <text x="1140" y="422" text-anchor="end" font-family="Segoe UI, Tahoma, Noto Sans Arabic, Geeza Pro, sans-serif" font-size="20" font-weight="700" fill="#E2A93B">الجوال</text>
+  <text x="1140" y="442" text-anchor="end" font-family="Cascadia Code, SF Mono, Menlo, Consolas, DejaVu Sans Mono, monospace" font-size="11" letter-spacing="2" fill="#7E8798">MOBILE</text>
+  <g>
+    <rect x="848" y="408" width="132" height="36" rx="10" fill="#12161F" stroke="#232A38" stroke-width="1"/>
+    <text x="914" y="431" text-anchor="middle" font-family="Cascadia Code, SF Mono, Menlo, Consolas, DejaVu Sans Mono, monospace" font-size="15" fill="#C7CEDB">React Native</text>
+    <rect x="780" y="408" width="60" height="36" rx="10" fill="#12161F" stroke="#232A38" stroke-width="1"/>
+    <text x="810" y="431" text-anchor="middle" font-family="Cascadia Code, SF Mono, Menlo, Consolas, DejaVu Sans Mono, monospace" font-size="15" fill="#C7CEDB">Expo</text>
+    <rect x="667" y="408" width="105" height="36" rx="10" fill="#12161F" stroke="#232A38" stroke-width="1"/>
+    <text x="719" y="431" text-anchor="middle" font-family="Cascadia Code, SF Mono, Menlo, Consolas, DejaVu Sans Mono, monospace" font-size="15" fill="#C7CEDB">EAS Build</text>
+  </g>
+
+  <!-- الصف 5: التشغيل -->
+  <text x="1140" y="514" text-anchor="end" font-family="Segoe UI, Tahoma, Noto Sans Arabic, Geeza Pro, sans-serif" font-size="20" font-weight="700" fill="#E2A93B">التشغيل</text>
+  <text x="1140" y="534" text-anchor="end" font-family="Cascadia Code, SF Mono, Menlo, Consolas, DejaVu Sans Mono, monospace" font-size="11" letter-spacing="2" fill="#7E8798">OPS AND INFRA</text>
+  <g>
+    <rect x="902" y="500" width="78" height="36" rx="10" fill="#12161F" stroke="#232A38" stroke-width="1"/>
+    <text x="941" y="523" text-anchor="middle" font-family="Cascadia Code, SF Mono, Menlo, Consolas, DejaVu Sans Mono, monospace" font-size="15" fill="#C7CEDB">Docker</text>
+    <rect x="807" y="500" width="87" height="36" rx="10" fill="#12161F" stroke="#232A38" stroke-width="1"/>
+    <text x="850" y="523" text-anchor="middle" font-family="Cascadia Code, SF Mono, Menlo, Consolas, DejaVu Sans Mono, monospace" font-size="15" fill="#C7CEDB">Coolify</text>
+    <rect x="721" y="500" width="78" height="36" rx="10" fill="#12161F" stroke="#232A38" stroke-width="1"/>
+    <text x="760" y="523" text-anchor="middle" font-family="Cascadia Code, SF Mono, Menlo, Consolas, DejaVu Sans Mono, monospace" font-size="15" fill="#C7CEDB">Vercel</text>
+    <rect x="635" y="500" width="78" height="36" rx="10" fill="#12161F" stroke="#232A38" stroke-width="1"/>
+    <text x="674" y="523" text-anchor="middle" font-family="Cascadia Code, SF Mono, Menlo, Consolas, DejaVu Sans Mono, monospace" font-size="15" fill="#C7CEDB">Render</text>
+    <rect x="477" y="500" width="150" height="36" rx="10" fill="#12161F" stroke="#232A38" stroke-width="1"/>
+    <text x="552" y="523" text-anchor="middle" font-family="Cascadia Code, SF Mono, Menlo, Consolas, DejaVu Sans Mono, monospace" font-size="15" fill="#C7CEDB">GitHub Actions</text>
+    <rect x="391" y="500" width="78" height="36" rx="10" fill="#12161F" stroke="#232A38" stroke-width="1"/>
+    <text x="430" y="523" text-anchor="middle" font-family="Cascadia Code, SF Mono, Menlo, Consolas, DejaVu Sans Mono, monospace" font-size="15" fill="#C7CEDB">Sentry</text>
+    <rect x="278" y="500" width="105" height="36" rx="10" fill="#12161F" stroke="#232A38" stroke-width="1"/>
+    <text x="330" y="523" text-anchor="middle" font-family="Cascadia Code, SF Mono, Menlo, Consolas, DejaVu Sans Mono, monospace" font-size="15" fill="#C7CEDB">Playwright</text>
+    <rect x="192" y="500" width="78" height="36" rx="10" fill="#12161F" stroke="#232A38" stroke-width="1"/>
+    <text x="231" y="523" text-anchor="middle" font-family="Cascadia Code, SF Mono, Menlo, Consolas, DejaVu Sans Mono, monospace" font-size="15" fill="#C7CEDB">Vitest</text>
+    <rect x="106" y="500" width="78" height="36" rx="10" fill="#12161F" stroke="#232A38" stroke-width="1"/>
+    <text x="145" y="523" text-anchor="middle" font-family="Cascadia Code, SF Mono, Menlo, Consolas, DejaVu Sans Mono, monospace" font-size="15" fill="#C7CEDB">pytest</text>
+  </g>
+
+  <!-- تذييل -->
+  <line x1="48" y1="566" x2="1152" y2="566" stroke="#232A38" stroke-width="1"/>
+  <text x="600" y="596" text-anchor="middle" font-family="Segoe UI, Tahoma, Noto Sans Arabic, Geeza Pro, sans-serif" font-size="15" fill="#8A93A3">تقنيات موثّقة في مستودعات المشاريع المنشورة — لا شيء هنا للزينة</text>
+</svg>

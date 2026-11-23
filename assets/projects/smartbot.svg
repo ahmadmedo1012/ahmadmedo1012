@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="560" height="300" viewBox="0 0 560 300" role="img">
+  <title>سمارت بوت — بوت ماسنجر وأتمتة لصفحات فيسبوك</title>
+  <rect width="560" height="300" rx="14" fill="#0D1017" stroke="#232A38" stroke-width="1"/>
+  <rect x="44" y="44" width="72" height="72" rx="16" fill="#12161F" stroke="#232A38" stroke-width="1"/>
+  <g transform="translate(80 82)">
+    <path d="M-12 -6 L-6 -12 L6 -12 L12 -6 L12 6 L6 12 L-6 12 L-12 6 Z" fill="none" stroke="#56E2F2" stroke-width="3" stroke-linejoin="round"/>
+    <circle cx="-4.5" cy="-1" r="2.3" fill="#56E2F2"/>
+    <circle cx="4.5" cy="-1" r="2.3" fill="#56E2F2"/>
+    <line x1="0" y1="-12" x2="0" y2="-17" stroke="#56E2F2" stroke-width="3" stroke-linecap="round"/>
+    <circle cx="0" cy="-19.5" r="2.2" fill="#56E2F2"/>
+  </g>
+  <text x="516" y="78" text-anchor="end" font-family="Segoe UI, Tahoma, Noto Sans Arabic, Geeza Pro, sans-serif" font-size="34" font-weight="700" fill="#F2EFE6">سمارت بوت</text>
+  <text x="516" y="104" text-anchor="end" font-family="Cascadia Code, SF Mono, Menlo, Consolas, DejaVu Sans Mono, monospace" font-size="14" letter-spacing="3" fill="#8A93A3">SMARTBOT</text>
+  <rect x="456" y="116" width="60" height="3" rx="1.5" fill="#56E2F2"/>
+  <text x="516" y="158" text-anchor="end" font-family="Segoe UI, Tahoma, Noto Sans Arabic, Geeza Pro, sans-serif" font-size="17" fill="#C7CEDB">بوت ماسنجر وأتمتة لصفحات فيسبوك للسوق الليبي</text>
+  <text x="516" y="184" text-anchor="end" font-family="Segoe UI, Tahoma, Noto Sans Arabic, Geeza Pro, sans-serif" font-size="17" fill="#C7CEDB">ردود تلقائية، بثّ وتسويق، مدفوعات ليبية</text>
+  <text x="516" y="222" text-anchor="end" font-family="Cascadia Code, SF Mono, Menlo, Consolas, DejaVu Sans Mono, monospace" font-size="13" fill="#8A93A3">Python · FastAPI · Next.js 16 · Expo</text>
+  <line x1="36" y1="246" x2="524" y2="246" stroke="#232A38" stroke-width="1"/>
+  <text x="524" y="272" text-anchor="end" font-family="Cascadia Code, SF Mono, Menlo, Consolas, DejaVu Sans Mono, monospace" font-size="13" fill="#9AA3B5">bot.smart-link.ly</text>
+  <text x="36" y="272" text-anchor="start" font-family="Segoe UI, Tahoma, Noto Sans Arabic, Geeza Pro, sans-serif" font-size="13" fill="#7E8798">المشروع الكامل على GitHub</text>
+</svg>

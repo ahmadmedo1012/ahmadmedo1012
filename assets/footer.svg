@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="240" viewBox="0 0 1200 240" role="img">
+  <title>شكرًا لزيارتك</title>
+  <defs>
+    <pattern id="fgrid" width="60" height="60" patternUnits="userSpaceOnUse">
+      <path d="M60 0H0V60" fill="none" stroke="#141926" stroke-width="1"/>
+    </pattern>
+  </defs>
+
+  <rect width="1200" height="240" rx="16" fill="#0D1017"/>
+  <rect width="1200" height="240" rx="16" fill="url(#fgrid)"/>
+  <rect x="0.5" y="0.5" width="1199" height="239" rx="15.5" fill="none" stroke="#232A38" stroke-width="1"/>
+
+  <!-- شبكة العقد: المنظومة المصغّرة -->
+  <g stroke="#2A3242" stroke-width="1">
+    <line x1="582" y1="44" x2="600" y2="44"/>
+    <line x1="600" y1="44" x2="618" y2="44"/>
+    <line x1="582" y1="62" x2="600" y2="62"/>
+    <line x1="600" y1="62" x2="618" y2="62"/>
+    <line x1="582" y1="80" x2="600" y2="80"/>
+    <line x1="600" y1="80" x2="618" y2="80"/>
+    <line x1="582" y1="44" x2="582" y2="62"/>
+    <line x1="582" y1="62" x2="582" y2="80"/>
+    <line x1="600" y1="44" x2="600" y2="62"/>
+    <line x1="600" y1="62" x2="600" y2="80"/>
+    <line x1="618" y1="44" x2="618" y2="62"/>
+    <line x1="618" y1="62" x2="618" y2="80"/>
+  </g>
+  <g fill="#5C6577">
+    <circle cx="582" cy="44" r="2.5"/>
+    <circle cx="600" cy="44" r="2.5"/>
+    <circle cx="618" cy="44" r="2.5"/>
+    <circle cx="582" cy="62" r="2.5"/>
+    <circle cx="618" cy="62" r="2.5"/>
+    <circle cx="582" cy="80" r="2.5"/>
+    <circle cx="600" cy="80" r="2.5"/>
+    <circle cx="618" cy="80" r="2.5"/>
+  </g>
+  <rect x="596" y="58" width="8" height="8" rx="2" transform="rotate(45 600 62)" fill="#E2A93B"/>
+
+  <text x="600" y="136" text-anchor="middle" font-family="Segoe UI, Tahoma, Noto Sans Arabic, Geeza Pro, sans-serif" font-size="34" font-weight="700" fill="#F2EFE6">شكرًا لزيارتك</text>
+  <text x="600" y="162" text-anchor="middle" font-family="Cascadia Code, SF Mono, Menlo, Consolas, DejaVu Sans Mono, monospace" font-size="12" letter-spacing="4" fill="#8A93A3">THANKS FOR STOPPING BY</text>
+  <text x="600" y="196" text-anchor="middle" font-family="Segoe UI, Tahoma, Noto Sans Arabic, Geeza Pro, sans-serif" font-size="17" fill="#9AA3B5">«كلُّ عملٍ يبدأ رابطًا ويصبح منظومةً»</text>
+  <text x="600" y="220" text-anchor="middle" font-family="Cascadia Code, SF Mono, Menlo, Consolas, DejaVu Sans Mono, monospace" font-size="11" letter-spacing="2" fill="#5C6577">ahmadmedo1012 · LIBYA</text>
+</svg>

@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="560" height="300" viewBox="0 0 560 300" role="img">
+  <title>سب نيشن — سوق الاشتراكات الرقمية</title>
+  <rect width="560" height="300" rx="14" fill="#0D1017" stroke="#232A38" stroke-width="1"/>
+  <rect x="44" y="44" width="72" height="72" rx="16" fill="#12161F" stroke="#232A38" stroke-width="1"/>
+  <g transform="translate(80 80)">
+    <rect x="-14" y="-13" width="28" height="8" rx="3" fill="none" stroke="#34D399" stroke-width="3"/>
+    <rect x="-14" y="-4" width="28" height="8" rx="3" fill="none" stroke="#34D399" stroke-width="3"/>
+    <rect x="-14" y="5" width="28" height="8" rx="3" fill="#34D399"/>
+  </g>
+  <text x="516" y="78" text-anchor="end" font-family="Segoe UI, Tahoma, Noto Sans Arabic, Geeza Pro, sans-serif" font-size="34" font-weight="700" fill="#F2EFE6">سب نيشن</text>
+  <text x="516" y="104" text-anchor="end" font-family="Cascadia Code, SF Mono, Menlo, Consolas, DejaVu Sans Mono, monospace" font-size="14" letter-spacing="3" fill="#8A93A3">SUBNATION</text>
+  <rect x="456" y="116" width="60" height="3" rx="1.5" fill="#34D399"/>
+  <text x="516" y="158" text-anchor="end" font-family="Segoe UI, Tahoma, Noto Sans Arabic, Geeza Pro, sans-serif" font-size="17" fill="#C7CEDB">سوق الاشتراكات الرقمية عربية-أولًا</text>
+  <text x="516" y="184" text-anchor="end" font-family="Segoe UI, Tahoma, Noto Sans Arabic, Geeza Pro, sans-serif" font-size="17" fill="#C7CEDB">دخول بلا كلمة مرور، محفظة، تسليم فوري مشفّر</text>
+  <text x="516" y="222" text-anchor="end" font-family="Cascadia Code, SF Mono, Menlo, Consolas, DejaVu Sans Mono, monospace" font-size="13" fill="#8A93A3">React 19 · Express 5 · Drizzle · Postgres</text>
+  <line x1="36" y1="246" x2="524" y2="246" stroke="#232A38" stroke-width="1"/>
+  <text x="524" y="272" text-anchor="end" font-family="Cascadia Code, SF Mono, Menlo, Consolas, DejaVu Sans Mono, monospace" font-size="13" fill="#9AA3B5">subnation.ly</text>
+  <text x="36" y="272" text-anchor="start" font-family="Segoe UI, Tahoma, Noto Sans Arabic, Geeza Pro, sans-serif" font-size="13" fill="#7E8798">المشروع الكامل على GitHub</text>
+</svg>

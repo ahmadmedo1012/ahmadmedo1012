@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="32" viewBox="0 0 1200 32" role="img">
+  <title>فاصل</title>
+  <line x1="60" y1="16" x2="574" y2="16" stroke="#232A38" stroke-width="1.5"/>
+  <line x1="626" y1="16" x2="1140" y2="16" stroke="#232A38" stroke-width="1.5"/>
+  <rect x="596" y="12" width="8" height="8" rx="2" transform="rotate(45 600 16)" fill="#E2A93B"/>
+  <rect x="572" y="14" width="4" height="4" rx="1" transform="rotate(45 574 16)" fill="#5C6577"/>
+  <rect x="624" y="14" width="4" height="4" rx="1" transform="rotate(45 626 16)" fill="#5C6577"/>
+</svg>

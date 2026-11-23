@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="560" height="300" viewBox="0 0 560 300" role="img">
+  <title>سمارت أوردر — متجر رقمي وطلبات وتوصيل للأعمال</title>
+  <rect width="560" height="300" rx="14" fill="#0D1017" stroke="#232A38" stroke-width="1"/>
+  <rect x="44" y="44" width="72" height="72" rx="16" fill="#12161F" stroke="#232A38" stroke-width="1"/>
+  <g transform="translate(80 80)">
+    <path d="M-14 12 Q-3 12 -3 0 Q-3 -12 8 -12" fill="none" stroke="#FF7A38" stroke-width="3.5" stroke-linecap="round" stroke-dasharray="0.5 8"/>
+    <circle cx="-14" cy="12" r="3" fill="none" stroke="#FF7A38" stroke-width="2.5"/>
+    <circle cx="10" cy="-12" r="4" fill="#FF7A38"/>
+  </g>
+  <text x="516" y="78" text-anchor="end" font-family="Segoe UI, Tahoma, Noto Sans Arabic, Geeza Pro, sans-serif" font-size="34" font-weight="700" fill="#F2EFE6">سمارت أوردر</text>
+  <text x="516" y="104" text-anchor="end" font-family="Cascadia Code, SF Mono, Menlo, Consolas, DejaVu Sans Mono, monospace" font-size="14" letter-spacing="3" fill="#8A93A3">SMART ORDER</text>
+  <rect x="456" y="116" width="60" height="3" rx="1.5" fill="#FF7A38"/>
+  <text x="516" y="158" text-anchor="end" font-family="Segoe UI, Tahoma, Noto Sans Arabic, Geeza Pro, sans-serif" font-size="17" fill="#C7CEDB">متجر رقمي وطلبات وتوصيل للأعمال</text>
+  <text x="516" y="184" text-anchor="end" font-family="Segoe UI, Tahoma, Noto Sans Arabic, Geeza Pro, sans-serif" font-size="17" fill="#C7CEDB">آلة حالات طلبات، مناطق توصيل، مدفوعات محلية</text>
+  <text x="516" y="222" text-anchor="end" font-family="Cascadia Code, SF Mono, Menlo, Consolas, DejaVu Sans Mono, monospace" font-size="13" fill="#8A93A3">Next.js 16 · Prisma · React 19 · Expo</text>
+  <line x1="36" y1="246" x2="524" y2="246" stroke="#232A38" stroke-width="1"/>
+  <text x="524" y="272" text-anchor="end" font-family="Cascadia Code, SF Mono, Menlo, Consolas, DejaVu Sans Mono, monospace" font-size="13" fill="#9AA3B5">order.smart-link.ly</text>
+  <text x="36" y="272" text-anchor="start" font-family="Segoe UI, Tahoma, Noto Sans Arabic, Geeza Pro, sans-serif" font-size="13" fill="#7E8798">المشروع الكامل على GitHub</text>
+</svg>
