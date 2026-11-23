@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 /**
- * LIVE SVG ENGINE — ahmadmedo1012 profile (dual-theme)
- * -----------------------------------------------------
+ * LIVE SVG ENGINE — ahmadmedo1012 profile (dual-theme)  ·  v3 "MONO + AMBER"
+ * --------------------------------------------------------------------------
  * Pulls real data from the GitHub API and generates animated SVG assets
  * (SMIL — survives GitHub camo proxying) in TWO theme variants with a
  * TRANSPARENT canvas:
@@ -15,6 +15,7 @@
  *   - Every number is LIVE — never hand-written.
  *   - Transparent canvas; panels float on the GitHub background.
  *   - Graceful degradation: base state = final state (correct at t=0).
+ *   - ONE accent (amber). Indicators are table-precise and column-aligned.
  *   - Theme variants are switched via #gh-dark-mode-only / #gh-light-mode-only.
  *
  * Env:
@@ -59,6 +60,13 @@ function odo(str, cx, y, t, o = {}) {
   return { defs, body };
 }
 
+/* ---------- shared panel header: title right (ar) · live chip left ---------- */
+function panelHeader(t, title, left) {
+  return `<text x="1176" y="36" text-anchor="end" font-family="${AR}" font-size="19" font-weight="700" fill="${t.ink}">${title}</text>
+  <circle cx="28" cy="32" r="4" fill="${t.amber}"><animate attributeName="opacity" values="1;.2;1" dur="1.8s" repeatCount="indefinite"/></circle>
+  <text x="42" y="36" font-family="${MONO}" font-size="12.5" letter-spacing="0.5" fill="${t.dim}" direction="ltr">${left}</text>`;
+}
+
 function doc(W, Hh, defs, body, label, t) {
   return `<svg xmlns="http://www.w3.org/2000/svg" width="${W}" height="${Hh}" viewBox="0 0 ${W} ${Hh}" role="img" aria-label="${esc(label)}">
 <title>${esc(label)}</title>
@@ -85,8 +93,8 @@ async function graphql() {
       name description stargazerCount forkCount pushedAt
       primaryLanguage{name}
       languages(first:8,orderBy:{field:SIZE,direction:DESC}){edges{size node{name}}}
-    } }
-  } }`;
+    } } }
+  }`;
   const data = await j('https://api.github.com/graphql', {
     method: 'POST', body: JSON.stringify({ query, variables: { u: USER } }),
     headers: { 'Content-Type': 'application/json' },
@@ -114,32 +122,39 @@ async function restFallback() {
 
 /* ============================ STATS ============================ */
 function statsSVG(m, t) {
-  const W = 1200, pad = 24, gap = 13, headerH = 54, th = 164, ty = headerH + 14;
+  const W = 1200, pad = 24, gap = 14, headerH = 54, th = 168, ty = headerH + 14;
   const tiles = [
     { ar: 'إجمالي النجوم', en: 'TOTAL STARS', v: m.stars },
     { ar: 'إجمالي الفروع', en: 'TOTAL FORKS', v: m.forks },
     { ar: 'المتابعون', en: 'FOLLOWERS', v: m.followers },
     { ar: 'المستودعات', en: 'PUBLIC REPOS', v: m.repos },
   ];
-  if (m.contributions != null) tiles.push({ ar: 'مساهمات هذه السنة', en: 'CONTRIBUTIONS · 1Y', v: m.contributions });
+  if (m.contributions != null) tiles.push({ ar: 'مساهمات هذه السنة', en: 'CONTRIBUTIONS · 1Y', v: m.contributions, spark: true });
   if (m.streak != null) tiles.push({ ar: 'السلسلة الحالية', en: 'CURRENT STREAK', v: m.streak });
   const tw = +(((W - pad * 2 - gap * (tiles.length - 1)) / tiles.length).toFixed(1));
   const Hh = headerH + 14 + th + 24;
   let defs = '', body = '';
 
-  body += `<text x="${W - pad}" y="35" text-anchor="end" font-family="${AR}" font-size="19" font-weight="700" fill="${t.ink}">القياسات الحيّة</text>`;
-  body += `<circle cx="${pad + 4}" cy="31" r="4" fill="${t.amber}"><animate attributeName="opacity" values="1;.2;1" dur="1.6s" repeatCount="indefinite"/></circle>`;
-  body += `<text x="${pad + 18}" y="35" font-family="${MONO}" font-size="12.5" fill="${t.dim}">SYNC ${m.date} · EVERY 6H</text>`;
+  body += panelHeader(t, 'القياسات الحيّة', `SYNC ${m.date} · EVERY 6H`);
 
   tiles.forEach((tl, i) => {
     const x = pad + i * (tw + gap);
     body += `<g opacity="1"><animate attributeName="opacity" values="0;1" begin="${(0.05 + i * 0.09).toFixed(2)}s" dur="0.45s" fill="freeze"/>`;
     body += `<rect x="${x}" y="${ty}" width="${tw}" height="${th}" rx="12" fill="${t.card}" stroke="${t.line}" filter="url(#lift)"/>`;
-    body += `<text x="${x + tw / 2}" y="${ty + 32}" text-anchor="middle" font-family="${AR}" font-size="13.5" fill="${t.mute}">${tl.ar}</text>`;
-    const od = odo(tl.v, x + tw / 2, ty + 104, t, { size: 36, color: t.amber, begin: 0.4 + i * 0.1 });
+    body += `<text x="${x + tw / 2}" y="${ty + 30}" text-anchor="middle" font-family="${AR}" font-size="13.5" fill="${t.mute}">${tl.ar}</text>`;
+    const od = odo(tl.v, x + tw / 2, ty + 96, t, { size: 36, color: t.amber, begin: 0.4 + i * 0.1 });
     defs += od.defs; body += od.body;
-    body += `<text x="${x + tw / 2}" y="${ty + 132}" text-anchor="middle" font-family="${MONO}" font-size="8.5" letter-spacing="1.2" fill="${t.dim}">${tl.en}</text>`;
-    body += `<line x1="${x + 18}" y1="${ty + th - 15}" x2="${x + tw - 18}" y2="${ty + th - 15}" stroke="${t.amberDim}" stroke-width="1.5" stroke-dasharray="5 7"><animate attributeName="stroke-dashoffset" from="0" to="-24" dur="1.6s" repeatCount="indefinite"/></line>`;
+    body += `<text x="${x + tw / 2}" y="${ty + 128}" text-anchor="middle" font-family="${MONO}" font-size="8.5" letter-spacing="1.2" fill="${t.dim}">${tl.en}</text>`;
+    if (tl.spark && m.weeks12) {
+      /* 12-week sparkline under the number */
+      const vals = m.weeks12, max = Math.max(...vals, 1);
+      const bw = 8, pitch = (tw - 36 - bw) / (vals.length - 1), by = ty + th - 14;
+      vals.forEach((v, k) => {
+        const h = Math.max(2, Math.round(18 * v / max));
+        body += `<rect x="${(x + 18 + k * pitch).toFixed(1)}" y="${by - h}" width="${bw}" height="${h}" rx="1.5" fill="${t.amber}" opacity="${k === vals.length - 1 ? 1 : 0.55}"/>`;
+      });
+      body += `<line x1="${x + 18}" y1="${by + 3}" x2="${x + tw - 18}" y2="${by + 3}" stroke="${t.amberDim}" stroke-width="1"/>`;
+    }
     body += `</g>`;
   });
   return { W, H: Hh, defs, body, label: 'قياسات GitHub الحية لأحمد رضوان — نجوم وفروع ومتابعون ومساهمات' };
@@ -150,14 +165,13 @@ function heatmapSVG(m, t) {
   const W = 1200, headerH = 54;
   const weeks = m.weeks;
   const nW = weeks.length;
-  const pitch = 13.5, cell = 11.5, x0 = +(((W - nW * pitch) / 2).toFixed(1)), y0 = 84;
+  const pitch = 13.5, cell = 11, x0 = 64, y0 = 88;
   const rowsH = 7 * pitch;
-  const Hh = headerH + 30 + rowsH + 34;
+  const Hh = 220;
   let defs = '', body = '';
 
-  body += `<text x="${W - 24}" y="35" text-anchor="end" font-family="${AR}" font-size="19" font-weight="700" fill="${t.ink}">خريطة المساهمات — آخر 365 يومًا</text>`;
-  body += `<text x="24" y="30" font-family="${MONO}" font-size="10.5" letter-spacing="1.5" fill="${t.dim}">365D TOTAL</text>`;
-  const od = odo(m.contributions, 44, 52, t, { size: 21, begin: 0.4 });
+  body += panelHeader(t, 'خريطة المساهمات — آخر 365 يومًا', '365D WINDOW');
+  const od = odo(m.contributions, 52, 52, t, { size: 20, begin: 0.4 });
   defs += od.defs; body += od.body;
 
   /* month labels */
@@ -169,8 +183,14 @@ function heatmapSVG(m, t) {
     const mo = new Date(d.date + 'T00:00:00Z').getUTCMonth();
     if (mo !== lastMonth) {
       lastMonth = mo;
-      body += `<text x="${(x0 + i * pitch).toFixed(1)}" y="${headerH + 14}" font-family="${MONO}" font-size="9" fill="${t.dim}">${months[mo]}</text>`;
+      body += `<text x="${(x0 + i * pitch).toFixed(1)}" y="${headerH + 24}" font-family="${MONO}" font-size="9" fill="${t.dim}">${months[mo]}</text>`;
     }
+  });
+
+  /* weekday labels */
+  ['M', 'W', 'F'].forEach((d, k) => {
+    const r = k * 2 + 1;
+    body += `<text x="56" y="${(y0 + r * pitch + 8.5).toFixed(1)}" text-anchor="end" font-family="${MONO}" font-size="9" fill="${t.dim}">${d}</text>`;
   });
 
   const lvl = c => c === 0 ? t.heatZero : c < 3 ? t.heat[1] : c < 6 ? t.heat[2] : c < 10 ? t.heat[3] : t.heat[4];
@@ -189,7 +209,7 @@ function heatmapSVG(m, t) {
   });
 
   /* scanning band sweeping across the year */
-  body += `<rect x="${(x0 - 34).toFixed(1)}" y="${y0 - 5}" width="24" height="${(rowsH + 10).toFixed(1)}" fill="${t.amber}" opacity="${t.name === 'dark' ? 0.08 : 0.12}"><animateTransform attributeName="transform" type="translate" values="0 0;${(nW * pitch + 70).toFixed(1)} 0" dur="7.5s" repeatCount="indefinite"/></rect>`;
+  body += `<rect x="${(x0 - 24).toFixed(1)}" y="${y0 - 5}" width="16" height="${(rowsH + 10).toFixed(1)}" fill="${t.amber}" opacity="${t.name === 'dark' ? 0.07 : 0.1}"><animateTransform attributeName="transform" type="translate" values="0 0;${(nW * pitch + 50).toFixed(1)} 0" dur="9s" repeatCount="indefinite"/></rect>`;
 
   /* legend */
   const lg = t.heat;
@@ -202,97 +222,92 @@ function heatmapSVG(m, t) {
   return { W, H: Hh, defs, body, label: 'خريطة مساهمات أحمد رضوان لآخر 365 يومًا — بيانات حية' };
 }
 
-/* ============================ PROJECTS ============================ */
+/* ============================ PROJECTS (leaderboard) ============================ */
 function projectsSVG(repos, t) {
   const n = repos.length; if (!n) return null;
-  const per = Math.min(4, n), rows = Math.ceil(n / per);
-  const W = 1200, pad = 24, gap = 16, headerH = 56;
-  const cw = Math.floor((W - pad * 2 - gap * (per - 1)) / per), ch = 178;
-  const Hh = headerH + 14 + rows * (ch + gap) + 10;
+  const W = 1200, headerH = 54, rowH = 54, top = headerH + 30;
+  const Hh = top + n * rowH + 16;
   let defs = '', body = '';
 
-  body += `<text x="${W - pad}" y="36" text-anchor="end" font-family="${AR}" font-size="19" font-weight="700" fill="${t.ink}">المشاريع — نجوم وفروع حيّة</text>`;
-  body += `<circle cx="${pad + 4}" cy="32" r="4" fill="${t.amber}"><animate attributeName="opacity" values="1;.2;1" dur="1.6s" repeatCount="indefinite"/></circle>`;
-  body += `<text x="${pad + 18}" y="36" font-family="${MONO}" font-size="12.5" fill="${t.dim}">${n} REPOS · AUTO-SYNC 6H</text>`;
+  body += panelHeader(t, 'لوحة المشاريع — حيّة من GitHub', `${n} REPOS · AUTO-SYNC 6H`);
 
-  const STAR = (x, y, i) => `<g transform="translate(${x} ${y})"><path d="M6 .9l1.5 3.1 3.4.5-2.5 2.4.6 3.4L6 8.7 3 10.3l.6-3.4L1.1 4.5l3.4-.5z" fill="${t.amber}"><animate attributeName="opacity" values="1;.45;1" dur="3s" begin="${(i * 0.37).toFixed(2)}s" repeatCount="indefinite"/></path></g>`;
-  const FORK = (x, y) => `<g transform="translate(${x} ${y})" stroke="${t.mute}" stroke-width="1.5" fill="none"><path d="M6 8V3"/><path d="M6 8c0 1.5 2.6 1.2 2.6 2.9M6 8c0 1.5-2.6 1.2-2.6 2.9"/></g><g transform="translate(${x} ${y})" fill="${t.mute}"><circle cx="6" cy="2" r="1.8"/><circle cx="8.6" cy="11" r="1.8"/><circle cx="3.4" cy="11" r="1.8"/></g>`;
+  /* column headers — right-aligned like the data, glyph columns centered over their span */
+  const cols = [
+    { x: 1104, ar: 'المشروع', anchor: 'end' }, { x: 870, ar: 'اللغة', anchor: 'end' },
+    { x: 715, ar: 'آخر دفع', anchor: 'end' }, { x: 565, ar: 'الحالة', anchor: 'end' },
+    { x: 380, ar: 'النجوم', anchor: 'middle' }, { x: 240, ar: 'الفروع', anchor: 'middle' },
+  ];
+  cols.forEach(c => {
+    body += `<text x="${c.x}" y="${headerH + 16}" text-anchor="${c.anchor}" font-family="${AR}" font-size="12" fill="${t.mute}">${c.ar}</text>`;
+  });
+  body += `<line x1="32" y1="${headerH + 26}" x2="1168" y2="${headerH + 26}" stroke="${t.line}" stroke-width="1.2"/>`;
+
+  const STAR = (x, y, i) => `<path transform="translate(${x} ${y})" d="M6 .9l1.5 3.1 3.4.5-2.5 2.4.6 3.4L6 8.7 3 10.3l.6-3.4L1.1 4.5l3.4-.5z" fill="${t.amber}"><animate attributeName="opacity" values="1;.45;1" dur="3s" begin="${(i * 0.4).toFixed(2)}s" repeatCount="indefinite"/></path>`;
+  const FORK = (x, y) => `<g transform="translate(${x} ${y})" stroke="${t.mute}" stroke-width="1.3" fill="none"><path d="M4 8V3.2"/><path d="M4 8c0 1.6 3.4 1.3 3.4 3.1M4 8c0 1.6-3.4 1.3-3.4 3.1"/></g><g transform="translate(${x} ${y})" fill="${t.mute}"><circle cx="4" cy="2.2" r="1.7"/><circle cx="7.4" cy="11.4" r="1.7"/><circle cx="0.6" cy="11.4" r="1.7"/></g>`;
+
+  const rel = days => days < 1 ? 'today' : days < 7 ? `${days}d` : days < 30 ? `${Math.round(days / 7)}w` : `${Math.round(days / 30)}mo`;
 
   repos.forEach((r, i) => {
-    const col = i % per, row = Math.floor(i / per);
-    const x = pad + col * (cw + gap), y = headerH + 14 + row * (ch + gap);
-    const clip = `pj${uid++}`;
-    defs += `<clipPath id="${clip}"><rect x="${x}" y="${y}" width="${cw}" height="${ch}" rx="12"/></clipPath>`;
-
+    const y = top + i * rowH, base = y + 34;
     body += `<g opacity="1"><animate attributeName="opacity" values="0;1" begin="${(0.05 + i * 0.08).toFixed(2)}s" dur="0.4s" fill="freeze"/>`;
-    body += `<rect x="${x}" y="${y}" width="${cw}" height="${ch}" rx="12" fill="${t.card}" stroke="${t.line}" filter="url(#lift)"/>`;
-    body += `<rect x="${x + 16}" y="${y + 18}" width="30" height="3" rx="1.5" fill="${t.amber}"><animate attributeName="width" values="0;30" begin="${(0.3 + i * 0.1).toFixed(2)}s" dur="0.6s" fill="freeze"/></rect>`;
+    if (i % 2 === 0) body += `<rect x="32" y="${y + 3}" width="1136" height="${rowH - 6}" rx="8" fill="${t.card}"/>`;
 
-    const name = r.name.length > 22 ? r.name.slice(0, 21) + '…' : r.name;
-    body += `<text x="${x + 16}" y="${y + 50}" font-family="${MONO}" font-size="15" font-weight="700" fill="${t.amberDeep}" direction="ltr">${esc(name)}</text>`;
+    body += `<text x="1160" y="${base}" text-anchor="end" font-family="${MONO}" font-size="12" fill="${t.dim}">${String(i + 1).padStart(2, '0')}</text>`;
+    const name = r.name.length > 24 ? r.name.slice(0, 23) + '…' : r.name;
+    body += `<text x="1104" y="${base}" text-anchor="end" font-family="${MONO}" font-size="15" font-weight="700" fill="${t.ink}" direction="ltr">${esc(name)}</text>`;
+    if (r.lang) body += `<text x="870" y="${base}" text-anchor="end" font-family="${MONO}" font-size="11.5" fill="${t.mute}" direction="ltr">${esc(r.lang)}</text>`;
 
-    const s = (r.desc || '').replace(/\s+/g, ' ').trim();
-    let l1 = '', l2 = '';
-    for (const w of s.split(' ')) {
-      if ((l1 + ' ' + w).trim().length <= 38) l1 = (l1 + ' ' + w).trim();
-      else if ((l2 + ' ' + w).trim().length <= 38) l2 = (l2 + ' ' + w).trim();
-      else break;
-    }
-    body += `<text x="${x + 16}" y="${y + 72}" font-family="${MONO}" font-size="10.5" fill="${t.mute}">${esc(l1 || '—')}</text>`;
-    body += `<text x="${x + 16}" y="${y + 88}" font-family="${MONO}" font-size="10.5" fill="${t.mute}">${esc(l2)}</text>`;
-    body += `<line x1="${x + 16}" y1="${y + 102}" x2="${x + cw - 16}" y2="${y + 102}" stroke="${t.line2}" stroke-width="1"/>`;
-
-    /* language + activity status */
-    if (r.lang) {
-      body += `<circle cx="${x + 21}" cy="${y + 124}" r="3" fill="${t.amber}"/>`;
-      body += `<text x="${x + 30}" y="${y + 128}" font-family="${MONO}" font-size="10" fill="${t.dim}">${esc(r.lang)}</text>`;
-    }
     const days = Math.floor((Date.now() - new Date(r.pushed).getTime()) / 86400000);
+    body += `<text x="715" y="${base}" text-anchor="end" font-family="${MONO}" font-size="12" fill="${t.mute}">${rel(days)}</text>`;
+
     if (days <= 14) {
-      body += `<circle cx="${x + cw - 58}" cy="${y + 124}" r="3" fill="${t.amber}"><animate attributeName="opacity" values="1;.25;1" dur="1.8s" begin="${(i * 0.3).toFixed(2)}s" repeatCount="indefinite"/></circle>`;
-      body += `<text x="${x + cw - 50}" y="${y + 128}" font-family="${MONO}" font-size="10" fill="${t.amberDeep}">ACTIVE</text>`;
+      body += `<text x="565" y="${base}" text-anchor="end" font-family="${MONO}" font-size="10.5" letter-spacing="1" fill="${t.amberDeep}">ACTIVE</text>`;
+      body += `<circle cx="579" cy="${base - 4}" r="3.5" fill="${t.amber}"><animate attributeName="opacity" values="1;.25;1" dur="1.8s" begin="${(i * 0.3).toFixed(2)}s" repeatCount="indefinite"/></circle>`;
     } else if (days <= 60) {
-      body += `<circle cx="${x + cw - 62}" cy="${y + 124}" r="3" fill="${t.mute}"/>`;
-      body += `<text x="${x + cw - 54}" y="${y + 128}" font-family="${MONO}" font-size="10" fill="${t.mute}">RECENT</text>`;
+      body += `<text x="565" y="${base}" text-anchor="end" font-family="${MONO}" font-size="10.5" letter-spacing="1" fill="${t.mute}">RECENT</text>`;
+      body += `<circle cx="579" cy="${base - 4}" r="3.5" fill="${t.mute}"/>`;
     } else {
-      body += `<circle cx="${x + cw - 54}" cy="${y + 124}" r="3" fill="${t.dim}"/>`;
-      body += `<text x="${x + cw - 46}" y="${y + 128}" font-family="${MONO}" font-size="10" fill="${t.dim}">IDLE</text>`;
+      body += `<text x="565" y="${base}" text-anchor="end" font-family="${MONO}" font-size="10.5" letter-spacing="1" fill="${t.dim}">IDLE</text>`;
+      body += `<circle cx="579" cy="${base - 4}" r="3.5" fill="${t.dim}"/>`;
     }
 
-    /* live metrics */
-    body += STAR(x + cw - 150, y + 144, i);
-    body += `<text x="${x + cw - 138}" y="${y + 156}" font-family="${MONO}" font-size="12" fill="${t.ink}">${r.stars}</text>`;
-    body += FORK(x + cw - 78, y + 144);
-    body += `<text x="${x + cw - 66}" y="${y + 156}" font-family="${MONO}" font-size="12" fill="${t.ink}">${r.forks}</text>`;
-
-    /* shimmer sweep */
-    body += `<g clip-path="url(#${clip})"><g transform="skewX(-18)"><rect x="${x - 80}" y="${y - 20}" width="42" height="${ch + 40}" fill="${t.ink}" opacity="${t.name === 'dark' ? 0.05 : 0.04}"><animateTransform attributeName="transform" type="translate" values="0 0;${cw + 170} 0;${cw + 170} 0" keyTimes="0;0.16;1" dur="${(6 + i * 0.45).toFixed(1)}s" begin="${(i * 0.6).toFixed(1)}s" repeatCount="indefinite"/></rect></g></g>`;
+    body += STAR(332, base - 11, i);
+    body += `<text x="425" y="${base}" text-anchor="end" font-family="${MONO}" font-size="13.5" fill="${t.ink}">${r.stars}</text>`;
+    body += FORK(192, base - 12);
+    body += `<text x="285" y="${base}" text-anchor="end" font-family="${MONO}" font-size="13.5" fill="${t.ink}">${r.forks}</text>`;
     body += `</g>`;
   });
-  return { W, H: Hh, defs, body, label: 'مشاريع أحمد رضوان مع نجوم وفروع حية من GitHub API' };
+  return { W, H: Hh, defs, body, label: 'لوحة مشاريع أحمد رضوان — نجوم وفروع حية من GitHub API' };
 }
 
 /* ============================ LANGUAGES ============================ */
 function languagesSVG(langs, t) {
-  const W = 1200, headerH = 56, rowH = 46, Hh = headerH + 14 + langs.length * rowH + 16;
+  const W = 1200, headerH = 54, rowH = 50, Hh = headerH + 10 + langs.length * rowH + 6;
   let defs = '', body = '';
-  const tx = 48, tw = 860, nameX = W - 24;
+  const tx = 48, tw = 880;
 
-  body += `<text x="${W - 24}" y="36" text-anchor="end" font-family="${AR}" font-size="19" font-weight="700" fill="${t.ink}">التوزيع التقني — حسب حجم الشيفرة</text>`;
-  body += `<text x="24" y="36" font-family="${MONO}" font-size="12.5" fill="${t.dim}">TOP LANGUAGES · BY CODE SIZE</text>`;
+  body += panelHeader(t, 'التوزيع التقني — حسب حجم الشيفرة', 'TOP LANGUAGES · BY CODE SIZE');
 
-  const opac = [1, 0.8, 0.62, 0.46, 0.34];
+  const opac = [1, 0.72, 0.54, 0.4, 0.3];
   langs.forEach((l, i) => {
-    const y = headerH + 14 + i * rowH;
+    const y = headerH + 10 + i * rowH;
     const bw = Math.max(6, Math.round(tw * (l.pct / 100)));
     const clip = `lg${uid++}`;
-    defs += `<clipPath id="${clip}"><rect x="${tx}" y="${y + 8}" width="${bw}" height="16" rx="4"/></clipPath>`;
+    defs += `<clipPath id="${clip}"><rect x="${tx}" y="${y + 10}" width="${bw}" height="14" rx="4"/></clipPath>`;
 
-    body += `<text x="${nameX}" y="${y + 21}" text-anchor="end" font-family="${MONO}" font-size="14" fill="${t.ink}" direction="ltr">${esc(l.name)}</text>`;
-    body += `<rect x="${tx}" y="${y + 8}" width="${tw}" height="16" rx="4" fill="${t.card2}"/>`;
-    body += `<rect x="${tx}" y="${y + 8}" width="${bw}" height="16" rx="4" fill="${t.amber}" fill-opacity="${opac[i] ?? 0.3}"><animate attributeName="width" values="0;${bw}" begin="${(0.25 + i * 0.15).toFixed(2)}s" dur="0.9s" calcMode="spline" keySplines="0.22 0.9 0.28 1" keyTimes="0;1" fill="freeze"/></rect>`;
-    body += `<rect x="${tx}" y="${y + 8}" width="50" height="16" fill="${t.ink}" opacity="0.08" clip-path="url(#${clip})"><animate attributeName="x" values="${tx};${tx + bw};${tx + bw}" keyTimes="0;0.35;1" dur="5s" begin="${(1.4 + i * 0.3).toFixed(1)}s" repeatCount="indefinite"/></rect>`;
-    body += `<text x="${tx + bw + 12}" y="${y + 21}" font-family="${MONO}" font-size="12" fill="${t.amberDeep}" opacity="1"><animate attributeName="opacity" values="0;1" begin="${(1 + i * 0.15).toFixed(2)}s" dur="0.4s" fill="freeze"/>${l.pct}%</text>`;
+    body += `<text x="1176" y="${y + 23}" text-anchor="end" font-family="${MONO}" font-size="13" fill="${t.dim}">${i + 1}</text>`;
+    body += `<text x="1148" y="${y + 23}" text-anchor="end" font-family="${MONO}" font-size="15" fill="${t.ink}" direction="ltr">${esc(l.name)}</text>`;
+
+    /* track with 25/50/75 precision ticks */
+    body += `<rect x="${tx}" y="${y + 10}" width="${tw}" height="14" rx="4" fill="${t.card2}"/>`;
+    [0.25, 0.5, 0.75].forEach(f => {
+      body += `<line x1="${tx + tw * f}" y1="${y + 10}" x2="${tx + tw * f}" y2="${y + 24}" stroke="${t.line2}" stroke-width="1"/>`;
+    });
+    body += `<rect x="${tx}" y="${y + 10}" width="${bw}" height="14" rx="4" fill="${t.amber}" fill-opacity="${opac[i] ?? 0.25}"><animate attributeName="width" values="0;${bw}" begin="${(0.25 + i * 0.15).toFixed(2)}s" dur="0.9s" calcMode="spline" keySplines="0.22 0.9 0.28 1" keyTimes="0;1" fill="freeze"/></rect>`;
+    if (i === 0) {
+      body += `<rect x="${tx}" y="${y + 10}" width="50" height="14" fill="${t.ink}" opacity="0.08" clip-path="url(#${clip})"><animate attributeName="x" values="${tx};${tx + bw};${tx + bw}" keyTimes="0;0.35;1" dur="4.5s" begin="1.4s" repeatCount="indefinite"/></rect>`;
+    }
+    body += `<text x="${tx + bw + 12}" y="${y + 23}" font-family="${MONO}" font-size="12.5" fill="${t.amberDeep}" opacity="1"><animate attributeName="opacity" values="0;1" begin="${(1 + i * 0.15).toFixed(2)}s" dur="0.4s" fill="freeze"/>${l.pct}%</text>`;
   });
   return { W, H: Hh, defs, body, label: 'أكثر اللغات استخدامًا في مستودعات أحمد رضوان' };
 }
@@ -314,6 +329,7 @@ async function main() {
     const cal = g.contributionsCollection.contributionCalendar;
     m.contributions = cal.totalContributions;
     m.weeks = cal.weeks;
+    m.weeks12 = cal.weeks.slice(-12).map(w => w.contributionDays.reduce((s, d) => s + d.contributionCount, 0));
     /* current streak: consecutive contributing days ending today (or yesterday) */
     const days = cal.weeks.flatMap(w => w.contributionDays.map(d => [d.date, d.contributionCount]));
     const byDate = new Map(days);
@@ -351,18 +367,7 @@ async function main() {
 
   /* the 8 flagship products in README order; anything else appended by stars */
   const FLAG = ['ulara', 'madarek', 'SubNation2', 'SmartBot', 'Smart-Menu', 'Smart-Order', 'Smart-Link', 'lyosint'];
-  /* fallbacks when a repo has no description set on GitHub */
-  const DESC = {
-    ulara: 'University OS — full academic system, Arabic-first',
-    madarek: 'Smart education platform — mastery matrix',
-    SubNation2: 'Digital subscriptions marketplace with wallet',
-    SmartBot: 'Multi-tenant Messenger bot with payments',
-    'Smart-Menu': 'Digital menu & WhatsApp orders for restaurants',
-    'Smart-Order': 'Digital store, orders & delivery',
-    'Smart-Link': 'Digital umbrella for businesses in Libya',
-    lyosint: 'OSINT platform — 40+ sources, knowledge maps',
-  };
-  m.reposList.forEach(r => { if (!r.desc && DESC[r.name]) r.desc = DESC[r.name]; });
+  m.reposList.forEach(r => { if (!r.desc) r.desc = ''; });
   const byName = new Map(m.reposList.map(r => [r.name.toLowerCase(), r]));
   const flagged = FLAG.map(n => byName.get(n.toLowerCase())).filter(Boolean);
   const extra = m.reposList

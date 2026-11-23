@@ -1,7 +1,7 @@
 <div dir="rtl" align="center">
 
-<img src="assets/hero-light.svg#gh-light-mode-only" width="100%" alt="أحمد رضوان — باني منتجات رقمية عربية-أولًا من ليبيا">
-<img src="assets/hero-dark.svg#gh-dark-mode-only" width="100%" alt="أحمد رضوان — باني منتجات رقمية عربية-أولًا من ليبيا">
+<img src="assets/hero-light.svg#gh-light-mode-only" width="100%" alt="أحمد رضوان — باني منظومات رقمية عربية-أولًا من ليبيا">
+<img src="assets/hero-dark.svg#gh-dark-mode-only" width="100%" alt="أحمد رضوان — باني منظومات رقمية عربية-أولًا من ليبيا">
 
 أبني منظومات رقمية عربية-أولًا من ليبيا — تعليم وتجارة وأتمتة واستخبارات مفتوحة.
 
@@ -50,8 +50,8 @@
 
 <div align="center">
 
-<img src="assets/stack-light.svg#gh-light-mode-only" width="100%" alt="المكدّس التقني — 20 أداة">
-<img src="assets/stack-dark.svg#gh-dark-mode-only" width="100%" alt="المكدّس التقني — 20 أداة">
+<img src="assets/stack-light.svg#gh-light-mode-only" width="100%" alt="المكدّس التقني — 20 أداة في أربع مجموعات">
+<img src="assets/stack-dark.svg#gh-dark-mode-only" width="100%" alt="المكدّس التقني — 20 أداة في أربع مجموعات">
 
 </div>
 
@@ -99,8 +99,8 @@
 
 <div align="center">
 
-<img src="assets/projects-live-light.svg#gh-light-mode-only" width="100%" alt="نجوم وفروع المشاريع — حية من GitHub">
-<img src="assets/projects-live-dark.svg#gh-dark-mode-only" width="100%" alt="نجوم وفروع المشاريع — حية من GitHub">
+<img src="assets/projects-live-light.svg#gh-light-mode-only" width="100%" alt="لوحة المشاريع — نجوم وفروع حيّة من GitHub">
+<img src="assets/projects-live-dark.svg#gh-dark-mode-only" width="100%" alt="لوحة المشاريع — نجوم وفروع حيّة من GitHub">
 
 </div>
 
@@ -109,7 +109,7 @@
 
 ## الإحصائيات
 
-كل الأرقام تُسحب من واجهة GitHub وتتجدد كل 6 ساعات عبر GitHub Actions.
+كل رقم يُسحب من واجهة GitHub ويُعاد توليده كل 6 ساعات — لا رقم مكتوب يدويًا.
 
 <div align="center">
 
