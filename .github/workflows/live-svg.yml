@@ -1,0 +1,39 @@
+name: Live SVG Engine
+
+# يعيد بناء أصول البيانات الحية (stats / heatmap / projects / languages)
+# من واجهة GitHub — كل 6 ساعات، وعند كل دفع، ويدويًا.
+
+on:
+  schedule:
+    - cron: "20 */6 * * *"   # مزاح 20 دقيقة عن أفعى المساهمات (0 */6)
+  workflow_dispatch:
+  push:
+    branches: [main]
+
+permissions:
+  contents: write
+
+concurrency:
+  group: live-svg
+  cancel-in-progress: true
+
+jobs:
+  generate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: Generate live-data SVGs
+        run: node scripts/generate-live-svg.mjs
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_USER: ${{ github.repository_owner }}
+
+      - uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: "chore: sync live data svgs [skip ci]"
+          file_pattern: "assets/stats-live.svg assets/heatmap-live.svg assets/projects-live.svg assets/languages-live.svg"
