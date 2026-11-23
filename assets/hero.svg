@@ -15,7 +15,7 @@
   </rect>
 
   <!-- النجمة الثمانية (هندسة عربية) — تدور ببطء -->
-  <g fill="none" stroke="#232A38" stroke-width="1.8">
+  <g fill="none" stroke="#2A3242" stroke-width="2">
     <rect x="78" y="98" width="184" height="184" rx="10"/>
     <rect x="78" y="98" width="184" height="184" rx="10" transform="rotate(45 170 190)">
       <animateTransform attributeName="transform" type="rotate" from="45 170 190" to="405 170 190" dur="80s" repeatCount="indefinite"/>
@@ -69,10 +69,10 @@
 
   <!-- قراءات HUD يمين: حالة المنتجات -->
   <text x="1172" y="168" text-anchor="end" font-family="Cascadia Code, SF Mono, Menlo, Consolas, monospace" font-size="13" fill="#9AA3B5">$ systemctl status products</text>
-  <circle cx="1014" cy="185" r="4.5" fill="#E2A93B">
+  <circle cx="1054" cy="185" r="4.5" fill="#E2A93B">
     <animate attributeName="opacity" values="1;.25;1" dur="1.4s" repeatCount="indefinite"/>
   </circle>
-  <text x="1027" y="190" font-family="Cascadia Code, SF Mono, Menlo, Consolas, monospace" font-size="13" fill="#E2A93B">8/8 ACTIVE · UPTIME 1Y</text>
+  <text x="1067" y="190" font-family="Cascadia Code, SF Mono, Menlo, Consolas, monospace" font-size="13" fill="#E2A93B">8/8 ACTIVE</text>
 
   <!-- المتن -->
   <text x="600" y="106" text-anchor="middle" font-family="Segoe UI, Tahoma, Noto Sans Arabic, Geeza Pro, sans-serif" font-size="18" font-weight="600" fill="#E2A93B">من رابط إلى منظومة</text>
