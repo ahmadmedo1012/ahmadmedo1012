@@ -137,7 +137,7 @@ function statsSVG(m) {
 
   body += `<text x="${W - pad}" y="35" text-anchor="end" font-family="${AR}" font-size="19" font-weight="700" fill="${PAPER}">القياسات الحيّة · LIVE TELEMETRY</text>`;
   body += `<circle cx="${pad + 4}" cy="31" r="4" fill="${AMBER}"><animate attributeName="opacity" values="1;.2;1" dur="1.6s" repeatCount="indefinite"/></circle>`;
-  body += `<text x="${pad + 18}" y="35" font-family="${MONO}" font-size="11" fill="${DIM}">SYNC ${m.date} · EVERY 6H · GITHUB ACTIONS</text>`;
+  body += `<text x="${pad + 18}" y="35" font-family="${MONO}" font-size="12.5" fill="${DIM}">SYNC ${m.date} · EVERY 6H · GITHUB ACTIONS</text>`;
 
   tiles.forEach((t, i) => {
     const x = pad + i * (tw + gap);
@@ -164,7 +164,7 @@ function heatmapSVG(m) {
   let defs = '', body = '';
 
   body += `<text x="${W - 24}" y="35" text-anchor="end" font-family="${AR}" font-size="19" font-weight="700" fill="${PAPER}">خريطة المساهمات — آخر 365 يومًا</text>`;
-  body += `<text x="24" y="30" font-family="${MONO}" font-size="9" letter-spacing="1.5" fill="${DIM}">365D TOTAL</text>`;
+  body += `<text x="24" y="30" font-family="${MONO}" font-size="10.5" letter-spacing="1.5" fill="${DIM}">365D TOTAL</text>`;
   const od = odo(m.contributions, 44, 52, { size: 21, begin: 0.4 });
   defs += od.defs; body += od.body;
 
@@ -221,7 +221,7 @@ function projectsSVG(repos) {
 
   body += `<text x="${W - pad}" y="36" text-anchor="end" font-family="${AR}" font-size="19" font-weight="700" fill="${PAPER}">المشاريع — مؤشرات حيّة من GitHub API</text>`;
   body += `<circle cx="${pad + 4}" cy="32" r="4" fill="${AMBER}"><animate attributeName="opacity" values="1;.2;1" dur="1.6s" repeatCount="indefinite"/></circle>`;
-  body += `<text x="${pad + 18}" y="36" font-family="${MONO}" font-size="11" fill="${DIM}">${n} PRODUCTS · STARS + FORKS · AUTO-SYNC 6H</text>`;
+  body += `<text x="${pad + 18}" y="36" font-family="${MONO}" font-size="12.5" fill="${DIM}">${n} PRODUCTS · STARS + FORKS · AUTO-SYNC 6H</text>`;
 
   const STAR = (x, y, i) => `<g transform="translate(${x} ${y})"><path d="M6 .9l1.5 3.1 3.4.5-2.5 2.4.6 3.4L6 8.7 3 10.3l.6-3.4L1.1 4.5l3.4-.5z" fill="${AMBER}"><animate attributeName="opacity" values="1;.45;1" dur="3s" begin="${(i * 0.37).toFixed(2)}s" repeatCount="indefinite"/></path></g>`;
   const FORK = (x, y) => `<g transform="translate(${x} ${y})" stroke="${MUTE}" stroke-width="1.5" fill="none"><path d="M6 8V3"/><path d="M6 8c0 1.5 2.6 1.2 2.6 2.9M6 8c0 1.5-2.6 1.2-2.6 2.9"/></g><g transform="translate(${x} ${y})" fill="${MUTE}"><circle cx="6" cy="2" r="1.8"/><circle cx="8.6" cy="11" r="1.8"/><circle cx="3.4" cy="11" r="1.8"/></g>`;
@@ -287,7 +287,7 @@ function languagesSVG(langs) {
   const tx = 48, tw = 860, nameX = W - 24;
 
   body += `<text x="${W - 24}" y="36" text-anchor="end" font-family="${AR}" font-size="19" font-weight="700" fill="${PAPER}">التوزيع التقني — حسب حجم الشيفرة</text>`;
-  body += `<text x="24" y="36" font-family="${MONO}" font-size="11" fill="${DIM}">TOP LANGUAGES · BY CODE SIZE · LIVE</text>`;
+  body += `<text x="24" y="36" font-family="${MONO}" font-size="12.5" fill="${DIM}">TOP LANGUAGES · BY CODE SIZE · LIVE</text>`;
 
   const opac = [1, 0.8, 0.62, 0.46, 0.34];
   langs.forEach((l, i) => {

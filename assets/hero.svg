@@ -15,7 +15,7 @@
   </rect>
 
   <!-- النجمة الثمانية (هندسة عربية) — تدور ببطء -->
-  <g fill="none" stroke="#1A212E" stroke-width="1.5">
+  <g fill="none" stroke="#232A38" stroke-width="1.8">
     <rect x="78" y="98" width="184" height="184" rx="10"/>
     <rect x="78" y="98" width="184" height="184" rx="10" transform="rotate(45 170 190)">
       <animateTransform attributeName="transform" type="rotate" from="45 170 190" to="405 170 190" dur="80s" repeatCount="indefinite"/>
@@ -29,7 +29,7 @@
     <animate attributeName="r" values="10;26" dur="2.6s" repeatCount="indefinite"/>
     <animate attributeName="opacity" values="0.4;0" dur="2.6s" repeatCount="indefinite"/>
   </circle>
-  <g fill="none" stroke="#161D29" stroke-width="1.2">
+  <g fill="none" stroke="#1E2634" stroke-width="1.4">
     <rect x="1032" y="272" width="56" height="56" rx="5"/>
     <rect x="1032" y="272" width="56" height="56" rx="5" transform="rotate(45 1060 300)">
       <animateTransform attributeName="transform" type="rotate" from="45 1060 300" to="-315 1060 300" dur="60s" repeatCount="indefinite"/>
@@ -68,11 +68,11 @@
   </g>
 
   <!-- قراءات HUD يمين: حالة المنتجات -->
-  <text x="1172" y="168" text-anchor="end" font-family="Cascadia Code, SF Mono, Menlo, Consolas, monospace" font-size="11" fill="#7E8798">$ systemctl status products</text>
-  <circle cx="1014" cy="185" r="4" fill="#E2A93B">
+  <text x="1172" y="168" text-anchor="end" font-family="Cascadia Code, SF Mono, Menlo, Consolas, monospace" font-size="13" fill="#9AA3B5">$ systemctl status products</text>
+  <circle cx="1014" cy="185" r="4.5" fill="#E2A93B">
     <animate attributeName="opacity" values="1;.25;1" dur="1.4s" repeatCount="indefinite"/>
   </circle>
-  <text x="1026" y="189" font-family="Cascadia Code, SF Mono, Menlo, Consolas, monospace" font-size="11" fill="#E2A93B">8/8 ACTIVE · UPTIME 1Y</text>
+  <text x="1027" y="190" font-family="Cascadia Code, SF Mono, Menlo, Consolas, monospace" font-size="13" fill="#E2A93B">8/8 ACTIVE · UPTIME 1Y</text>
 
   <!-- المتن -->
   <text x="600" y="106" text-anchor="middle" font-family="Segoe UI, Tahoma, Noto Sans Arabic, Geeza Pro, sans-serif" font-size="18" font-weight="600" fill="#E2A93B">من رابط إلى منظومة</text>
