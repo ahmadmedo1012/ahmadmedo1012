@@ -153,7 +153,7 @@
 ## الإحصائيات والنشاط — بيانات حية
 
 لا رقم في هذه الصفحة مكتوب يدويًا — كل ما يلي يُسحب من واجهة GitHub لحظة
-زيارتك: نجوم، مساهمات، لغات، نشاط، كؤوس، وعدد الزوار. وحتى أفعى المساهمات
+زيارتك: نجوم، مساهمات، لغات، نشاط، وعدد الزوار. وحتى أفعى المساهمات
 في الأسفل تُعاد بناء تلقائيًا كل ست ساعات عبر سير عمل آلي داخل هذا المستودع —
 فبمجرد ظهور بيانات جديدة تظهر من نفسها، بلا تدخل يدوي:
 
@@ -166,12 +166,6 @@
 </a>
 <a href="https://github.com/ahmadmedo1012">
   <img height="160" src="https://streak-stats.demolab.com/?user=ahmadmedo1012&hide_border=true&background=0D1017&ring=E2A93B&fire=E2A93B&currStreakLabel=E2A93B&sideLabels=C7CEDB&dates=C7CEDB&numbers=C7CEDB&currStreakNum=C7CEDB" alt="سلسلة المساهمات المتصلة" />
-</a>
-
-<br/>
-
-<a href="https://github-profile-trophy.vercel.app/?username=ahmadmedo1012&row=2&column=4&margin-w=6&margin-h=6&no-frame=true&title_color=E2A93B&text_color=C7CEDB&icon_color=E2A93B&bg_color=0D1017&stroke_color=232A38">
-  <img width="95%" src="https://github-profile-trophy.vercel.app/?username=ahmadmedo1012&row=2&column=4&margin-w=6&margin-h=6&no-frame=true&title_color=E2A93B&text_color=C7CEDB&icon_color=E2A93B&bg_color=0D1017&stroke_color=232A38" alt="كؤوس الإنجاز — تُسحب حية من GitHub" />
 </a>
 
 <br/>
@@ -198,7 +192,7 @@
 
 <div dir="rtl" align="center">
 
-<sub>كل ما في الأعلى حي: الإحصائيات والسلاسل والكؤوس واللغات والنشاط والزوار تُسحب لحظة فتحك الصفحة — والأفعى يعيد بناءها سير عمل آلي كل ٦ ساعات.</sub>
+<sub>كل ما في الأعلى حي: الإحصائيات والسلاسل واللغات والنشاط والزوار تُسحب لحظة فتحك الصفحة — والأفعى يعيد بناءها سير عمل آلي كل ٦ ساعات.</sub>
 
 </div>
 
