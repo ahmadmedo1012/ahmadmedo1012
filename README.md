@@ -1,58 +1,41 @@
 <div dir="rtl" align="center">
 
-<img src="assets/hero.svg" width="100%" alt="واجهة حية: أحمد رضوان — من رابط إلى منظومة، باني منتجات رقمية عربية-أولًا من ليبيا، النجمة الثمانية تدور، والبذرة الأولى تنبض، والاسم يومض بخفة" />
+<img src="assets/hero-light.svg#gh-light-mode-only" width="100%" alt="أحمد رضوان — باني منتجات رقمية عربية-أولًا من ليبيا">
+<img src="assets/hero-dark.svg#gh-dark-mode-only" width="100%" alt="أحمد رضوان — باني منتجات رقمية عربية-أولًا من ليبيا">
 
-**«كلُّ عملٍ يبدأ رابطًا ويصبح منظومةً»**
-
-أبني منظومات رقمية عربية-أولًا من ليبيا — تعليم وتجارة وأتمتة واستخبارات مفتوحة —
-بشيفرة تصل إلى الإنتاج، وبوابات جودة آلية، واختبارات موثقة بالأرقام لا بالادعاء.
+أبني منظومات رقمية عربية-أولًا من ليبيا — تعليم وتجارة وأتمتة واستخبارات مفتوحة.
 
 </div>
 
-<img src="assets/divider.svg" width="100%" alt="فاصل متحرك: نبضة كهرمانية تعبر الخط" />
-
-<div dir="rtl">
+<img src="assets/divider-light.svg#gh-light-mode-only" width="100%" alt="">
+<img src="assets/divider-dark.svg#gh-dark-mode-only" width="100%" alt="">
 
 ## الطرفية
 
-نافذة حية رسمتُها يدويًا بـ SVG — والحركة فيها حقيقية لا صورة ثابتة:
-الأسطر تُكتب واحدًا تلو الآخر عند فتح الصفحة، والمؤشر لا يتوقف عن الوميض،
-ومؤشر `live` في شريط الحالة ينبض فعليًا طوال الوقت:
-
-</div>
-
 <div align="center">
 
-<img src="assets/terminal.svg" width="96%" alt="طرفية حية: أمر whoami يعيد ahmed-radwan باني منتجات رقمية من ليبيا، ثم قائمة المنتجات الثمانية، ثم مؤشر وامض لا يتوقف" />
+<img src="assets/terminal-light.svg#gh-light-mode-only" width="96%" alt="طرفية: whoami و ls ./products و cat focus.txt و uptime --build">
+<img src="assets/terminal-dark.svg#gh-dark-mode-only" width="96%" alt="طرفية: whoami و ls ./products و cat focus.txt و uptime --build">
 
 </div>
-
-<img src="assets/divider.svg" width="100%" alt="فاصل متحرك" />
-
-<div dir="rtl">
 
 ## من أنا
 
 أنا **أحمد رضوان** — باني منتجات رقمية من ليبيا، أصمّم وأبرمج المنظومة كاملة:
 من واجهة RTL أصيلة، إلى قاعدة البيانات، إلى تطبيق الجوال.
 
-أؤمن أن **العربية-أولًا ليست ترجمة**: التجربة تُصمَّم من أول بكسل للاتجاه والخط
-العربيين، وتُدفع بوسائل الدفع المحلية (ليبيانا / مدار)، وتُوثَّق بالعربية داخل
-المستودع نفسه — من README ثنائي اللغة إلى سجل تغييرات لكل جولة تطوير.
+**العربية-أولًا ليست ترجمة**: التجربة تُصمَّم من أول بكسل للاتجاه والخط العربيين،
+وتُدفع بوسائل الدفع المحلية (ليبيانا / مدار)، وتُوثَّق بالعربية داخل المستودع نفسه —
+من README ثنائي اللغة إلى سجل تغييرات لكل جولة تطوير.
 
-## ما أعمل عليه — خط إنتاج حي
-
-أربعة مسارات تعمل الآن، كل عقدة فيها تنبض والبيانات تتدفق بينها:
-
-</div>
+## ما أعمل عليه
 
 <div align="center">
 
-<img src="assets/pipeline.svg" width="100%" alt="خط إنتاج متحرك بأربعة مسارات: التعليم، التجارة، الأتمتة، الاستخبارات المفتوحة — حلقات نابضة حول كل أيقونة ونبضات بيانات تعبر الوصلات" />
+<img src="assets/pipeline-light.svg#gh-light-mode-only" width="100%" alt="مسارات العمل: التعليم، التجارة، الأتمتة، الاستخبارات المفتوحة">
+<img src="assets/pipeline-dark.svg#gh-dark-mode-only" width="100%" alt="مسارات العمل: التعليم، التجارة، الأتمتة، الاستخبارات المفتوحة">
 
 </div>
-
-<div dir="rtl">
 
 | المجال | المشاريع | ما يميّزه |
 |---|---|---|
@@ -61,164 +44,133 @@
 | **الأتمتة** | سمارت بوت · openwa | بوت ماسنجر متعدد المستأجرين بمدفوعات وموافقات تيليجرام، وبوابة واتساب بتشفير AES-256 وجلسات باقية بعد إعادة التشغيل |
 | **الاستخبارات المفتوحة** | ليوسينت | بحث عبر أكثر من 40 منصة، خرائط معرفة تفاعلية، ملفات مدعومة بالأدلة ودرجات ثقة |
 
-كل مشروع يحمل **عقدًا بصريًا مستقلًا موثقًا** — ألوانه ورموزه ونظام تصميمه — لكنها
-تنتمي جميعًا إلى منظومة واحدة متكاملة.
-
 ## المكدّس التقني
 
-عشرون أداة تتنفس بموجة كهرمانية — كلها موجودة فعلًا في ملفات `package.json`
-و`requirements.txt` للمشاريع المنشورة في هذه الصفحة، لا شارات زينة:
-
-</div>
+الأدوات المستخدمة فعلًا في مشاريعي المنشورة:
 
 <div align="center">
 
-<img src="assets/stack.svg" width="100%" alt="المكدّس التقني المتحرك: React 19 وNext.js 16 وTypeScript وNode.js وExpress 5 وFastAPI وVite وTailwind وZustand وPostgreSQL وPrisma وDrizzle وReact Native وExpo وDocker وCoolify وVercel وGitHub Actions وSentry وPlaywright — حدود الشرائح تومض بموجة متتابعة" />
+<img src="assets/stack-light.svg#gh-light-mode-only" width="100%" alt="المكدّس التقني — 20 أداة">
+<img src="assets/stack-dark.svg#gh-dark-mode-only" width="100%" alt="المكدّس التقني — 20 أداة">
 
 </div>
 
-<img src="assets/divider.svg" width="100%" alt="فاصل متحرك" />
+<img src="assets/divider-light.svg#gh-light-mode-only" width="100%" alt="">
+<img src="assets/divider-dark.svg#gh-dark-mode-only" width="100%" alt="">
 
-<div dir="rtl">
+## المشاريع
 
-## المشاريع المميزة
-
-ثمانية منتجات مكتملة الجوانب — لكل منها هويته البصرية المستقلة الموثقة في
-مستودعه، وكل بطاقة تلمع بنبض من لونها الخاص. **انقر أي بطاقة لزيارة المستودع
-الكامل** — وتحت البطاقات لوحة مؤشرات حية متحركة تسحب النجوم والفروع
-لحظة توليدها:
-
-</div>
-
-<div dir="rtl">
+ثمانية منتجات — كل بطاقة تؤدي إلى مستودعها:
 
 <table>
   <tr>
     <td dir="ltr" width="50%" valign="top">
-      <a href="https://github.com/ahmadmedo1012/ulara"><img src="assets/projects/ulara.svg" width="100%" alt="أُلارا — نظام تشغيل الجامعة: منظومة أكاديمية متكاملة عربية-أولًا، لمعة وحلقة نبض بلون المشروع"></a>
+      <a href="https://github.com/ahmadmedo1012/ulara"><img src="assets/projects/ulara-light.svg#gh-light-mode-only" width="100%" alt="أُلارا — نظام تشغيل الجامعة"><img src="assets/projects/ulara-dark.svg#gh-dark-mode-only" width="100%" alt="أُلارا — نظام تشغيل الجامعة"></a>
     </td>
     <td dir="ltr" width="50%" valign="top">
-      <a href="https://github.com/ahmadmedo1012/madarek"><img src="assets/projects/madarek.svg" width="100%" alt="مدارك — منصة تعليم ذكي مستقلة عربية-أولًا، لمعة وحلقة نبض بلون المشروع"></a>
-    </td>
-  </tr>
-  <tr>
-    <td dir="ltr" width="50%" valign="top">
-      <a href="https://github.com/ahmadmedo1012/SubNation2"><img src="assets/projects/subnation.svg" width="100%" alt="سب نيشن — سوق الاشتراكات الرقمية عربية-أولًا، لمعة وحلقة نبض بلون المشروع"></a>
-    </td>
-    <td dir="ltr" width="50%" valign="top">
-      <a href="https://github.com/ahmadmedo1012/SmartBot"><img src="assets/projects/smartbot.svg" width="100%" alt="سمارت بوت — بوت ماسنجر وأتمتة لصفحات فيسبوك، لمعة وحلقة نبض بلون المشروع"></a>
+      <a href="https://github.com/ahmadmedo1012/madarek"><img src="assets/projects/madarek-light.svg#gh-light-mode-only" width="100%" alt="مدارك — منصة تعليم ذكي عربية-أولًا"><img src="assets/projects/madarek-dark.svg#gh-dark-mode-only" width="100%" alt="مدارك — منصة تعليم ذكي عربية-أولًا"></a>
     </td>
   </tr>
   <tr>
     <td dir="ltr" width="50%" valign="top">
-      <a href="https://github.com/ahmadmedo1012/Smart-Menu"><img src="assets/projects/smart-menu.svg" width="100%" alt="سمارت منيو — منيو رقمي وطلبات واتساب للمطاعم، لمعة وحلقة نبض بلون المشروع"></a>
+      <a href="https://github.com/ahmadmedo1012/SubNation2"><img src="assets/projects/subnation-light.svg#gh-light-mode-only" width="100%" alt="سب نيشن — سوق الاشتراكات الرقمية"><img src="assets/projects/subnation-dark.svg#gh-dark-mode-only" width="100%" alt="سب نيشن — سوق الاشتراكات الرقمية"></a>
     </td>
     <td dir="ltr" width="50%" valign="top">
-      <a href="https://github.com/ahmadmedo1012/Smart-Order"><img src="assets/projects/smart-order.svg" width="100%" alt="سمارت أوردر — متجر رقمي وطلبات وتوصيل للأعمال، لمعة وحلقة نبض بلون المشروع"></a>
+      <a href="https://github.com/ahmadmedo1012/SmartBot"><img src="assets/projects/smartbot-light.svg#gh-light-mode-only" width="100%" alt="سمارت بوت — بوت ماسنجر وأتمتة لصفحات فيسبوك"><img src="assets/projects/smartbot-dark.svg#gh-dark-mode-only" width="100%" alt="سمارت بوت — بوت ماسنجر وأتمتة لصفحات فيسبوك"></a>
     </td>
   </tr>
   <tr>
     <td dir="ltr" width="50%" valign="top">
-      <a href="https://github.com/ahmadmedo1012/Smart-Link"><img src="assets/projects/smart-link.svg" width="100%" alt="سمارت لينك — المظلة الرقمية للأعمال في ليبيا، لمعة وحلقة نبض بلون المشروع"></a>
+      <a href="https://github.com/ahmadmedo1012/Smart-Menu"><img src="assets/projects/smart-menu-light.svg#gh-light-mode-only" width="100%" alt="سمارت منيو — منيو رقمي وطلبات واتساب للمطاعم"><img src="assets/projects/smart-menu-dark.svg#gh-dark-mode-only" width="100%" alt="سمارت منيو — منيو رقمي وطلبات واتساب للمطاعم"></a>
     </td>
     <td dir="ltr" width="50%" valign="top">
-      <a href="https://github.com/ahmadmedo1012/lyosint"><img src="assets/projects/lyosint.svg" width="100%" alt="ليوسينت — منصة استخبارات المصدر المفتوح، لمعة وحلقة نبض بلون المشروع"></a>
+      <a href="https://github.com/ahmadmedo1012/Smart-Order"><img src="assets/projects/smart-order-light.svg#gh-light-mode-only" width="100%" alt="سمارت أوردر — متجر رقمي وطلبات وتوصيل"><img src="assets/projects/smart-order-dark.svg#gh-dark-mode-only" width="100%" alt="سمارت أوردر — متجر رقمي وطلبات وتوصيل"></a>
+    </td>
+  </tr>
+  <tr>
+    <td dir="ltr" width="50%" valign="top">
+      <a href="https://github.com/ahmadmedo1012/Smart-Link"><img src="assets/projects/smart-link-light.svg#gh-light-mode-only" width="100%" alt="سمارت لينك — المظلة الرقمية للأعمال في ليبيا"><img src="assets/projects/smart-link-dark.svg#gh-dark-mode-only" width="100%" alt="سمارت لينك — المظلة الرقمية للأعمال في ليبيا"></a>
+    </td>
+    <td dir="ltr" width="50%" valign="top">
+      <a href="https://github.com/ahmadmedo1012/lyosint"><img src="assets/projects/lyosint-light.svg#gh-light-mode-only" width="100%" alt="ليوسينت — منصة استخبارات المصدر المفتوح"><img src="assets/projects/lyosint-dark.svg#gh-dark-mode-only" width="100%" alt="ليوسينت — منصة استخبارات المصدر المفتوح"></a>
     </td>
   </tr>
 </table>
 
+<div align="center">
+
+<img src="assets/projects-live-light.svg#gh-light-mode-only" width="100%" alt="نجوم وفروع المشاريع — حية من GitHub">
+<img src="assets/projects-live-dark.svg#gh-dark-mode-only" width="100%" alt="نجوم وفروع المشاريع — حية من GitHub">
+
 </div>
+
+<img src="assets/divider-light.svg#gh-light-mode-only" width="100%" alt="">
+<img src="assets/divider-dark.svg#gh-dark-mode-only" width="100%" alt="">
+
+## الإحصائيات
+
+كل الأرقام تُسحب من واجهة GitHub وتتجدد كل 6 ساعات عبر GitHub Actions.
 
 <div align="center">
 
-<img src="assets/projects-live.svg" width="100%" alt="لوحة مؤشرات المشاريع: نجوم وفروع حية لكل مستودع مع حالة نشاط نابضة ولمعة تعبر البطاقات — تُسحب من GitHub API وتتجدد كل 6 ساعات" />
+<img src="assets/stats-live-light.svg#gh-light-mode-only" width="100%" alt="قياسات GitHub: النجوم والفروع والمتابعون والمساهمات">
+<img src="assets/stats-live-dark.svg#gh-dark-mode-only" width="100%" alt="قياسات GitHub: النجوم والفروع والمتابعون والمساهمات">
 
-</div>
+<img src="assets/heatmap-live-light.svg#gh-light-mode-only" width="100%" alt="خريطة مساهمات آخر 365 يومًا">
+<img src="assets/heatmap-live-dark.svg#gh-dark-mode-only" width="100%" alt="خريطة مساهمات آخر 365 يومًا">
 
-<img src="assets/divider.svg" width="100%" alt="فاصل متحرك" />
+<img src="assets/languages-live-light.svg#gh-light-mode-only" width="100%" alt="أكثر اللغات استخدامًا حسب حجم الشيفرة">
+<img src="assets/languages-live-dark.svg#gh-dark-mode-only" width="100%" alt="أكثر اللغات استخدامًا حسب حجم الشيفرة">
 
-<div dir="rtl">
-
-## القياسات الحيّة — محرك خاص لا صور جاهزة
-
-لا رقم في هذه الصفحة مكتوب يدويًا، ولا مؤشر يستعيره من خدمة خارجية: **محرك
-داخل هذا المستودع** (`scripts/generate-live-svg.mjs`) يسحب البيانات من واجهة
-GitHub، ثم يرسمها SVG متحركًا بألوان الهوية — عدّادات تتدحرج لأرقامها، خريطة
-مساهمات يمسحها شريط ضوئي، أشرطة لغات تنمو وتلمع — ويعيد كل ذلك تلقائيًا كل
-ست ساعات عبر GitHub Actions:
-
-</div>
-
-<div align="center">
-
-<img src="assets/stats-live.svg" width="100%" alt="القياسات الحية: النجوم والفروع والمتابعون والمستودعات ومساهمات السنة والسلسلة الحالية — عدادات تتدحرج إلى أرقامها الحقيقية عند فتح الصفحة" />
-
-<img src="assets/heatmap-live.svg" width="100%" alt="خريطة مساهمات آخر 365 يومًا بدرجات الحبر والكهرمان، مع شريط مسح يعبر السنة ونبضات على أعلى الأيام — مجموع المساهمات يتدحرج رقميًا" />
-
-<img src="assets/languages-live.svg" width="100%" alt="التوزيع التقني حسب حجم الشيفرة: أشرطة كهرمانية تنمو وتلمع مع النسب المئوية الحية" />
-
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/ahmadmedo1012/ahmadmedo1012/main/assets/snake-dark.svg">
-  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/ahmadmedo1012/ahmadmedo1012/main/assets/snake-light.svg">
-  <img width="95%" src="https://raw.githubusercontent.com/ahmadmedo1012/ahmadmedo1012/main/assets/snake-dark.svg" alt="أفعى المساهمات تزحف على شبكة المساهمات — كهرمانية على الحبر، متحركة، وتتجدد تلقائيًا" />
-</picture>
+<img src="https://raw.githubusercontent.com/ahmadmedo1012/ahmadmedo1012/main/assets/snake-light.svg#gh-light-mode-only" width="95%" alt="أفعى المساهمات">
+<img src="https://raw.githubusercontent.com/ahmadmedo1012/ahmadmedo1012/main/assets/snake-dark.svg#gh-dark-mode-only" width="95%" alt="أفعى المساهمات">
 
 <br/>
 
-<img src="https://komarev.com/ghpvc/?username=ahmadmedo1012&style=flat-square&color=E2A93B&label=profile+views" alt="عدد زوار الملف الشخصي — حي" />
+<img src="https://komarev.com/ghpvc/?username=ahmadmedo1012&style=flat-square&color=E2A93B&label=profile+views" alt="عدد زوار الملف الشخصي">
 
 </div>
 
-<div dir="rtl" align="center">
-
-<sub>كل ما في الأعلى حي ومتحرك: العدّادات تتدحرج، والخريطة تُمسح ضوئيًا، والأفعى تزحف — والمحرك يعيد بناءها كل ٦ ساعات بلا تدخل يدوي.</sub>
-
-</div>
-
-<img src="assets/divider.svg" width="100%" alt="فاصل متحرك" />
-
-<div dir="rtl">
+<img src="assets/divider-light.svg#gh-light-mode-only" width="100%" alt="">
+<img src="assets/divider-dark.svg#gh-dark-mode-only" width="100%" alt="">
 
 ## تواصل
 
-**واتساب هو القناة الأساسية** — أسرع طريق للرد مهما كان الموضوع، ويمكنك رؤية
-قنواتي تنبض في اللوحة الحية أدناه:
-
-</div>
+**واتساب** — القناة الأساسية والأسرع ردًا:
 
 <div align="center">
 
-<a href="https://wa.me/218910089975"><img src="assets/contact-live.svg" width="100%" alt="لوحة تواصل حية: واتساب القناة الأساسية بموجات سونار كهرمانية تنبض من أيقونته، وتليجرام بجانبها — اضغط للمراسلة عبر واتساب"/></a>
+<a href="https://wa.me/218910089975"><img src="assets/contact-light.svg#gh-light-mode-only" width="100%" alt="قنوات التواصل: واتساب القناة الأساسية، وتليجرام"><img src="assets/contact-dark.svg#gh-dark-mode-only" width="100%" alt="قنوات التواصل: واتساب القناة الأساسية، وتليجرام"></a>
 
 </div>
 
 <table>
   <tr>
     <td dir="rtl" width="28%" align="center">
-      <a href="https://wa.me/218910089975"><img src="assets/icons/whatsapp.svg" width="56" alt="واتساب — القناة الأساسية"></a>
+      <a href="https://wa.me/218910089975"><img src="assets/icons/whatsapp-light.svg#gh-light-mode-only" width="56" alt="واتساب"><img src="assets/icons/whatsapp-dark.svg#gh-dark-mode-only" width="56" alt="واتساب"></a>
       <br/>
       <a href="https://wa.me/218910089975"><b>واتساب</b></a>
       <br/>
       <sub dir="ltr"><b>+218 91 008 9975</b></sub>
       <br/>
-      <sub>القناة الأساسية — الأسرع ردًا</sub>
+      <sub>القناة الأساسية</sub>
     </td>
     <td dir="rtl" width="24%" align="center">
-      <a href="https://t.me/rhAhmed2011"><img src="assets/icons/telegram.svg" width="48" alt="تليجرام"></a>
+      <a href="https://t.me/rhAhmed2011"><img src="assets/icons/telegram-light.svg#gh-light-mode-only" width="48" alt="تليجرام"><img src="assets/icons/telegram-dark.svg#gh-dark-mode-only" width="48" alt="تليجرام"></a>
       <br/>
       <a href="https://t.me/rhAhmed2011"><b>تليجرام</b></a>
       <br/>
       <sub dir="ltr">@rhAhmed2011</sub>
     </td>
     <td dir="rtl" width="24%" align="center">
-      <a href="mailto:ahmadmedo1012@gmail.com"><img src="assets/icons/mail.svg" width="48" alt="البريد الإلكتروني"></a>
+      <a href="mailto:ahmadmedo1012@gmail.com"><img src="assets/icons/mail-light.svg#gh-light-mode-only" width="48" alt="البريد الإلكتروني"><img src="assets/icons/mail-dark.svg#gh-dark-mode-only" width="48" alt="البريد الإلكتروني"></a>
       <br/>
       <a href="mailto:ahmadmedo1012@gmail.com"><b>البريد</b></a>
       <br/>
       <sub dir="ltr">ahmadmedo1012@gmail.com</sub>
     </td>
     <td dir="rtl" width="24%" align="center">
-      <a href="https://github.com/ahmadmedo1012"><img src="assets/icons/github.svg" width="48" alt="GitHub"></a>
+      <a href="https://github.com/ahmadmedo1012"><img src="assets/icons/github-light.svg#gh-light-mode-only" width="48" alt="GitHub"><img src="assets/icons/github-dark.svg#gh-dark-mode-only" width="48" alt="GitHub"></a>
       <br/>
       <a href="https://github.com/ahmadmedo1012"><b>GitHub</b></a>
       <br/>
@@ -229,16 +181,21 @@ GitHub، ثم يرسمها SVG متحركًا بألوان الهوية — عد
 
 <div dir="rtl" align="center">
 
-<sub>ونماذج حية تعمل الآن: <a href="https://ulara.vercel.app"><b dir="ltr">ulara.vercel.app</b></a> · <a href="https://subnation.ly"><b dir="ltr">subnation.ly</b></a></sub>
+<sub>نماذج حية: <a href="https://ulara.vercel.app"><b dir="ltr">ulara.vercel.app</b></a> · <a href="https://subnation.ly"><b dir="ltr">subnation.ly</b></a></sub>
 
 </div>
 
-<img src="assets/footer.svg" width="100%" alt="خاتمة حية: سطر git push origin future بمؤشر وامض، ونقاط ضوء تتقارب نحو معين نابض — شكرًا لزيارتك" />
+<div align="center">
+
+<img src="assets/footer-light.svg#gh-light-mode-only" width="100%" alt="">
+<img src="assets/footer-dark.svg#gh-dark-mode-only" width="100%" alt="">
+
+</div>
 
 ---
 
 <div dir="rtl" align="center">
 
-<sub>الواجهة والأصول البصرية في هذه الصفحة رسمت خصيصًا لهذا الحساب — SVG يدوي بلا تدرجات، كل رقم يُسحب حيًا من واجهة GitHub، وكل عنصر يتحرك بحركة مقصودة عبر SMIL · دليل الهوية: <a href="IDENTITY.md">IDENTITY.md</a></sub>
+<sub>دليل الهوية البصرية · <a href="IDENTITY.md">IDENTITY.md</a></sub>
 
 </div>
