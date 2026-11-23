@@ -359,6 +359,18 @@ async function main() {
 
   /* the 8 flagship products in README order; anything else appended by stars */
   const FLAG = ['ulara', 'madarek', 'SubNation2', 'SmartBot', 'Smart-Menu', 'Smart-Order', 'Smart-Link', 'lyosint'];
+  /* fallbacks when a repo has no description set on GitHub */
+  const DESC = {
+    ulara: 'University OS — full academic system, Arabic-first',
+    madarek: 'Smart education platform — mastery matrix',
+    SubNation2: 'Digital subscriptions marketplace with wallet',
+    SmartBot: 'Multi-tenant Messenger bot with payments',
+    'Smart-Menu': 'Digital menu & WhatsApp orders for restaurants',
+    'Smart-Order': 'Digital store, orders & delivery',
+    'Smart-Link': 'Digital umbrella for businesses in Libya',
+    lyosint: 'OSINT platform — 40+ sources, knowledge maps',
+  };
+  m.reposList.forEach(r => { if (!r.desc && DESC[r.name]) r.desc = DESC[r.name]; });
   const byName = new Map(m.reposList.map(r => [r.name.toLowerCase(), r]));
   const flagged = FLAG.map(n => byName.get(n.toLowerCase())).filter(Boolean);
   const extra = m.reposList
