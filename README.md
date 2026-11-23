@@ -65,34 +65,34 @@
 <table>
   <tr>
     <td dir="ltr" width="50%" valign="top">
-      <a href="https://github.com/ahmadmedo1012/ulara"><img src="assets/projects/ulara-light.svg#gh-light-mode-only" width="100%" alt="أُلارا — نظام تشغيل الجامعة"><img src="assets/projects/ulara-dark.svg#gh-dark-mode-only" width="100%" alt="أُلارا — نظام تشغيل الجامعة"></a>
+      <a href="https://github.com/ahmadmedo1012/ulara#gh-light-mode-only"><img src="assets/projects/ulara-light.svg#gh-light-mode-only" width="100%" alt="أُلارا — نظام تشغيل الجامعة"></a><a href="https://github.com/ahmadmedo1012/ulara#gh-dark-mode-only"><img src="assets/projects/ulara-dark.svg#gh-dark-mode-only" width="100%" alt="أُلارا — نظام تشغيل الجامعة"></a>
     </td>
     <td dir="ltr" width="50%" valign="top">
-      <a href="https://github.com/ahmadmedo1012/madarek"><img src="assets/projects/madarek-light.svg#gh-light-mode-only" width="100%" alt="مدارك — منصة تعليم ذكي عربية-أولًا"><img src="assets/projects/madarek-dark.svg#gh-dark-mode-only" width="100%" alt="مدارك — منصة تعليم ذكي عربية-أولًا"></a>
-    </td>
-  </tr>
-  <tr>
-    <td dir="ltr" width="50%" valign="top">
-      <a href="https://github.com/ahmadmedo1012/SubNation2"><img src="assets/projects/subnation-light.svg#gh-light-mode-only" width="100%" alt="سب نيشن — سوق الاشتراكات الرقمية"><img src="assets/projects/subnation-dark.svg#gh-dark-mode-only" width="100%" alt="سب نيشن — سوق الاشتراكات الرقمية"></a>
-    </td>
-    <td dir="ltr" width="50%" valign="top">
-      <a href="https://github.com/ahmadmedo1012/SmartBot"><img src="assets/projects/smartbot-light.svg#gh-light-mode-only" width="100%" alt="سمارت بوت — بوت ماسنجر وأتمتة لصفحات فيسبوك"><img src="assets/projects/smartbot-dark.svg#gh-dark-mode-only" width="100%" alt="سمارت بوت — بوت ماسنجر وأتمتة لصفحات فيسبوك"></a>
+      <a href="https://github.com/ahmadmedo1012/madarek#gh-light-mode-only"><img src="assets/projects/madarek-light.svg#gh-light-mode-only" width="100%" alt="مدارك — منصة تعليم ذكي عربية-أولًا"></a><a href="https://github.com/ahmadmedo1012/madarek#gh-dark-mode-only"><img src="assets/projects/madarek-dark.svg#gh-dark-mode-only" width="100%" alt="مدارك — منصة تعليم ذكي عربية-أولًا"></a>
     </td>
   </tr>
   <tr>
     <td dir="ltr" width="50%" valign="top">
-      <a href="https://github.com/ahmadmedo1012/Smart-Menu"><img src="assets/projects/smart-menu-light.svg#gh-light-mode-only" width="100%" alt="سمارت منيو — منيو رقمي وطلبات واتساب للمطاعم"><img src="assets/projects/smart-menu-dark.svg#gh-dark-mode-only" width="100%" alt="سمارت منيو — منيو رقمي وطلبات واتساب للمطاعم"></a>
+      <a href="https://github.com/ahmadmedo1012/SubNation2#gh-light-mode-only"><img src="assets/projects/subnation-light.svg#gh-light-mode-only" width="100%" alt="سب نيشن — سوق الاشتراكات الرقمية"></a><a href="https://github.com/ahmadmedo1012/SubNation2#gh-dark-mode-only"><img src="assets/projects/subnation-dark.svg#gh-dark-mode-only" width="100%" alt="سب نيشن — سوق الاشتراكات الرقمية"></a>
     </td>
     <td dir="ltr" width="50%" valign="top">
-      <a href="https://github.com/ahmadmedo1012/Smart-Order"><img src="assets/projects/smart-order-light.svg#gh-light-mode-only" width="100%" alt="سمارت أوردر — متجر رقمي وطلبات وتوصيل"><img src="assets/projects/smart-order-dark.svg#gh-dark-mode-only" width="100%" alt="سمارت أوردر — متجر رقمي وطلبات وتوصيل"></a>
+      <a href="https://github.com/ahmadmedo1012/SmartBot#gh-light-mode-only"><img src="assets/projects/smartbot-light.svg#gh-light-mode-only" width="100%" alt="سمارت بوت — بوت ماسنجر وأتمتة لصفحات فيسبوك"></a><a href="https://github.com/ahmadmedo1012/SmartBot#gh-dark-mode-only"><img src="assets/projects/smartbot-dark.svg#gh-dark-mode-only" width="100%" alt="سمارت بوت — بوت ماسنجر وأتمتة لصفحات فيسبوك"></a>
     </td>
   </tr>
   <tr>
     <td dir="ltr" width="50%" valign="top">
-      <a href="https://github.com/ahmadmedo1012/Smart-Link"><img src="assets/projects/smart-link-light.svg#gh-light-mode-only" width="100%" alt="سمارت لينك — المظلة الرقمية للأعمال في ليبيا"><img src="assets/projects/smart-link-dark.svg#gh-dark-mode-only" width="100%" alt="سمارت لينك — المظلة الرقمية للأعمال في ليبيا"></a>
+      <a href="https://github.com/ahmadmedo1012/Smart-Menu#gh-light-mode-only"><img src="assets/projects/smart-menu-light.svg#gh-light-mode-only" width="100%" alt="سمارت منيو — منيو رقمي وطلبات واتساب للمطاعم"></a><a href="https://github.com/ahmadmedo1012/Smart-Menu#gh-dark-mode-only"><img src="assets/projects/smart-menu-dark.svg#gh-dark-mode-only" width="100%" alt="سمارت منيو — منيو رقمي وطلبات واتساب للمطاعم"></a>
     </td>
     <td dir="ltr" width="50%" valign="top">
-      <a href="https://github.com/ahmadmedo1012/lyosint"><img src="assets/projects/lyosint-light.svg#gh-light-mode-only" width="100%" alt="ليوسينت — منصة استخبارات المصدر المفتوح"><img src="assets/projects/lyosint-dark.svg#gh-dark-mode-only" width="100%" alt="ليوسينت — منصة استخبارات المصدر المفتوح"></a>
+      <a href="https://github.com/ahmadmedo1012/Smart-Order#gh-light-mode-only"><img src="assets/projects/smart-order-light.svg#gh-light-mode-only" width="100%" alt="سمارت أوردر — متجر رقمي وطلبات وتوصيل"></a><a href="https://github.com/ahmadmedo1012/Smart-Order#gh-dark-mode-only"><img src="assets/projects/smart-order-dark.svg#gh-dark-mode-only" width="100%" alt="سمارت أوردر — متجر رقمي وطلبات وتوصيل"></a>
+    </td>
+  </tr>
+  <tr>
+    <td dir="ltr" width="50%" valign="top">
+      <a href="https://github.com/ahmadmedo1012/Smart-Link#gh-light-mode-only"><img src="assets/projects/smart-link-light.svg#gh-light-mode-only" width="100%" alt="سمارت لينك — المظلة الرقمية للأعمال في ليبيا"></a><a href="https://github.com/ahmadmedo1012/Smart-Link#gh-dark-mode-only"><img src="assets/projects/smart-link-dark.svg#gh-dark-mode-only" width="100%" alt="سمارت لينك — المظلة الرقمية للأعمال في ليبيا"></a>
+    </td>
+    <td dir="ltr" width="50%" valign="top">
+      <a href="https://github.com/ahmadmedo1012/lyosint#gh-light-mode-only"><img src="assets/projects/lyosint-light.svg#gh-light-mode-only" width="100%" alt="ليوسينت — منصة استخبارات المصدر المفتوح"></a><a href="https://github.com/ahmadmedo1012/lyosint#gh-dark-mode-only"><img src="assets/projects/lyosint-dark.svg#gh-dark-mode-only" width="100%" alt="ليوسينت — منصة استخبارات المصدر المفتوح"></a>
     </td>
   </tr>
 </table>
@@ -140,14 +140,14 @@
 
 <div align="center">
 
-<a href="https://wa.me/218910089975"><img src="assets/contact-light.svg#gh-light-mode-only" width="100%" alt="قنوات التواصل: واتساب القناة الأساسية، وتليجرام"><img src="assets/contact-dark.svg#gh-dark-mode-only" width="100%" alt="قنوات التواصل: واتساب القناة الأساسية، وتليجرام"></a>
+<a href="https://wa.me/218910089975#gh-light-mode-only"><img src="assets/contact-light.svg#gh-light-mode-only" width="100%" alt="قنوات التواصل: واتساب القناة الأساسية، وتليجرام"></a><a href="https://wa.me/218910089975#gh-dark-mode-only"><img src="assets/contact-dark.svg#gh-dark-mode-only" width="100%" alt="قنوات التواصل: واتساب القناة الأساسية، وتليجرام"></a>
 
 </div>
 
 <table>
   <tr>
     <td dir="rtl" width="28%" align="center">
-      <a href="https://wa.me/218910089975"><img src="assets/icons/whatsapp-light.svg#gh-light-mode-only" width="56" alt="واتساب"><img src="assets/icons/whatsapp-dark.svg#gh-dark-mode-only" width="56" alt="واتساب"></a>
+      <a href="https://wa.me/218910089975#gh-light-mode-only"><img src="assets/icons/whatsapp-light.svg#gh-light-mode-only" width="56" alt="واتساب"></a><a href="https://wa.me/218910089975#gh-dark-mode-only"><img src="assets/icons/whatsapp-dark.svg#gh-dark-mode-only" width="56" alt="واتساب"></a>
       <br/>
       <a href="https://wa.me/218910089975"><b>واتساب</b></a>
       <br/>
@@ -156,21 +156,22 @@
       <sub>القناة الأساسية</sub>
     </td>
     <td dir="rtl" width="24%" align="center">
-      <a href="https://t.me/rhAhmed2011"><img src="assets/icons/telegram-light.svg#gh-light-mode-only" width="48" alt="تليجرام"><img src="assets/icons/telegram-dark.svg#gh-dark-mode-only" width="48" alt="تليجرام"></a>
+      <a href="https://t.me/rhAhmed2011#gh-light-mode-only"><img src="assets/icons/telegram-light.svg#gh-light-mode-only" width="48" alt="تليجرام"></a><a href="https://t.me/rhAhmed2011#gh-dark-mode-only"><img src="assets/icons/telegram-dark.svg#gh-dark-mode-only" width="48" alt="تليجرام"></a>
       <br/>
       <a href="https://t.me/rhAhmed2011"><b>تليجرام</b></a>
       <br/>
       <sub dir="ltr">@rhAhmed2011</sub>
     </td>
     <td dir="rtl" width="24%" align="center">
-      <a href="mailto:ahmadmedo1012@gmail.com"><img src="assets/icons/mail-light.svg#gh-light-mode-only" width="48" alt="البريد الإلكتروني"><img src="assets/icons/mail-dark.svg#gh-dark-mode-only" width="48" alt="البريد الإلكتروني"></a>
+      <img src="assets/icons/mail-light.svg#gh-light-mode-only" width="48" alt="البريد الإلكتروني">
+      <img src="assets/icons/mail-dark.svg#gh-dark-mode-only" width="48" alt="البريد الإلكتروني">
       <br/>
       <a href="mailto:ahmadmedo1012@gmail.com"><b>البريد</b></a>
       <br/>
       <sub dir="ltr">ahmadmedo1012@gmail.com</sub>
     </td>
     <td dir="rtl" width="24%" align="center">
-      <a href="https://github.com/ahmadmedo1012"><img src="assets/icons/github-light.svg#gh-light-mode-only" width="48" alt="GitHub"><img src="assets/icons/github-dark.svg#gh-dark-mode-only" width="48" alt="GitHub"></a>
+      <a href="https://github.com/ahmadmedo1012#gh-light-mode-only"><img src="assets/icons/github-light.svg#gh-light-mode-only" width="48" alt="GitHub"></a><a href="https://github.com/ahmadmedo1012#gh-dark-mode-only"><img src="assets/icons/github-dark.svg#gh-dark-mode-only" width="48" alt="GitHub"></a>
       <br/>
       <a href="https://github.com/ahmadmedo1012"><b>GitHub</b></a>
       <br/>
