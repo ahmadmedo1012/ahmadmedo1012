@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 /**
- * LIVE SVG ENGINE — ahmadmedo1012 profile (dual-theme)  ·  v3 "MONO + AMBER"
+ * LIVE SVG ENGINE — ahmadmedo1012 profile (dual-theme)  ·  v4 "SIGNAL RED"
  * --------------------------------------------------------------------------
  * Pulls real data from the GitHub API and generates animated SVG assets
  * (SMIL — survives GitHub camo proxying) in TWO theme variants with a
@@ -15,7 +15,7 @@
  *   - Every number is LIVE — never hand-written.
  *   - Transparent canvas; panels float on the GitHub background.
  *   - Graceful degradation: base state = final state (correct at t=0).
- *   - ONE accent (amber). Indicators are table-precise and column-aligned.
+ *   - ONE accent (signal red). Indicators are table-precise and column-aligned.
  *   - Theme variants are switched via #gh-dark-mode-only / #gh-light-mode-only.
  *
  * Env:
@@ -39,7 +39,7 @@ let uid = 0;
    Base transform = final digit (correct without SMIL / at t=0 screenshots).
    Animation rolls 0 -> target, freezes. */
 function odo(str, cx, y, t, o = {}) {
-  const size = o.size ?? 34, color = o.color ?? t.amberDeep,
+  const size = o.size ?? 34, color = o.color ?? t.redDeep,
     begin = o.begin ?? 0.45, step = o.step ?? 0.11;
   const w = size * 0.64, rowH = size * 1.3;
   const digits = String(str).split('');
@@ -63,7 +63,7 @@ function odo(str, cx, y, t, o = {}) {
 /* ---------- shared panel header: title right (ar) · live chip left ---------- */
 function panelHeader(t, title, left) {
   return `<text x="1176" y="36" text-anchor="end" font-family="${AR}" font-size="19" font-weight="700" fill="${t.ink}">${title}</text>
-  <circle cx="28" cy="32" r="4" fill="${t.amber}"><animate attributeName="opacity" values="1;.2;1" dur="1.8s" repeatCount="indefinite"/></circle>
+  <circle cx="28" cy="32" r="4" fill="${t.red}"><animate attributeName="opacity" values="1;.2;1" dur="1.8s" repeatCount="indefinite"/></circle>
   <text x="42" y="36" font-family="${MONO}" font-size="12.5" letter-spacing="0.5" fill="${t.dim}" direction="ltr">${left}</text>`;
 }
 
@@ -142,7 +142,7 @@ function statsSVG(m, t) {
     body += `<g opacity="1"><animate attributeName="opacity" values="0;1" begin="${(0.05 + i * 0.09).toFixed(2)}s" dur="0.45s" fill="freeze"/>`;
     body += `<rect x="${x}" y="${ty}" width="${tw}" height="${th}" rx="12" fill="${t.card}" stroke="${t.line}" filter="url(#lift)"/>`;
     body += `<text x="${x + tw / 2}" y="${ty + 30}" text-anchor="middle" font-family="${AR}" font-size="13.5" fill="${t.mute}">${tl.ar}</text>`;
-    const od = odo(tl.v, x + tw / 2, ty + 96, t, { size: 36, color: t.amber, begin: 0.4 + i * 0.1 });
+    const od = odo(tl.v, x + tw / 2, ty + 96, t, { size: 36, color: t.red, begin: 0.4 + i * 0.1 });
     defs += od.defs; body += od.body;
     body += `<text x="${x + tw / 2}" y="${ty + 128}" text-anchor="middle" font-family="${MONO}" font-size="8.5" letter-spacing="1.2" fill="${t.dim}">${tl.en}</text>`;
     if (tl.spark && m.weeks12) {
@@ -151,9 +151,9 @@ function statsSVG(m, t) {
       const bw = 8, pitch = (tw - 36 - bw) / (vals.length - 1), by = ty + th - 14;
       vals.forEach((v, k) => {
         const h = Math.max(2, Math.round(18 * v / max));
-        body += `<rect x="${(x + 18 + k * pitch).toFixed(1)}" y="${by - h}" width="${bw}" height="${h}" rx="1.5" fill="${t.amber}" opacity="${k === vals.length - 1 ? 1 : 0.55}"/>`;
+        body += `<rect x="${(x + 18 + k * pitch).toFixed(1)}" y="${by - h}" width="${bw}" height="${h}" rx="1.5" fill="${t.red}" opacity="${k === vals.length - 1 ? 1 : 0.55}"/>`;
       });
-      body += `<line x1="${x + 18}" y1="${by + 3}" x2="${x + tw - 18}" y2="${by + 3}" stroke="${t.amberDim}" stroke-width="1"/>`;
+      body += `<line x1="${x + 18}" y1="${by + 3}" x2="${x + tw - 18}" y2="${by + 3}" stroke="${t.redDim}" stroke-width="1"/>`;
     }
     body += `</g>`;
   });
@@ -209,7 +209,7 @@ function heatmapSVG(m, t) {
   });
 
   /* scanning band sweeping across the year */
-  body += `<rect x="${(x0 - 24).toFixed(1)}" y="${y0 - 5}" width="16" height="${(rowsH + 10).toFixed(1)}" fill="${t.amber}" opacity="${t.name === 'dark' ? 0.07 : 0.1}"><animateTransform attributeName="transform" type="translate" values="0 0;${(nW * pitch + 50).toFixed(1)} 0" dur="9s" repeatCount="indefinite"/></rect>`;
+  body += `<rect x="${(x0 - 24).toFixed(1)}" y="${y0 - 5}" width="16" height="${(rowsH + 10).toFixed(1)}" fill="${t.red}" opacity="${t.name === 'dark' ? 0.07 : 0.1}"><animateTransform attributeName="transform" type="translate" values="0 0;${(nW * pitch + 50).toFixed(1)} 0" dur="9s" repeatCount="indefinite"/></rect>`;
 
   /* legend */
   const lg = t.heat;
@@ -242,7 +242,7 @@ function projectsSVG(repos, t) {
   });
   body += `<line x1="32" y1="${headerH + 26}" x2="1168" y2="${headerH + 26}" stroke="${t.line}" stroke-width="1.2"/>`;
 
-  const STAR = (x, y, i) => `<path transform="translate(${x} ${y})" d="M6 .9l1.5 3.1 3.4.5-2.5 2.4.6 3.4L6 8.7 3 10.3l.6-3.4L1.1 4.5l3.4-.5z" fill="${t.amber}"><animate attributeName="opacity" values="1;.45;1" dur="3s" begin="${(i * 0.4).toFixed(2)}s" repeatCount="indefinite"/></path>`;
+  const STAR = (x, y, i) => `<path transform="translate(${x} ${y})" d="M6 .9l1.5 3.1 3.4.5-2.5 2.4.6 3.4L6 8.7 3 10.3l.6-3.4L1.1 4.5l3.4-.5z" fill="${t.red}"><animate attributeName="opacity" values="1;.45;1" dur="3s" begin="${(i * 0.4).toFixed(2)}s" repeatCount="indefinite"/></path>`;
   const FORK = (x, y) => `<g transform="translate(${x} ${y})" stroke="${t.mute}" stroke-width="1.3" fill="none"><path d="M4 8V3.2"/><path d="M4 8c0 1.6 3.4 1.3 3.4 3.1M4 8c0 1.6-3.4 1.3-3.4 3.1"/></g><g transform="translate(${x} ${y})" fill="${t.mute}"><circle cx="4" cy="2.2" r="1.7"/><circle cx="7.4" cy="11.4" r="1.7"/><circle cx="0.6" cy="11.4" r="1.7"/></g>`;
 
   const rel = days => days < 1 ? 'today' : days < 7 ? `${days}d` : days < 30 ? `${Math.round(days / 7)}w` : `${Math.round(days / 30)}mo`;
@@ -261,8 +261,8 @@ function projectsSVG(repos, t) {
     body += `<text x="715" y="${base}" text-anchor="end" font-family="${MONO}" font-size="12" fill="${t.mute}">${rel(days)}</text>`;
 
     if (days <= 14) {
-      body += `<text x="565" y="${base}" text-anchor="end" font-family="${MONO}" font-size="10.5" letter-spacing="1" fill="${t.amberDeep}">ACTIVE</text>`;
-      body += `<circle cx="579" cy="${base - 4}" r="3.5" fill="${t.amber}"><animate attributeName="opacity" values="1;.25;1" dur="1.8s" begin="${(i * 0.3).toFixed(2)}s" repeatCount="indefinite"/></circle>`;
+      body += `<text x="565" y="${base}" text-anchor="end" font-family="${MONO}" font-size="10.5" letter-spacing="1" fill="${t.redDeep}">ACTIVE</text>`;
+      body += `<circle cx="579" cy="${base - 4}" r="3.5" fill="${t.red}"><animate attributeName="opacity" values="1;.25;1" dur="1.8s" begin="${(i * 0.3).toFixed(2)}s" repeatCount="indefinite"/></circle>`;
     } else if (days <= 60) {
       body += `<text x="565" y="${base}" text-anchor="end" font-family="${MONO}" font-size="10.5" letter-spacing="1" fill="${t.mute}">RECENT</text>`;
       body += `<circle cx="579" cy="${base - 4}" r="3.5" fill="${t.mute}"/>`;
@@ -303,11 +303,11 @@ function languagesSVG(langs, t) {
     [0.25, 0.5, 0.75].forEach(f => {
       body += `<line x1="${tx + tw * f}" y1="${y + 10}" x2="${tx + tw * f}" y2="${y + 24}" stroke="${t.line2}" stroke-width="1"/>`;
     });
-    body += `<rect x="${tx}" y="${y + 10}" width="${bw}" height="14" rx="4" fill="${t.amber}" fill-opacity="${opac[i] ?? 0.25}"><animate attributeName="width" values="0;${bw}" begin="${(0.25 + i * 0.15).toFixed(2)}s" dur="0.9s" calcMode="spline" keySplines="0.22 0.9 0.28 1" keyTimes="0;1" fill="freeze"/></rect>`;
+    body += `<rect x="${tx}" y="${y + 10}" width="${bw}" height="14" rx="4" fill="${t.red}" fill-opacity="${opac[i] ?? 0.25}"><animate attributeName="width" values="0;${bw}" begin="${(0.25 + i * 0.15).toFixed(2)}s" dur="0.9s" calcMode="spline" keySplines="0.22 0.9 0.28 1" keyTimes="0;1" fill="freeze"/></rect>`;
     if (i === 0) {
       body += `<rect x="${tx}" y="${y + 10}" width="50" height="14" fill="${t.ink}" opacity="0.08" clip-path="url(#${clip})"><animate attributeName="x" values="${tx};${tx + bw};${tx + bw}" keyTimes="0;0.35;1" dur="4.5s" begin="1.4s" repeatCount="indefinite"/></rect>`;
     }
-    body += `<text x="${tx + bw + 12}" y="${y + 23}" font-family="${MONO}" font-size="12.5" fill="${t.amberDeep}" opacity="1"><animate attributeName="opacity" values="0;1" begin="${(1 + i * 0.15).toFixed(2)}s" dur="0.4s" fill="freeze"/>${l.pct}%</text>`;
+    body += `<text x="${tx + bw + 12}" y="${y + 23}" font-family="${MONO}" font-size="12.5" fill="${t.redDeep}" opacity="1"><animate attributeName="opacity" values="0;1" begin="${(1 + i * 0.15).toFixed(2)}s" dur="0.4s" fill="freeze"/>${l.pct}%</text>`;
   });
   return { W, H: Hh, defs, body, label: 'أكثر اللغات استخدامًا في مستودعات أحمد رضوان' };
 }

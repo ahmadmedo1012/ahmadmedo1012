@@ -1,12 +1,12 @@
 #!/usr/bin/env node
 /**
- * STATIC SVG ENGINE — ahmadmedo1012 profile  ·  v3 "MONO + AMBER"
+ * STATIC SVG ENGINE — ahmadmedo1012 profile  ·  v4 "SIGNAL RED"
  * ---------------------------------------------------------------
  * Generates every hand-designed visual of the profile in TWO theme
  * variants (-dark / -light) with a fully TRANSPARENT canvas:
  *
- *   hero · divider · terminal · pipeline(tracks) · stack · footer · contact
- *   8 project cards · 4 contact icons
+ *   hero · status · divider · terminal · pipeline(tracks) · stack ·
+ *   footer · contact · 8 project cards · 4 contact icons
  *
  * Theme switching on GitHub uses the native image fragments:
  *   <img src="asset-light.svg#gh-light-mode-only">
@@ -16,7 +16,7 @@
  *   - transparent canvas — panels float on the GitHub background
  *   - default state = final state (correct without SMIL, at t=0)
  *   - SMIL only — survives GitHub camo proxying
- *   - ONE accent (amber). Structure is monochrome. No gradients.
+ *   - ONE accent (signal red). Structure is neutral. No gradients.
  *   - restraint: at most one signature loop per asset + one entrance
  */
 import { writeFileSync } from 'node:fs';
@@ -25,6 +25,7 @@ import { fileURLToPath } from 'node:url';
 import { THEMES, MONO, AR } from './palette.mjs';
 
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), '..');
+const YEAR = new Date().getFullYear();
 const esc = s => String(s ?? '')
   .replace(/&/g, '&amp;').replace(/</g, '&lt;')
   .replace(/>/g, '&gt;').replace(/"/g, '&quot;');
@@ -48,40 +49,40 @@ const shadowDef = t =>
 /* ============================ PROJECTS (shared data) ============================ */
 const PROJECTS = [
   { id: 'ulara', ar: 'أُلارا', en: 'ULARA',
-    d1: 'نظام تشغيل الجامعة — منظومة أكاديمية متكاملة',
-    d2: 'فصول مقلوبة، مصفوفة إتقان، دورة بحوث علمية',
+    d1: 'نظام تشغيل جامعة متكامل',
+    d2: 'إتقان · بحوث · حوكمة أكاديمية',
     stack: 'TypeScript · Express · React · Prisma · Expo', link: 'ulara.vercel.app' },
   { id: 'madarek', ar: 'مدارك', en: 'MADAREK',
-    d1: 'منصّة تعليم ذكي مستقلّة عربية-أولًا',
-    d2: 'مجتمع جامعي، جودة وحوكمة، تدريب ذاتي وألعاب',
+    d1: 'منصة تعليم ذكي عربية',
+    d2: 'مجتمع · جودة · تدريب ذاتي',
     stack: 'TypeScript · Express · React · Prisma', link: 'madarek-app.vercel.app' },
   { id: 'subnation', ar: 'سب نيشن', en: 'SUBNATION',
-    d1: 'سوق الاشتراكات الرقمية عربية-أولًا',
-    d2: 'دخول بلا كلمة مرور، محفظة، تسليم فوري مشفّر',
+    d1: 'سوق الاشتراكات الرقمية',
+    d2: 'محفظة · تسليم فوري مشفّر',
     stack: 'React 19 · Express 5 · Drizzle · Postgres', link: 'subnation.ly' },
   { id: 'smartbot', ar: 'سمارت بوت', en: 'SMARTBOT',
-    d1: 'بوت ماسنجر وأتمتة لصفحات فيسبوك للسوق الليبي',
-    d2: 'ردود تلقائية، بثّ وتسويق، مدفوعات ليبية',
+    d1: 'بوت ماسنجر وأتمتة فيسبوك',
+    d2: 'مدفوعات · بث · ردود تلقائية',
     stack: 'Python · FastAPI · Next.js 16 · Expo', link: 'bot.smart-link.ly' },
   { id: 'smart-menu', ar: 'سمارت منيو', en: 'SMART MENU',
-    d1: 'منيو رقمي وطلبات واتساب للمطاعم',
-    d2: 'QR للطباعة، اشتراكات SaaS، لوحة تحكم، جوال',
+    d1: 'منيو رقمي للمطاعم',
+    d2: 'QR · اشتراكات · لوحة تحكم',
     stack: 'Next.js 16 · Prisma · Tailwind · Expo', link: 'menu.smart-link.ly' },
   { id: 'smart-order', ar: 'سمارت أوردر', en: 'SMART ORDER',
-    d1: 'متجر رقمي وطلبات وتوصيل للأعمال',
-    d2: 'آلة حالات طلبات، مناطق توصيل، مدفوعات محلية',
+    d1: 'متجر وطلبات وتوصيل',
+    d2: 'آلة حالات · مناطق · مدفوعات',
     stack: 'Next.js 16 · Prisma · React 19 · Expo', link: 'order.smart-link.ly' },
   { id: 'smart-link', ar: 'سمارت لينك', en: 'SMART LINK',
-    d1: 'المظلة الرقمية للأعمال في ليبيا',
-    d2: 'بوابة المنظومة: خدمات، أسعار، تواصل',
+    d1: 'المظلة الرقمية للأعمال',
+    d2: 'خدمات · أسعار · تواصل',
     stack: 'Next.js 16 · Tailwind CSS 4', link: 'smart-link.ly' },
   { id: 'lyosint', ar: 'ليوسينت', en: 'LYOSINT',
-    d1: 'منصّة استخبارات المصدر المفتوح',
-    d2: 'بحث في +40 منصة، خرائط معرفة، ملفات وتحليل',
+    d1: 'منصة استخبارات المصدر المفتوح',
+    d2: 'بحث · خرائط معرفة · تحليل',
     stack: 'React 19 · Express 5 · Drizzle · pgvector', link: 'مفتوح المصدر · MIT' },
 ];
 
-const TRACKS = ['التعليم', 'التجارة', 'الأتمتة', 'الاستخبارات المفتوحة'];
+const TRACKS = ['التعليم', 'التجارة', 'الأتمتة', 'الاستخبارات'];
 
 /* ============================ HERO ============================ */
 function hero(t) {
@@ -90,54 +91,108 @@ function hero(t) {
 
   const ticks = Array.from({ length: n }, (_, i) =>
 `  <rect x="${tickX(i)}" y="328" width="3" height="12" rx="1.5" fill="${t.line}">
-    <animate attributeName="fill" values="${t.line};${t.amber};${t.line}" keyTimes="0;0.02;0.05" dur="${(n * 0.55 + 1).toFixed(1)}s" begin="${(i * 0.55).toFixed(2)}s" repeatCount="indefinite"/>
+    <animate attributeName="fill" values="${t.line};${t.red};${t.line}" keyTimes="0;0.02;0.05" dur="${(n * 0.55 + 1).toFixed(1)}s" begin="${(i * 0.55).toFixed(2)}s" repeatCount="indefinite"/>
   </rect>`).join('\n  ');
 
-  return `<!-- emblem: eight-point star (arabic geometry), slow rotation -->
-  <g fill="none" stroke="${t.line}" stroke-width="1.5">
-    <rect x="151" y="106" width="128" height="128" rx="10"/>
-    <rect x="151" y="106" width="128" height="128" rx="10" transform="rotate(45 215 170)">
-      <animateTransform attributeName="transform" type="rotate" from="45 215 170" to="405 215 170" dur="90s" repeatCount="indefinite"/>
-    </rect>
+  const CX = 215, CY = 170;
+
+  return `<!-- targeting emblem: rotating dashed ring + crosshair + sonar core -->
+  <g fill="none" stroke="${t.line}" stroke-width="1.4">
+    <line x1="${CX - 30}" y1="${CY}" x2="${CX + 30}" y2="${CY}" stroke="${t.line2}"/>
+    <line x1="${CX}" y1="${CY - 30}" x2="${CX}" y2="${CY + 30}" stroke="${t.line2}"/>
+    <circle cx="${CX}" cy="${CY}" r="42"/>
   </g>
-  <circle cx="215" cy="170" r="4" fill="${t.amber}">
-    <animate attributeName="r" values="3.5;5;3.5" dur="2.6s" repeatCount="indefinite"/>
+  <g stroke="${t.red}" stroke-width="2" stroke-linecap="round">
+    <line x1="${CX}" y1="${CY - 49}" x2="${CX}" y2="${CY - 57}"/>
+    <line x1="${CX}" y1="${CY + 49}" x2="${CX}" y2="${CY + 57}"/>
+    <line x1="${CX - 49}" y1="${CY}" x2="${CX - 57}" y2="${CY}"/>
+    <line x1="${CX + 49}" y1="${CY}" x2="${CX + 57}" y2="${CY}"/>
+  </g>
+  <g>
+    <circle cx="${CX}" cy="${CY}" r="56" fill="none" stroke="${t.red}" stroke-width="1.5" stroke-dasharray="3 8">
+      <animateTransform attributeName="transform" type="rotate" from="0 ${CX} ${CY}" to="360 ${CX} ${CY}" dur="60s" repeatCount="indefinite"/>
+    </circle>
+    <g>
+      <circle cx="${CX + 56}" cy="${CY}" r="3.2" fill="${t.red}"/>
+      <animateTransform attributeName="transform" type="rotate" from="0 ${CX} ${CY}" to="360 ${CX} ${CY}" dur="14s" repeatCount="indefinite"/>
+    </g>
+  </g>
+  <circle cx="${CX}" cy="${CY}" r="4.5" fill="${t.red}">
+    <animate attributeName="r" values="3.8;5.2;3.8" dur="2.6s" repeatCount="indefinite"/>
   </circle>
-  <circle cx="215" cy="170" r="14" fill="none" stroke="${t.amber}" stroke-width="1">
-    <animate attributeName="r" values="10;28" dur="2.6s" repeatCount="indefinite"/>
-    <animate attributeName="opacity" values="0.4;0" dur="2.6s" repeatCount="indefinite"/>
+  <circle cx="${CX}" cy="${CY}" r="14" fill="none" stroke="${t.red}" stroke-width="1">
+    <animate attributeName="r" values="12;34" dur="2.6s" repeatCount="indefinite"/>
+    <animate attributeName="opacity" values="0.45;0" dur="2.6s" repeatCount="indefinite"/>
   </circle>
+  <text x="${CX}" y="264" text-anchor="middle" font-family="${MONO}" font-size="9.5" letter-spacing="1" fill="${t.mute}" direction="ltr">32.8872°N · 13.1913°E</text>
+
+  <!-- precision frame corners -->
+  <g fill="none" stroke="${t.redDim}" stroke-width="2" stroke-linecap="round">
+    <path d="M24 46 V24 H46"/><path d="M1154 24 H1176 V46"/>
+    <path d="M24 310 V332 H46"/><path d="M1176 310 V332 H1154"/>
+  </g>
 
   <!-- telemetry -->
   ${reveal('0', `
-  <circle cx="1132" cy="60" r="4" fill="${t.amber}">
+  <circle cx="1132" cy="60" r="4" fill="${t.red}">
     <animate attributeName="opacity" values="1;.3;1" dur="1.8s" repeatCount="indefinite"/>
   </circle>
-  <text x="1118" y="64" text-anchor="end" font-family="${MONO}" font-size="12" letter-spacing="1" fill="${t.dim}" direction="ltr">TRIPOLI, LY · UTC+02 · ${n} PRODUCTS LIVE</text>`)}
+  <text x="1118" y="64" text-anchor="end" font-family="${MONO}" font-size="12" letter-spacing="1" fill="${t.mute}" direction="ltr">TRIPOLI, LY · UTC+02 · ${n} LIVE PRODUCTS</text>`, '0.55')}
 
   <!-- wordmark -->
-  ${reveal('0.05', `<text x="1136" y="124" text-anchor="end" font-family="${AR}" font-size="21" font-weight="600" fill="${t.amber}">باني منظومات رقمية عربية-أولًا</text>`)}
-  ${reveal('0.15', `<text x="1136" y="214" text-anchor="end" font-family="${AR}" font-size="90" font-weight="700" fill="${t.ink}">أحمد رضوان</text>`)}
-  <rect x="1072" y="238" width="64" height="4" rx="2" fill="${t.amber}">
+  ${reveal('0.05', `<text x="1136" y="112" text-anchor="end" font-family="${AR}" font-size="20" font-weight="700" fill="${t.red}">مهندس منتجات · عربية أولًا</text>`)}
+  ${reveal('0.15', `<text x="1136" y="208" text-anchor="end" font-family="${AR}" font-size="88" font-weight="700" fill="${t.ink}">أحمد رضوان</text>`)}
+  <rect x="1072" y="232" width="64" height="4" rx="2" fill="${t.red}">
     <animate attributeName="width" values="0;64" begin="0.55s" dur="0.7s" calcMode="spline" keySplines="0.22 0.9 0.28 1" keyTimes="0;1" fill="freeze"/>
   </rect>
-  ${reveal('0.35', `<text x="1136" y="286" text-anchor="end" font-family="${MONO}" font-size="14" letter-spacing="7" fill="${t.dim}" direction="ltr">AHMAD RADWAN — PRODUCT ENGINEER</text>`)}
-  ${reveal('0.45', `<text x="1136" y="314" text-anchor="end" font-family="${AR}" font-size="17" fill="${t.mute}">${TRACKS.join(' · ')}</text>`)}
+  ${reveal('0.35', `<text x="1136" y="278" text-anchor="end" font-family="${MONO}" font-size="13" letter-spacing="6" fill="${t.mute}" direction="ltr">AHMAD RADWAN — PRODUCT ENGINEER</text>`, '0.5')}
+  ${reveal('0.45', `<text x="1136" y="306" text-anchor="end" font-family="${AR}" font-size="16" fill="${t.mute}">${TRACKS.join(' · ')}</text>`)}
 
   <!-- product rail: one tick per product, signal walks it -->
-  <line x1="60" y1="334" x2="1100" y2="334" stroke="${t.line2}" stroke-width="1"/>
+  <line x1="60" y1="334" x2="1140" y2="334" stroke="${t.line2}" stroke-width="1"/>
   ${ticks}`;
+}
+
+/* ============================ STATUS (ops strip) ============================ */
+function status(t) {
+  const led = (x, y, phase, dur = 1.8) =>
+`  <circle cx="${x}" cy="${y}" r="4.2" fill="${t.red}">
+    <animate attributeName="opacity" values="1;.25;1" dur="${dur}s" begin="${phase}s" repeatCount="indefinite"/>
+  </circle>`;
+
+  return `<defs>${shadowDef(t)}</defs>
+  ${reveal('0.05', `
+  <rect x="1" y="1" width="1198" height="64" rx="12" fill="${t.card}" stroke="${t.line}" filter="url(#lift)"/>
+
+  ${led(1158, 33, 0)}
+  <text x="1140" y="38" text-anchor="end" font-family="${AR}" font-size="16" font-weight="700" fill="${t.ink}">متاح لمشاريع جديدة</text>
+  <line x1="950" y1="17" x2="950" y2="49" stroke="${t.line2}" stroke-width="1.5"/>
+
+  ${led(922, 33, 0.6)}
+  <text x="904" y="38" text-anchor="end" font-family="${AR}" font-size="14.5" fill="${t.mute}">مؤشرات حيّة — تتجدد كل ٦ ساعات</text>
+  <line x1="670" y1="17" x2="670" y2="49" stroke="${t.line2}" stroke-width="1.5"/>
+
+  ${led(642, 33, 1.2)}
+  <text x="624" y="38" text-anchor="end" font-family="${AR}" font-size="14.5" fill="${t.mute}">طرابلس · UTC+02</text>
+
+  ${led(34, 33, 0.3)}
+  <text x="46" y="38" text-anchor="start" font-family="${MONO}" font-size="10" letter-spacing="1.5" fill="${t.mute}" direction="ltr">STATUS · OPERATIONAL</text>`, 0.45)}
+
+  <!-- signal sweep along the panel base -->
+  <rect x="24" y="58" width="40" height="2" rx="1" fill="${t.red}" opacity="0.65">
+    <animateTransform attributeName="transform" type="translate" values="0 0;1112 0" dur="5.5s" repeatCount="indefinite"/>
+  </rect>`;
 }
 
 /* ============================ DIVIDER ============================ */
 function divider(t) {
   return `<line x1="60" y1="16" x2="1140" y2="16" stroke="${t.line2}" stroke-width="1"/>
 
-  <rect x="60" y="15" width="40" height="2" rx="1" fill="${t.amber}" opacity="0.9">
+  <rect x="60" y="15" width="40" height="2" rx="1" fill="${t.red}" opacity="0.9">
     <animateTransform attributeName="transform" type="translate" values="0 0;1000 0" dur="5.5s" repeatCount="indefinite"/>
   </rect>
 
-  <rect x="594" y="11" width="10" height="10" rx="2" transform="rotate(45 599 16)" fill="${t.amber}">
+  <rect x="594" y="11" width="10" height="10" rx="2" transform="rotate(45 599 16)" fill="${t.red}">
     <animate attributeName="opacity" values="1;.45;1" dur="2.8s" repeatCount="indefinite"/>
   </rect>
   <rect x="574" y="14" width="4" height="4" rx="1" transform="rotate(45 576 16)" fill="${t.dim}"/>
@@ -147,13 +202,13 @@ function divider(t) {
 /* ============================ TERMINAL ============================ */
 function terminal(t) {
   const win = t.name === 'dark' ? '#0D1017' : '#FFFFFF';
-  const bar = t.name === 'dark' ? '#12161F' : '#F1EEE5';
+  const bar = t.name === 'dark' ? '#12151B' : '#F6F7F9';
   const line = (y, inner, a, b) =>
 `  <g>
     <text x="56" y="${y}" font-family="${MONO}" font-size="19">${inner}</text>
     <animate attributeName="opacity" values="0;0;1;1" keyTimes="0;${a};${b};1" dur="2.6s" fill="freeze"/>
   </g>`;
-  const cmd = c => `<tspan fill="${t.amber}">$</tspan><tspan fill="${t.ink}" dx="10">${c}</tspan>`;
+  const cmd = c => `<tspan fill="${t.red}">$</tspan><tspan fill="${t.ink}" dx="10">${c}</tspan>`;
 
   return `<defs>
     <pattern id="tgrid" width="60" height="60" patternUnits="userSpaceOnUse">
@@ -168,7 +223,7 @@ function terminal(t) {
   <!-- title bar -->
   <path d="M2.25 48 V18 A15.75 15.75 0 0 1 18 2.25 H1182 A15.75 15.75 0 0 1 1197.75 18 V48 Z" fill="${bar}"/>
   <line x1="2.25" y1="48" x2="1197.75" y2="48" stroke="${t.line2}" stroke-width="1.5"/>
-  <circle cx="32" cy="25" r="5.5" fill="${t.amber}"/>
+  <circle cx="32" cy="25" r="5.5" fill="${t.red}"/>
   <circle cx="54" cy="25" r="5.5" fill="none" stroke="${t.line}" stroke-width="1.5"/>
   <circle cx="76" cy="25" r="5.5" fill="none" stroke="${t.line}" stroke-width="1.5"/>
   <text x="600" y="30.5" text-anchor="middle" font-family="${MONO}" font-size="15" letter-spacing="0.5" fill="${t.mute}">ahmad@libya — ~/build — zsh</text>
@@ -178,14 +233,14 @@ function terminal(t) {
   ${line(96, cmd('whoami'), '0.06', '0.07')}
   ${line(136, `<tspan fill="${t.mute}">ahmed-radwan · product engineer · libya</tspan>`, '0.16', '0.17')}
   ${line(176, cmd('ls ./products'), '0.28', '0.29')}
-  ${line(216, `<tspan fill="${t.amberDeep}">ulara  madarek  subnation  smartbot  smart-menu  smart-order  smart-link  lyosint</tspan>`, '0.38', '0.39')}
+  ${line(216, `<tspan fill="${t.redDeep}">ulara  madarek  subnation  smartbot  smart-menu  smart-order  smart-link  lyosint</tspan>`, '0.38', '0.39')}
   ${line(256, cmd('cat focus.txt'), '0.48', '0.49')}
   ${line(296, `<tspan fill="${t.mute}">arabic-first systems: education · commerce · automation · osint</tspan>`, '0.58', '0.59')}
   ${line(336, cmd('uptime --build'), '0.68', '0.69')}
   ${line(376, `<tspan fill="${t.mute}">since 2025 · ${PROJECTS.length} products in production</tspan>`, '0.78', '0.79')}
   <g>
-    <text x="56" y="416" font-family="${MONO}" font-size="19" fill="${t.amber}">$</text>
-    <rect x="72" y="399" width="11" height="22" fill="${t.amber}">
+    <text x="56" y="416" font-family="${MONO}" font-size="19" fill="${t.red}">$</text>
+    <rect x="72" y="399" width="11" height="22" fill="${t.red}">
       <animate attributeName="opacity" values="1;1;0;0" keyTimes="0;0.5;0.5;1" dur="1.1s" repeatCount="indefinite"/>
     </rect>
     <animate attributeName="opacity" values="0;0;1;1" keyTimes="0;0.88;0.89;1" dur="2.6s" fill="freeze"/>
@@ -193,8 +248,8 @@ function terminal(t) {
 
   <!-- status bar -->
   <line x1="2.25" y1="438" x2="1197.75" y2="438" stroke="${t.line2}" stroke-width="1.5"/>
-  <text x="56" y="461" font-family="${MONO}" font-size="14" fill="${t.dim}">zsh · utf-8 · rtl-ready</text>
-  <circle cx="1035" cy="456.5" r="4.5" fill="${t.amber}">
+  <text x="56" y="461" font-family="${MONO}" font-size="14" fill="${t.mute}">zsh · utf-8 · rtl-ready</text>
+  <circle cx="1035" cy="456.5" r="4.5" fill="${t.red}">
     <animate attributeName="opacity" values="1;0.35;1" dur="2s" repeatCount="indefinite"/>
   </circle>
   <text x="1047" y="461" font-family="${MONO}" font-size="14" fill="${t.mute}">git: main</text>`;
@@ -219,10 +274,10 @@ const TRACK_ICON = {
 };
 
 function pipeline(t) {
-  const A = t.amber;
+  const A = t.red;
   const nodes = [
     { cx: 180, icon: TRACK_ICON.edu(A), ar: 'التعليم', en: 'EDUCATION OS', sub: 'أُلارا · مدارك' },
-    { cx: 460, icon: TRACK_ICON.com(A), ar: 'التجارة', en: 'COMMERCE SAAS', sub: 'سب نيشن · منيو · أوردر · لينك' },
+    { cx: 460, icon: TRACK_ICON.com(A), ar: 'التجارة', en: 'COMMERCE SAAS', sub: 'سب نيشن · منيو · أوردر' },
     { cx: 740, icon: TRACK_ICON.bot(A), ar: 'الأتمتة', en: 'BOTS &amp; AUTOMATION', sub: 'سمارت بوت · openwa' },
     { cx: 1020, icon: TRACK_ICON.osint(A), ar: 'الاستخبارات المفتوحة', en: 'OPEN-SOURCE INTEL', sub: 'ليوسينت' },
   ];
@@ -234,7 +289,7 @@ function pipeline(t) {
     <rect x="${n.cx - 125}" y="24" width="250" height="156" rx="14" fill="${t.card}" stroke="${t.line}" filter="url(#lift)"/>
     <g transform="translate(${n.cx} 64)">${n.icon}</g>
     <text x="${n.cx}" y="120" text-anchor="middle" font-family="${AR}" font-size="18" font-weight="700" fill="${t.ink}">${n.ar}</text>
-    <text x="${n.cx}" y="139" text-anchor="middle" font-family="${MONO}" font-size="9.5" letter-spacing="1.5" fill="${t.dim}">${n.en}</text>
+    <text x="${n.cx}" y="139" text-anchor="middle" font-family="${MONO}" font-size="9.5" letter-spacing="1.5" fill="${t.mute}">${n.en}</text>
     <text x="${n.cx}" y="160" text-anchor="middle" font-family="${AR}" font-size="11" fill="${t.mute}">${n.sub}</text>`, 0.5)).join('\n');
 
   return `<defs>${shadowDef(t)}</defs>
@@ -267,14 +322,14 @@ function stack(t) {
       const slotEnd = (slot * 1 + 0.022).toFixed(4);
       chips += `
     <rect x="${x}" y="${y}" width="${chipW}" height="${chipH}" rx="9" fill="${t.card}" stroke="${t.line}" stroke-width="1">
-      <animate attributeName="stroke" values="${t.line};${t.amber};${t.line}" keyTimes="0;${slot};${slotEnd}" dur="${cycle}s" begin="${(i * 0.55).toFixed(2)}s" repeatCount="indefinite"/>
+      <animate attributeName="stroke" values="${t.line};${t.red};${t.line}" keyTimes="0;${slot};${slotEnd}" dur="${cycle}s" begin="${(i * 0.55).toFixed(2)}s" repeatCount="indefinite"/>
     </rect>
-    <rect x="${x + 18}" y="${y + 27}" width="6" height="6" rx="1.5" fill="${t.amber}"/>
+    <rect x="${x + 18}" y="${y + 27}" width="6" height="6" rx="1.5" fill="${t.red}"/>
     <text x="${x + 36}" y="${y + 37}" font-family="${MONO}" font-size="13.5" fill="${t.ink}">${name}</text>`;
     });
     rows += reveal((0.05 + r * 0.14).toFixed(2), `
     <text x="1176" y="${y + 28}" text-anchor="end" font-family="${AR}" font-size="15" font-weight="700" fill="${t.ink}">${g.ar}</text>
-    <text x="1176" y="${y + 46}" text-anchor="end" font-family="${MONO}" font-size="9.5" letter-spacing="1.5" fill="${t.dim}">${g.en}</text>${chips}`);
+    <text x="1176" y="${y + 46}" text-anchor="end" font-family="${MONO}" font-size="9.5" letter-spacing="1.5" fill="${t.mute}">${g.en}</text>${chips}`);
   });
   return rows;
 }
@@ -284,14 +339,14 @@ function footer(t) {
   return `<line x1="60" y1="56" x2="480" y2="56" stroke="${t.line2}" stroke-width="1"/>
   <line x1="720" y1="56" x2="1140" y2="56" stroke="${t.line2}" stroke-width="1"/>
 
-  <rect x="594" y="50" width="12" height="12" rx="2.5" transform="rotate(45 600 56)" fill="none" stroke="${t.amber}" stroke-width="1.5">
+  <rect x="594" y="50" width="12" height="12" rx="2.5" transform="rotate(45 600 56)" fill="none" stroke="${t.red}" stroke-width="1.5">
     <animate attributeName="opacity" values="1;.35;1" dur="2.6s" repeatCount="indefinite"/>
   </rect>
-  <circle cx="600" cy="56" r="2.2" fill="${t.amber}">
+  <circle cx="600" cy="56" r="2.2" fill="${t.red}">
     <animate attributeName="r" values="1.8;3;1.8" dur="2.6s" repeatCount="indefinite"/>
   </circle>
 
-  <text x="600" y="88" text-anchor="middle" font-family="${AR}" font-size="13" fill="${t.mute}">© 2025 أحمد رضوان</text>
+  <text x="600" y="88" text-anchor="middle" font-family="${AR}" font-size="13" fill="${t.mute}">© ${YEAR} أحمد رضوان</text>
   <text x="600" y="106" text-anchor="middle" font-family="${MONO}" font-size="10" letter-spacing="2" fill="${t.mute}" direction="ltr">TRIPOLI, LY · UTC+02</text>`;
 }
 
@@ -305,21 +360,24 @@ function contact(t) {
 
   <!-- whatsapp — primary -->
   ${reveal('0.05', `
-  <circle cx="190" cy="129" r="26" fill="none" stroke="${t.amber}" stroke-width="1.3" opacity="0">
+  <circle cx="190" cy="129" r="26" fill="none" stroke="${t.red}" stroke-width="1.3" opacity="0">
     <animate attributeName="r" values="24;54" dur="3.2s" repeatCount="indefinite"/>
     <animate attributeName="opacity" values="0.55;0" dur="3.2s" repeatCount="indefinite"/>
   </circle>
-  <circle cx="190" cy="129" r="26" fill="none" stroke="${t.amber}" stroke-width="1.3" opacity="0">
+  <circle cx="190" cy="129" r="26" fill="none" stroke="${t.red}" stroke-width="1.3" opacity="0">
     <animate attributeName="r" values="24;54" dur="3.2s" begin="1.6s" repeatCount="indefinite"/>
     <animate attributeName="opacity" values="0.55;0" dur="3.2s" begin="1.6s" repeatCount="indefinite"/>
   </circle>
-  <rect x="128" y="54" width="490" height="150" rx="16" fill="${t.card}" stroke="${t.amber}" stroke-width="1.5" filter="url(#lift)"/>
+  <rect x="128" y="54" width="490" height="150" rx="16" fill="${t.card}" stroke="${t.red}" stroke-width="1.5" filter="url(#lift)"/>
   <circle cx="190" cy="129" r="26" fill="${t.card2}" stroke="${t.line}" stroke-width="1.5"/>
-  <g transform="translate(178 117)"><path fill="${t.amber}" d="${WA_GLYPH}"/></g>
+  <g transform="translate(178 117)"><path fill="${t.red}" d="${WA_GLYPH}"/></g>
   <text x="596" y="102" text-anchor="end" font-family="${AR}" font-size="17" font-weight="700" fill="${t.ink}">واتساب — القناة الأساسية</text>
-  <text x="596" y="134" text-anchor="end" font-family="${MONO}" font-size="20" font-weight="700" fill="${t.amberDeep}" direction="ltr">+218 91 008 9975</text>
-  <text x="596" y="162" text-anchor="end" font-family="${AR}" font-size="11.5" fill="${t.dim}">الأسرع ردًا — لكل الموضوعات</text>
-  <rect x="500" y="66" width="84" height="22" rx="6" fill="${t.amber}"/>
+  <text x="596" y="134" text-anchor="end" font-family="${MONO}" font-size="20" font-weight="700" fill="${t.redDeep}" direction="ltr">+218 91 008 9975</text>
+  <text x="596" y="162" text-anchor="end" font-family="${AR}" font-size="11.5" fill="${t.mute}">الأسرع ردًا — متاح الآن</text>
+  <circle cx="604" cy="158" r="3.5" fill="${t.red}">
+    <animate attributeName="opacity" values="1;.25;1" dur="1.8s" repeatCount="indefinite"/>
+  </circle>
+  <rect x="500" y="66" width="84" height="22" rx="6" fill="${t.red}"/>
   <text x="542" y="81" text-anchor="middle" font-family="${AR}" font-size="11.5" font-weight="700" fill="${badgeText}">أساسية</text>`, 0.5)}
 
   <!-- link -->
@@ -334,7 +392,7 @@ function contact(t) {
   <g transform="translate(706.5 119.5) scale(0.79)"><path fill="${t.mute}" d="${TG_GLYPH}"/></g>
   <text x="1048" y="102" text-anchor="end" font-family="${AR}" font-size="17" font-weight="700" fill="${t.ink}">تليجرام</text>
   <text x="1048" y="134" text-anchor="end" font-family="${MONO}" font-size="20" font-weight="700" fill="${t.mute}" direction="ltr">@rhAhmed2011</text>
-  <text x="1048" y="162" text-anchor="end" font-family="${AR}" font-size="11.5" fill="${t.dim}">للمجتمع والقنوات والتحديثات</text>`, 0.5)}
+  <text x="1048" y="162" text-anchor="end" font-family="${AR}" font-size="11.5" fill="${t.mute}">للتحديثات والقنوات</text>`, 0.5)}
 
   <text x="600" y="234" text-anchor="middle" font-family="${MONO}" font-size="10" letter-spacing="2" fill="${t.mute}" direction="ltr">OPEN CHANNEL · UTC+02 · TRIPOLI, LY</text>`;
 }
@@ -352,7 +410,7 @@ const CARD_ICONS = {
 };
 
 function card(p, t) {
-  const A = t.amber;
+  const A = t.red;
   const icon = (CARD_ICONS[p.id.replace(/-/g, '')] || CARD_ICONS.ulara)(A);
   const linkAttr = /[\u0600-\u06FF]/.test(p.link) ? '' : ' direction="ltr"';
   return `<defs>${shadowDef(t)}</defs>
@@ -365,16 +423,16 @@ function card(p, t) {
     <animate attributeName="opacity" values="0.45;0" dur="3.2s" begin="0.4s" repeatCount="indefinite"/>
   </circle>
   <text x="516" y="78" text-anchor="end" font-family="${AR}" font-size="34" font-weight="700" fill="${t.ink}">${p.ar}</text>
-  <text x="516" y="104" text-anchor="end" font-family="${MONO}" font-size="14" letter-spacing="3" fill="${t.dim}">${p.en}</text>
+  <text x="516" y="104" text-anchor="end" font-family="${MONO}" font-size="14" letter-spacing="3" fill="${t.mute}">${p.en}</text>
   <rect x="456" y="116" width="60" height="3" rx="1.5" fill="${A}">
     <animate attributeName="width" values="0;60" begin="0.4s" dur="0.7s" calcMode="spline" keySplines="0.22 0.9 0.28 1" keyTimes="0;1" fill="freeze"/>
   </rect>
   <text x="516" y="158" text-anchor="end" font-family="${AR}" font-size="17" fill="${t.mute}">${p.d1}</text>
   <text x="516" y="184" text-anchor="end" font-family="${AR}" font-size="17" fill="${t.mute}">${p.d2}</text>
-  <text x="516" y="222" text-anchor="end" font-family="${MONO}" font-size="13" fill="${t.dim}" direction="ltr">${p.stack}</text>
+  <text x="516" y="222" text-anchor="end" font-family="${MONO}" font-size="13" fill="${t.mute}" direction="ltr">${p.stack}</text>
   <line x1="36" y1="246" x2="524" y2="246" stroke="${t.line2}" stroke-width="1" stroke-dasharray="5 7"/>
-  <text x="524" y="272" text-anchor="end" font-family="${MONO}" font-size="13" fill="${t.mute}"${linkAttr}>${p.link}</text>
-  <text x="36" y="272" text-anchor="start" font-family="${AR}" font-size="13" fill="${t.dim}">المشروع على GitHub</text>`;
+  <text x="524" y="272" text-anchor="end" font-family="${MONO}" font-size="13" fill="${t.redDeep}"${linkAttr}>${p.link}</text>
+  <text x="36" y="272" text-anchor="start" font-family="${AR}" font-size="13" fill="${t.mute}">المشروع على GitHub</text>`;
 }
 
 /* ============================ CONTACT ICONS ============================ */
@@ -382,9 +440,9 @@ const GH_GLYPH = 'M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.
 
 function contactIcon(name, t) {
   const frame = (stroke, sw) => `<rect x="1" y="1" width="46" height="46" rx="11" fill="${t.card}" stroke="${stroke}" stroke-width="${sw}"/>`;
-  if (name === 'whatsapp') return `${frame(t.amber, 2)}
-  <g transform="translate(11 11) scale(1.083)"><path fill="${t.amber}" d="${WA_GLYPH}"/></g>
-  <circle cx="24" cy="24" r="21.5" fill="none" stroke="${t.amber}" stroke-width="1.2" opacity="0">
+  if (name === 'whatsapp') return `${frame(t.red, 2)}
+  <g transform="translate(11 11) scale(1.083)"><path fill="${t.red}" d="${WA_GLYPH}"/></g>
+  <circle cx="24" cy="24" r="21.5" fill="none" stroke="${t.red}" stroke-width="1.2" opacity="0">
     <animate attributeName="r" values="20;26" dur="2.8s" repeatCount="indefinite"/>
     <animate attributeName="opacity" values="0.5;0" dur="2.8s" repeatCount="indefinite"/>
   </circle>`;
@@ -392,7 +450,7 @@ function contactIcon(name, t) {
   <g transform="translate(11 11) scale(1.083)"><path fill="${t.mute}" d="${TG_GLYPH}"/></g>`;
   if (name === 'mail') return `${frame(t.line, 1.5)}
   <rect x="11" y="16" width="26" height="17" rx="3" fill="none" stroke="${t.mute}" stroke-width="2.4"/>
-  <path d="M12.4 18.2 L24 27.4 L35.6 18.2" fill="none" stroke="${t.amber}" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>`;
+  <path d="M12.4 18.2 L24 27.4 L35.6 18.2" fill="none" stroke="${t.red}" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>`;
   return `${frame(t.line, 1.5)}
   <g transform="translate(9.6 9.6) scale(1.8)"><path fill="${t.mute}" d="${GH_GLYPH}"/></g>`;
 }
@@ -405,7 +463,8 @@ const save = (rel, svg) => {
 
 for (const t of Object.values(THEMES)) {
   console.log(`theme: ${t.name}`);
-  save(`assets/hero-${t.name}.svg`, doc(1200, 356, 'أحمد رضوان — باني منظومات رقمية عربية-أولًا', hero(t)));
+  save(`assets/hero-${t.name}.svg`, doc(1200, 356, 'أحمد رضوان — مهندس منتجات · عربية أولًا', hero(t)));
+  save(`assets/status-${t.name}.svg`, doc(1200, 72, 'شريط الحالة — متاح لمشاريع جديدة', status(t)));
   save(`assets/divider-${t.name}.svg`, doc(1200, 32, 'فاصل', divider(t)));
   save(`assets/terminal-${t.name}.svg`, doc(1200, 470, 'طرفية — نظرة على المنتجات', terminal(t)));
   save(`assets/pipeline-${t.name}.svg`, doc(1200, 232, 'مسارات العمل: التعليم، التجارة، الأتمتة، الاستخبارات المفتوحة', pipeline(t)));

@@ -7,36 +7,39 @@
 
   <!-- whatsapp — primary -->
   <g opacity="1"><animate attributeName="opacity" values="0;1" begin="0.05s" dur="0.5s" fill="freeze"/>
-  <circle cx="190" cy="129" r="26" fill="none" stroke="#E2A93B" stroke-width="1.3" opacity="0">
+  <circle cx="190" cy="129" r="26" fill="none" stroke="#FF4D5E" stroke-width="1.3" opacity="0">
     <animate attributeName="r" values="24;54" dur="3.2s" repeatCount="indefinite"/>
     <animate attributeName="opacity" values="0.55;0" dur="3.2s" repeatCount="indefinite"/>
   </circle>
-  <circle cx="190" cy="129" r="26" fill="none" stroke="#E2A93B" stroke-width="1.3" opacity="0">
+  <circle cx="190" cy="129" r="26" fill="none" stroke="#FF4D5E" stroke-width="1.3" opacity="0">
     <animate attributeName="r" values="24;54" dur="3.2s" begin="1.6s" repeatCount="indefinite"/>
     <animate attributeName="opacity" values="0.55;0" dur="3.2s" begin="1.6s" repeatCount="indefinite"/>
   </circle>
-  <rect x="128" y="54" width="490" height="150" rx="16" fill="#11151E" stroke="#E2A93B" stroke-width="1.5" filter="url(#lift)"/>
-  <circle cx="190" cy="129" r="26" fill="#161D29" stroke="#2A3242" stroke-width="1.5"/>
-  <g transform="translate(178 117)"><path fill="#E2A93B" d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></g>
-  <text x="596" y="102" text-anchor="end" font-family="Segoe UI, Tahoma, Noto Sans Arabic, Geeza Pro, sans-serif" font-size="17" font-weight="700" fill="#F2EFE6">واتساب — القناة الأساسية</text>
-  <text x="596" y="134" text-anchor="end" font-family="Cascadia Code, SF Mono, Menlo, Consolas, DejaVu Sans Mono, monospace" font-size="20" font-weight="700" fill="#E2A93B" direction="ltr">+218 91 008 9975</text>
-  <text x="596" y="162" text-anchor="end" font-family="Segoe UI, Tahoma, Noto Sans Arabic, Geeza Pro, sans-serif" font-size="11.5" fill="#7E8798">الأسرع ردًا — لكل الموضوعات</text>
-  <rect x="500" y="66" width="84" height="22" rx="6" fill="#E2A93B"/>
+  <rect x="128" y="54" width="490" height="150" rx="16" fill="#15171C" stroke="#FF4D5E" stroke-width="1.5" filter="url(#lift)"/>
+  <circle cx="190" cy="129" r="26" fill="#1B1E24" stroke="#2C3038" stroke-width="1.5"/>
+  <g transform="translate(178 117)"><path fill="#FF4D5E" d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></g>
+  <text x="596" y="102" text-anchor="end" font-family="Segoe UI, Tahoma, Noto Sans Arabic, Geeza Pro, sans-serif" font-size="17" font-weight="700" fill="#F5F6F8">واتساب — القناة الأساسية</text>
+  <text x="596" y="134" text-anchor="end" font-family="Cascadia Code, SF Mono, Menlo, Consolas, DejaVu Sans Mono, monospace" font-size="20" font-weight="700" fill="#FF5C6A" direction="ltr">+218 91 008 9975</text>
+  <text x="596" y="162" text-anchor="end" font-family="Segoe UI, Tahoma, Noto Sans Arabic, Geeza Pro, sans-serif" font-size="11.5" fill="#C8CBD2">الأسرع ردًا — متاح الآن</text>
+  <circle cx="604" cy="158" r="3.5" fill="#FF4D5E">
+    <animate attributeName="opacity" values="1;.25;1" dur="1.8s" repeatCount="indefinite"/>
+  </circle>
+  <rect x="500" y="66" width="84" height="22" rx="6" fill="#FF4D5E"/>
   <text x="542" y="81" text-anchor="middle" font-family="Segoe UI, Tahoma, Noto Sans Arabic, Geeza Pro, sans-serif" font-size="11.5" font-weight="700" fill="#0D1017">أساسية</text></g>
 
   <!-- link -->
-  <line x1="622" y1="129" x2="658" y2="129" stroke="#2A3242" stroke-width="1.5" stroke-dasharray="4 6">
+  <line x1="622" y1="129" x2="658" y2="129" stroke="#2C3038" stroke-width="1.5" stroke-dasharray="4 6">
     <animate attributeName="stroke-dashoffset" from="0" to="-20" dur="1.4s" repeatCount="indefinite"/>
   </line>
 
   <!-- telegram -->
   <g opacity="1"><animate attributeName="opacity" values="0;1" begin="0.2s" dur="0.5s" fill="freeze"/>
-  <rect x="662" y="54" width="410" height="150" rx="16" fill="#11151E" stroke="#2A3242" stroke-width="1.5" filter="url(#lift)"/>
-  <circle cx="716" cy="129" r="22" fill="#161D29" stroke="#2A3242" stroke-width="1.5"/>
-  <g transform="translate(706.5 119.5) scale(0.79)"><path fill="#C7CEDB" d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z"/></g>
-  <text x="1048" y="102" text-anchor="end" font-family="Segoe UI, Tahoma, Noto Sans Arabic, Geeza Pro, sans-serif" font-size="17" font-weight="700" fill="#F2EFE6">تليجرام</text>
-  <text x="1048" y="134" text-anchor="end" font-family="Cascadia Code, SF Mono, Menlo, Consolas, DejaVu Sans Mono, monospace" font-size="20" font-weight="700" fill="#C7CEDB" direction="ltr">@rhAhmed2011</text>
-  <text x="1048" y="162" text-anchor="end" font-family="Segoe UI, Tahoma, Noto Sans Arabic, Geeza Pro, sans-serif" font-size="11.5" fill="#7E8798">للمجتمع والقنوات والتحديثات</text></g>
+  <rect x="662" y="54" width="410" height="150" rx="16" fill="#15171C" stroke="#2C3038" stroke-width="1.5" filter="url(#lift)"/>
+  <circle cx="716" cy="129" r="22" fill="#1B1E24" stroke="#2C3038" stroke-width="1.5"/>
+  <g transform="translate(706.5 119.5) scale(0.79)"><path fill="#C8CBD2" d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z"/></g>
+  <text x="1048" y="102" text-anchor="end" font-family="Segoe UI, Tahoma, Noto Sans Arabic, Geeza Pro, sans-serif" font-size="17" font-weight="700" fill="#F5F6F8">تليجرام</text>
+  <text x="1048" y="134" text-anchor="end" font-family="Cascadia Code, SF Mono, Menlo, Consolas, DejaVu Sans Mono, monospace" font-size="20" font-weight="700" fill="#C8CBD2" direction="ltr">@rhAhmed2011</text>
+  <text x="1048" y="162" text-anchor="end" font-family="Segoe UI, Tahoma, Noto Sans Arabic, Geeza Pro, sans-serif" font-size="11.5" fill="#C8CBD2">للتحديثات والقنوات</text></g>
 
-  <text x="600" y="234" text-anchor="middle" font-family="Cascadia Code, SF Mono, Menlo, Consolas, DejaVu Sans Mono, monospace" font-size="10" letter-spacing="2" fill="#C7CEDB" direction="ltr">OPEN CHANNEL · UTC+02 · TRIPOLI, LY</text>
+  <text x="600" y="234" text-anchor="middle" font-family="Cascadia Code, SF Mono, Menlo, Consolas, DejaVu Sans Mono, monospace" font-size="10" letter-spacing="2" fill="#C8CBD2" direction="ltr">OPEN CHANNEL · UTC+02 · TRIPOLI, LY</text>
 </svg>

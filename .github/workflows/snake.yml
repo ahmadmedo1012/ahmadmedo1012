@@ -23,8 +23,8 @@ jobs:
         with:
           github_user_name: ${{ github.repository_owner }}
           outputs: |
-            assets/snake-dark.svg?color_snake=#E2A93B&color_dots=#161D29,#232A38,#2A3242,#8A6420,#E2A93B
-            assets/snake-light.svg?color_snake=#B87D1F&color_dots=#EDF0F4,#C9D2DE,#8A93A3,#C9922B,#B87D1F
+            assets/snake-dark.svg?color_snake=#FF4D5E&color_dots=#1B1E24,#3A2228,#6E2A32,#B03740,#FF4D5E
+            assets/snake-light.svg?color_snake=#C92230&color_dots=#F0F1F3,#F8D8DC,#F0ABB3,#E15564,#C92230
 
       - name: Commit regenerated snake
         uses: stefanzweifel/git-auto-commit-action@v5

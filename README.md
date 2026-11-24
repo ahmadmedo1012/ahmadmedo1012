@@ -1,16 +1,14 @@
 <div dir="rtl" align="center">
 
-<img src="assets/hero-light.svg#gh-light-mode-only" width="100%" alt="أحمد رضوان — باني منظومات رقمية عربية-أولًا من ليبيا">
-<img src="assets/hero-dark.svg#gh-dark-mode-only" width="100%" alt="أحمد رضوان — باني منظومات رقمية عربية-أولًا من ليبيا">
+<img src="assets/hero-light.svg#gh-light-mode-only" width="100%" alt="أحمد رضوان — مهندس منتجات · عربية أولًا">
+<img src="assets/hero-dark.svg#gh-dark-mode-only" width="100%" alt="أحمد رضوان — مهندس منتجات · عربية أولًا">
 
-أبني منظومات رقمية عربية-أولًا من ليبيا — تعليم وتجارة وأتمتة واستخبارات مفتوحة.
+**أبني منتجات عربية بالكامل — من الواجهة إلى قاعدة البيانات.**
 
 </div>
 
-<img src="assets/divider-light.svg#gh-light-mode-only" width="100%" alt="">
-<img src="assets/divider-dark.svg#gh-dark-mode-only" width="100%" alt="">
-
-## الطرفية
+<img src="assets/status-light.svg#gh-light-mode-only" width="100%" alt="شريط الحالة — متاح لمشاريع جديدة">
+<img src="assets/status-dark.svg#gh-dark-mode-only" width="100%" alt="شريط الحالة — متاح لمشاريع جديدة">
 
 <div align="center">
 
@@ -19,36 +17,13 @@
 
 </div>
 
-## من أنا
-
-أنا **أحمد رضوان** — باني منتجات رقمية من ليبيا، أصمّم وأبرمج المنظومة كاملة:
-من واجهة RTL أصيلة، إلى قاعدة البيانات، إلى تطبيق الجوال.
-
-**العربية-أولًا ليست ترجمة**: التجربة تُصمَّم من أول بكسل للاتجاه والخط العربيين،
-وتُدفع بوسائل الدفع المحلية (ليبيانا / مدار)، وتُوثَّق بالعربية داخل المستودع نفسه —
-من README ثنائي اللغة إلى سجل تغييرات لكل جولة تطوير.
-
-## ما أعمل عليه
+<img src="assets/divider-light.svg#gh-light-mode-only" width="100%" alt="">
+<img src="assets/divider-dark.svg#gh-dark-mode-only" width="100%" alt="">
 
 <div align="center">
 
 <img src="assets/pipeline-light.svg#gh-light-mode-only" width="100%" alt="مسارات العمل: التعليم، التجارة، الأتمتة، الاستخبارات المفتوحة">
 <img src="assets/pipeline-dark.svg#gh-dark-mode-only" width="100%" alt="مسارات العمل: التعليم، التجارة، الأتمتة، الاستخبارات المفتوحة">
-
-</div>
-
-| المجال | المشاريع | ما يميّزه |
-|---|---|---|
-| **التعليم** | أُلارا · مدارك | نظام تشغيل جامعة متكامل ومنصة تعليم ذكي — مصفوفة إتقان لكل مفهوم، دورة بحوث علمية بقارئ PDF، حوكمة وسجل تدقيق |
-| **التجارة** | سب نيشن · سمارت منيو · سمارت أوردر · سمارت لينك | سوق اشتراكات رقمية بمحفظة داخلية وتسليم مشفّر فوري، ومنصات SaaS للمطاعم والمتاجر بمدفوعات ليبية |
-| **الأتمتة** | سمارت بوت · openwa | بوت ماسنجر متعدد المستأجرين بمدفوعات وموافقات تيليجرام، وبوابة واتساب بتشفير AES-256 وجلسات باقية بعد إعادة التشغيل |
-| **الاستخبارات المفتوحة** | ليوسينت | بحث عبر أكثر من 40 منصة، خرائط معرفة تفاعلية، ملفات مدعومة بالأدلة ودرجات ثقة |
-
-## المكدّس التقني
-
-الأدوات المستخدمة فعلًا في مشاريعي المنشورة:
-
-<div align="center">
 
 <img src="assets/stack-light.svg#gh-light-mode-only" width="100%" alt="المكدّس التقني — 20 أداة في أربع مجموعات">
 <img src="assets/stack-dark.svg#gh-dark-mode-only" width="100%" alt="المكدّس التقني — 20 أداة في أربع مجموعات">
@@ -58,17 +33,13 @@
 <img src="assets/divider-light.svg#gh-light-mode-only" width="100%" alt="">
 <img src="assets/divider-dark.svg#gh-dark-mode-only" width="100%" alt="">
 
-## المشاريع
-
-ثمانية منتجات — كل بطاقة تؤدي إلى مستودعها:
-
 <table>
   <tr>
     <td dir="ltr" width="50%" valign="top">
       <a href="https://github.com/ahmadmedo1012/ulara#gh-light-mode-only"><img src="assets/projects/ulara-light.svg#gh-light-mode-only" width="100%" alt="أُلارا — نظام تشغيل الجامعة"></a><a href="https://github.com/ahmadmedo1012/ulara#gh-dark-mode-only"><img src="assets/projects/ulara-dark.svg#gh-dark-mode-only" width="100%" alt="أُلارا — نظام تشغيل الجامعة"></a>
     </td>
     <td dir="ltr" width="50%" valign="top">
-      <a href="https://github.com/ahmadmedo1012/madarek#gh-light-mode-only"><img src="assets/projects/madarek-light.svg#gh-light-mode-only" width="100%" alt="مدارك — منصة تعليم ذكي عربية-أولًا"></a><a href="https://github.com/ahmadmedo1012/madarek#gh-dark-mode-only"><img src="assets/projects/madarek-dark.svg#gh-dark-mode-only" width="100%" alt="مدارك — منصة تعليم ذكي عربية-أولًا"></a>
+      <a href="https://github.com/ahmadmedo1012/madarek#gh-light-mode-only"><img src="assets/projects/madarek-light.svg#gh-light-mode-only" width="100%" alt="مدارك — منصة تعليم ذكي عربية"></a><a href="https://github.com/ahmadmedo1012/madarek#gh-dark-mode-only"><img src="assets/projects/madarek-dark.svg#gh-dark-mode-only" width="100%" alt="مدارك — منصة تعليم ذكي عربية"></a>
     </td>
   </tr>
   <tr>
@@ -107,10 +78,6 @@
 <img src="assets/divider-light.svg#gh-light-mode-only" width="100%" alt="">
 <img src="assets/divider-dark.svg#gh-dark-mode-only" width="100%" alt="">
 
-## الإحصائيات
-
-كل رقم يُسحب من واجهة GitHub ويُعاد توليده كل 6 ساعات — لا رقم مكتوب يدويًا.
-
 <div align="center">
 
 <img src="assets/stats-live-light.svg#gh-light-mode-only" width="100%" alt="قياسات GitHub: النجوم والفروع والمتابعون والمساهمات">
@@ -127,16 +94,12 @@
 
 <br/>
 
-<img src="https://komarev.com/ghpvc/?username=ahmadmedo1012&style=flat-square&color=E2A93B&label=profile+views" alt="عدد زوار الملف الشخصي">
+<img src="https://komarev.com/ghpvc/?username=ahmadmedo1012&style=flat-square&color=D92638&label=profile+views" alt="عدد زوار الملف الشخصي">
 
 </div>
 
 <img src="assets/divider-light.svg#gh-light-mode-only" width="100%" alt="">
 <img src="assets/divider-dark.svg#gh-dark-mode-only" width="100%" alt="">
-
-## تواصل
-
-**واتساب** — القناة الأساسية والأسرع ردًا:
 
 <div align="center">
 
