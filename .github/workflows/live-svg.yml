@@ -33,7 +33,16 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           GITHUB_USER: ${{ github.repository_owner }}
 
-      - uses: stefanzweifel/git-auto-commit-action@v5
-        with:
-          commit_message: "chore: sync live data svgs [skip ci]"
-          file_pattern: "assets/stats-live-*.svg assets/heatmap-live-*.svg assets/projects-live-*.svg assets/languages-live-*.svg"
+      - name: Commit live-data SVGs (race-safe)
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git pull --rebase --autostash origin main
+          git add assets/stats-live-*.svg assets/heatmap-live-*.svg assets/projects-live-*.svg assets/languages-live-*.svg
+          if git diff --cached --quiet; then echo "no live-data changes"; exit 0; fi
+          git commit -m "chore: sync live data svgs [skip ci]"
+          if ! git push; then
+            echo "push raced — rebasing and retrying"
+            git pull --rebase origin main
+            git push
+          fi

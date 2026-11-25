@@ -24,8 +24,16 @@ jobs:
             assets/snake-dark.svg?color_snake=#FF4D5E&color_dots=#1B1E24,#3A2228,#6E2A32,#B03740,#FF4D5E
             assets/snake-light.svg?color_snake=#C92230&color_dots=#F0F1F3,#F8D8DC,#F0ABB3,#E15564,#C92230
 
-      - name: Commit regenerated snake
-        uses: stefanzweifel/git-auto-commit-action@v5
-        with:
-          commit_message: "chore: regenerate contribution snake [skip ci]"
-          file_pattern: "assets/snake-*.svg"
+      - name: Commit regenerated snake (race-safe)
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git pull --rebase --autostash origin main
+          git add assets/snake-*.svg
+          if git diff --cached --quiet; then echo "no snake changes"; exit 0; fi
+          git commit -m "chore: regenerate contribution snake [skip ci]"
+          if ! git push; then
+            echo "push raced — rebasing and retrying"
+            git pull --rebase origin main
+            git push
+          fi
