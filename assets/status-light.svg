@@ -16,7 +16,7 @@
     <circle cx="922" cy="33" r="4.2" fill="#D92638">
     <animate attributeName="opacity" values="1;.25;1" dur="1.8s" begin="0.6s" repeatCount="indefinite"/>
   </circle>
-  <text x="904" y="38" text-anchor="end" font-family="Segoe UI, Tahoma, Noto Sans Arabic, Geeza Pro, sans-serif" font-size="14.5" fill="#43474F">مؤشرات حيّة — تتجدد كل ٦ ساعات</text>
+  <text x="904" y="38" text-anchor="end" font-family="Segoe UI, Tahoma, Noto Sans Arabic, Geeza Pro, sans-serif" font-size="14.5" fill="#43474F">مؤشرات حيّة — تتجدد كل 6 ساعات</text>
   <line x1="670" y1="17" x2="670" y2="49" stroke="#EDEFF2" stroke-width="1.5"/>
 
     <circle cx="642" cy="33" r="4.2" fill="#D92638">

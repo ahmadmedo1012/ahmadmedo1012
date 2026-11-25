@@ -169,7 +169,7 @@ function status(t) {
   <line x1="950" y1="17" x2="950" y2="49" stroke="${t.line2}" stroke-width="1.5"/>
 
   ${led(922, 33, 0.6)}
-  <text x="904" y="38" text-anchor="end" font-family="${AR}" font-size="14.5" fill="${t.mute}">مؤشرات حيّة — تتجدد كل ٦ ساعات</text>
+  <text x="904" y="38" text-anchor="end" font-family="${AR}" font-size="14.5" fill="${t.mute}">مؤشرات حيّة — تتجدد كل 6 ساعات</text>
   <line x1="670" y1="17" x2="670" y2="49" stroke="${t.line2}" stroke-width="1.5"/>
 
   ${led(642, 33, 1.2)}
@@ -368,17 +368,14 @@ function contact(t) {
     <animate attributeName="r" values="24;54" dur="3.2s" begin="1.6s" repeatCount="indefinite"/>
     <animate attributeName="opacity" values="0.55;0" dur="3.2s" begin="1.6s" repeatCount="indefinite"/>
   </circle>
-  <rect x="128" y="54" width="490" height="150" rx="16" fill="${t.card}" stroke="${t.red}" stroke-width="1.5" filter="url(#lift)"/>
+  <rect x="128" y="54" width="490" height="158" rx="16" fill="${t.card}" stroke="${t.red}" stroke-width="1.5" filter="url(#lift)"/>
   <circle cx="190" cy="129" r="26" fill="${t.card2}" stroke="${t.line}" stroke-width="1.5"/>
   <g transform="translate(178 117)"><path fill="${t.red}" d="${WA_GLYPH}"/></g>
-  <text x="596" y="102" text-anchor="end" font-family="${AR}" font-size="17" font-weight="700" fill="${t.ink}">واتساب — القناة الأساسية</text>
-  <text x="596" y="134" text-anchor="end" font-family="${MONO}" font-size="20" font-weight="700" fill="${t.redDeep}" direction="ltr">+218 91 008 9975</text>
-  <text x="596" y="162" text-anchor="end" font-family="${AR}" font-size="11.5" fill="${t.mute}">الأسرع ردًا — متاح الآن</text>
-  <circle cx="604" cy="158" r="3.5" fill="${t.red}">
-    <animate attributeName="opacity" values="1;.25;1" dur="1.8s" repeatCount="indefinite"/>
-  </circle>
-  <rect x="500" y="66" width="84" height="22" rx="6" fill="${t.red}"/>
-  <text x="542" y="81" text-anchor="middle" font-family="${AR}" font-size="11.5" font-weight="700" fill="${badgeText}">أساسية</text>`, 0.5)}
+  <text x="596" y="120" text-anchor="end" font-family="${AR}" font-size="17" font-weight="700" fill="${t.ink}">واتساب — القناة الأساسية</text>
+  <text x="596" y="154" text-anchor="end" font-family="${MONO}" font-size="20" font-weight="700" fill="${t.redDeep}" direction="ltr">+218 91 008 9975</text>
+  <text x="596" y="184" text-anchor="end" font-family="${AR}" font-size="11.5" fill="${t.mute}">الأسرع ردًا — متاح الآن</text>
+  <rect x="500" y="74" width="84" height="22" rx="6" fill="${t.red}"/>
+  <text x="542" y="89" text-anchor="middle" font-family="${AR}" font-size="11.5" font-weight="700" fill="${badgeText}">أساسية</text>`, 0.5)}
 
   <!-- link -->
   <line x1="622" y1="129" x2="658" y2="129" stroke="${t.line}" stroke-width="1.5" stroke-dasharray="4 6">
@@ -387,14 +384,14 @@ function contact(t) {
 
   <!-- telegram -->
   ${reveal('0.2', `
-  <rect x="662" y="54" width="410" height="150" rx="16" fill="${t.card}" stroke="${t.line}" stroke-width="1.5" filter="url(#lift)"/>
+  <rect x="662" y="54" width="410" height="158" rx="16" fill="${t.card}" stroke="${t.line}" stroke-width="1.5" filter="url(#lift)"/>
   <circle cx="716" cy="129" r="22" fill="${t.card2}" stroke="${t.line}" stroke-width="1.5"/>
   <g transform="translate(706.5 119.5) scale(0.79)"><path fill="${t.mute}" d="${TG_GLYPH}"/></g>
-  <text x="1048" y="102" text-anchor="end" font-family="${AR}" font-size="17" font-weight="700" fill="${t.ink}">تليجرام</text>
-  <text x="1048" y="134" text-anchor="end" font-family="${MONO}" font-size="20" font-weight="700" fill="${t.mute}" direction="ltr">@rhAhmed2011</text>
-  <text x="1048" y="162" text-anchor="end" font-family="${AR}" font-size="11.5" fill="${t.mute}">للتحديثات والقنوات</text>`, 0.5)}
+  <text x="1048" y="120" text-anchor="end" font-family="${AR}" font-size="17" font-weight="700" fill="${t.ink}">تليجرام</text>
+  <text x="1048" y="154" text-anchor="end" font-family="${MONO}" font-size="20" font-weight="700" fill="${t.mute}" direction="ltr">@rhAhmed2011</text>
+  <text x="1048" y="184" text-anchor="end" font-family="${AR}" font-size="11.5" fill="${t.mute}">للتحديثات والقنوات</text>`, 0.5)}
 
-  <text x="600" y="234" text-anchor="middle" font-family="${MONO}" font-size="10" letter-spacing="2" fill="${t.mute}" direction="ltr">OPEN CHANNEL · UTC+02 · TRIPOLI, LY</text>`;
+  <text x="600" y="236" text-anchor="middle" font-family="${MONO}" font-size="10" letter-spacing="2" fill="${t.mute}" direction="ltr">OPEN CHANNEL · UTC+02 · TRIPOLI, LY</text>`;
 }
 
 /* ============================ PROJECT CARDS ============================ */

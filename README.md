@@ -109,23 +109,21 @@
 
 <table>
   <tr>
-    <td dir="rtl" width="28%" align="center">
+    <td dir="rtl" width="30%" align="center">
       <a href="https://wa.me/218910089975#gh-light-mode-only"><img src="assets/icons/whatsapp-light.svg#gh-light-mode-only" width="56" alt="واتساب"></a><a href="https://wa.me/218910089975#gh-dark-mode-only"><img src="assets/icons/whatsapp-dark.svg#gh-dark-mode-only" width="56" alt="واتساب"></a>
       <br/>
       <a href="https://wa.me/218910089975"><b>واتساب</b></a>
       <br/>
-      <sub dir="ltr"><b>+218 91 008 9975</b></sub>
-      <br/>
-      <sub>القناة الأساسية</sub>
+      <sub dir="ltr"><b>+218&nbsp;91&nbsp;008&nbsp;9975</b></sub>
     </td>
-    <td dir="rtl" width="24%" align="center">
+    <td dir="rtl" width="23%" align="center">
       <a href="https://t.me/rhAhmed2011#gh-light-mode-only"><img src="assets/icons/telegram-light.svg#gh-light-mode-only" width="48" alt="تليجرام"></a><a href="https://t.me/rhAhmed2011#gh-dark-mode-only"><img src="assets/icons/telegram-dark.svg#gh-dark-mode-only" width="48" alt="تليجرام"></a>
       <br/>
       <a href="https://t.me/rhAhmed2011"><b>تليجرام</b></a>
       <br/>
       <sub dir="ltr">@rhAhmed2011</sub>
     </td>
-    <td dir="rtl" width="24%" align="center">
+    <td dir="rtl" width="25%" align="center">
       <img src="assets/icons/mail-light.svg#gh-light-mode-only" width="48" alt="البريد الإلكتروني">
       <img src="assets/icons/mail-dark.svg#gh-dark-mode-only" width="48" alt="البريد الإلكتروني">
       <br/>
@@ -133,7 +131,7 @@
       <br/>
       <sub dir="ltr">ahmadmedo1012@gmail.com</sub>
     </td>
-    <td dir="rtl" width="24%" align="center">
+    <td dir="rtl" width="22%" align="center">
       <a href="https://github.com/ahmadmedo1012#gh-light-mode-only"><img src="assets/icons/github-light.svg#gh-light-mode-only" width="48" alt="GitHub"></a><a href="https://github.com/ahmadmedo1012#gh-dark-mode-only"><img src="assets/icons/github-dark.svg#gh-dark-mode-only" width="48" alt="GitHub"></a>
       <br/>
       <a href="https://github.com/ahmadmedo1012"><b>GitHub</b></a>

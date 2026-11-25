@@ -161,18 +161,18 @@ function statsSVG(m, t) {
 }
 
 /* ============================ HEATMAP ============================ */
+/* Layout: full-height grid on the left (x 64…777) + "أرقام العام" indicator
+   sidebar on the right (x 812…1176) so the 1200px panel has zero dead space. */
 function heatmapSVG(m, t) {
   const W = 1200, headerH = 54;
   const weeks = m.weeks;
   const nW = weeks.length;
-  const pitch = 13.5, cell = 11, x0 = 64, y0 = 88;
-  const rowsH = 7 * pitch;
-  const Hh = 220;
+  const pitch = 13.5, cell = 11, x0 = 64, y0 = 92;
+  const gridR = x0 + nW * pitch;            // grid right edge (~777)
+  const Hh = 232;
   let defs = '', body = '';
 
-  body += panelHeader(t, 'خريطة المساهمات — آخر 365 يومًا', '365D WINDOW');
-  const od = odo(m.contributions, 52, 52, t, { size: 20, begin: 0.4 });
-  defs += od.defs; body += od.body;
+  body += panelHeader(t, 'خريطة المساهمات — آخر 365 يومًا', 'LIVE · 365D WINDOW');
 
   /* month labels */
   const months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
@@ -183,7 +183,7 @@ function heatmapSVG(m, t) {
     const mo = new Date(d.date + 'T00:00:00Z').getUTCMonth();
     if (mo !== lastMonth) {
       lastMonth = mo;
-      body += `<text x="${(x0 + i * pitch).toFixed(1)}" y="${headerH + 24}" font-family="${MONO}" font-size="9" fill="${t.dim}">${months[mo]}</text>`;
+      body += `<text x="${(x0 + i * pitch).toFixed(1)}" y="${headerH + 28}" font-family="${MONO}" font-size="9" fill="${t.dim}">${months[mo]}</text>`;
     }
   });
 
@@ -208,16 +208,43 @@ function heatmapSVG(m, t) {
     body += `<rect x="${a.x.toFixed(1)}" y="${a.y.toFixed(1)}" width="${cell}" height="${cell}" rx="2.5" fill="none" stroke="${t.ink}" stroke-width="1"><animate attributeName="opacity" values="0;.8;0" dur="2.8s" begin="${(i * 0.45).toFixed(2)}s" repeatCount="indefinite"/></rect>`;
   });
 
-  /* scanning band sweeping across the year */
-  body += `<rect x="${(x0 - 24).toFixed(1)}" y="${y0 - 5}" width="16" height="${(rowsH + 10).toFixed(1)}" fill="${t.red}" opacity="${t.name === 'dark' ? 0.07 : 0.1}"><animateTransform attributeName="transform" type="translate" values="0 0;${(nW * pitch + 50).toFixed(1)} 0" dur="9s" repeatCount="indefinite"/></rect>`;
+  /* scanning band sweeping across the year (grid zone only) */
+  body += `<rect x="${(x0 - 24).toFixed(1)}" y="${y0 - 5}" width="16" height="${(7 * pitch + 10).toFixed(1)}" fill="${t.red}" opacity="${t.name === 'dark' ? 0.07 : 0.1}"><animateTransform attributeName="transform" type="translate" values="0 0;${(gridR - x0 + 10).toFixed(1)} 0" dur="9s" repeatCount="indefinite"/></rect>`;
 
-  /* legend */
+  /* ---- sidebar: year highlights (العدادات والمؤشرات) ---- */
+  const sx = 812, sr = 1176;                 // sidebar span
+  body += `<line x1="790" y1="64" x2="790" y2="${Hh - 16}" stroke="${t.line}" stroke-width="1.2"/>`;
+  body += `<text x="${sr}" y="80" text-anchor="end" font-family="${AR}" font-size="14" font-weight="700" fill="${t.ink}">أرقام العام</text>`;
+  body += `<text x="${sx}" y="80" text-anchor="start" font-family="${MONO}" font-size="9.5" letter-spacing="1.5" fill="${t.dim}">1Y</text>`;
+
+  /* right-aligned odometer for the total */
+  const valR = 1048, unitR = 944;
+  const digits = String(m.contributions).split('').length;
+  const odW = digits * 24 * 0.64;
+  const od = odo(m.contributions, valR - odW / 2, 112, t, { size: 24, begin: 0.5 });
+  defs += od.defs; body += od.body;
+  body += `<text x="${sr}" y="112" text-anchor="end" font-family="${AR}" font-size="12.5" fill="${t.mute}">إجمالي المساهمات</text>`;
+
+  const rows = [
+    { y: 144, label: 'أطول سلسلة', v: m.longestStreak, unit: 'يومًا' },
+    { y: 176, label: 'أعلى يوم', v: m.maxDay, unit: 'مساهمة' },
+    { y: 208, label: 'المعدل الأسبوعي', v: m.weeklyAvg, unit: 'مساهمة' },
+  ];
+  rows.forEach((r, i) => {
+    if (r.v == null) return;
+    body += `<g opacity="1"><animate attributeName="opacity" values="0;1" begin="${(0.3 + i * 0.12).toFixed(2)}s" dur="0.4s" fill="freeze"/>`;
+    body += `<text x="${sr}" y="${r.y}" text-anchor="end" font-family="${AR}" font-size="12.5" fill="${t.mute}">${r.label}</text>`;
+    body += `<text x="${valR}" y="${r.y}" text-anchor="end" font-family="${MONO}" font-size="16" font-weight="700" fill="${t.ink}">${r.v}</text>`;
+    body += `<text x="${unitR}" y="${r.y}" text-anchor="end" font-family="${AR}" font-size="11" fill="${t.dim}">${r.unit}</text></g>`;
+  });
+
+  /* legend (under the grid, right-aligned to the grid edge) */
   const lg = t.heat;
-  const lx = W - 24 - 5 * 14 - 34;
-  body += `<text x="${W - 24}" y="${Hh - 14}" text-anchor="end" font-family="${AR}" font-size="11" fill="${t.dim}">أكثر</text>`;
-  lg.forEach((c, i) => { body += `<rect x="${lx + i * 14}" y="${Hh - 24}" width="11" height="11" rx="2.5" fill="${c}"/>`; });
-  body += `<text x="${lx - 8}" y="${Hh - 14}" text-anchor="end" font-family="${AR}" font-size="11" fill="${t.dim}">أقل</text>`;
-  body += `<text x="24" y="${Hh - 14}" font-family="${MONO}" font-size="10" fill="${t.dim}">SOURCE: GITHUB CONTRIB API · REBUILT EVERY 6H</text>`;
+  const lx = gridR - 70 - 44;
+  body += `<text x="${gridR.toFixed(1)}" y="${Hh - 18}" text-anchor="end" font-family="${AR}" font-size="11" fill="${t.dim}">أكثر</text>`;
+  lg.forEach((c, i) => { body += `<rect x="${(lx + i * 14).toFixed(1)}" y="${Hh - 28}" width="11" height="11" rx="2.5" fill="${c}"/>`; });
+  body += `<text x="${(lx - 8).toFixed(1)}" y="${Hh - 18}" text-anchor="end" font-family="${AR}" font-size="11" fill="${t.dim}">أقل</text>`;
+  body += `<text x="64" y="${Hh - 18}" font-family="${MONO}" font-size="10" fill="${t.dim}">SOURCE: GITHUB CONTRIB API · REBUILT EVERY 6H</text>`;
 
   return { W, H: Hh, defs, body, label: 'خريطة مساهمات أحمد رضوان لآخر 365 يومًا — بيانات حية' };
 }
@@ -339,6 +366,13 @@ async function main() {
     let streak = 0;
     while (byDate.get(fmt(t0)) > 0) { streak++; t0.setDate(t0.getDate() - 1); }
     m.streak = streak;
+    /* year highlights for the heatmap sidebar */
+    const counts = days.map(([, c]) => c);
+    m.maxDay = counts.length ? Math.max(...counts) : 0;
+    m.weeklyAvg = Math.round(cal.totalContributions / 52);
+    let ls = 0, cur = 0;
+    counts.forEach(c => { cur = c > 0 ? cur + 1 : 0; if (cur > ls) ls = cur; });
+    m.longestStreak = ls;
     m.reposList = nodes.map(r => ({
       name: r.name, desc: r.description, stars: r.stargazerCount, forks: r.forkCount,
       lang: r.primaryLanguage?.name || '', pushed: r.pushedAt,
